@@ -103,77 +103,6 @@ const blogPosts: BlogPost[] = [
           highlight: 'Time Saved: 15+ hours per role + 5-7 days in scheduling'
         },
         {
-          heading: '3. Create Standardized Interview Scorecards',
-          content: 'Without clear criteria, interviews become subjective and decision-making slows down. Create detailed scorecards with specific competencies, rating scales, and knockout questions. This allows for faster, more objective candidate evaluation and eliminates endless debate.',
-          bulletPoints: [
-            'Define 5-7 key competencies per role',
-            'Use 1-5 rating scales with clear definitions',
-            'Include must-have vs. nice-to-have criteria',
-            'Train all interviewers on the same standards'
-          ]
-        },
-        {
-          heading: '4. Implement One-Day Interview Marathons',
-          content: 'Spreading interviews over weeks kills momentum and loses candidates to competitors. Top companies are condensing all interviews into a single day. Candidates meet everyone, you make decisions immediately, and offers go out within 24 hours.',
-          stats: [
-            { label: '75% faster', description: 'decision making' },
-            { label: '50% less', description: 'candidate drop-off' },
-            { label: '90%', description: 'accept rate' },
-            { label: '24 hours', description: 'to offer' }
-          ]
-        },
-        {
-          heading: '5. Build Talent Pipelines Before You Need Them',
-          content: 'The fastest hire is the one you already know. Maintain ongoing relationships with potential candidates even when you don\'t have open roles. When a position opens, you have pre-qualified candidates ready to go.',
-          conclusion: 'Companies with active talent pipelines reduce time-to-hire by 40% on average.'
-        },
-        {
-          heading: '6. Streamline Your Job Descriptions',
-          content: 'Long, jargon-filled job descriptions with 20+ requirements discourage qualified candidates and attract unqualified ones. Keep descriptions clear, concise, and focused on what actually matters. List 5-7 real requirements, not 20 wish-list items.',
-          bulletPoints: [
-            'Focus on outcomes, not just credentials',
-            'Be transparent about salary ranges',
-            'Highlight growth opportunities',
-            'Make the application process obvious and simple'
-          ]
-        },
-        {
-          heading: '7. Reduce Approval Layers',
-          content: 'Every additional approval step adds 3-5 days to your process. Empower hiring managers with clear authority levels. If your process requires 5+ approvals, you\'re losing top candidates to faster competitors.',
-          highlight: 'Companies with 2 or fewer approval steps hire 60% faster'
-        },
-        {
-          heading: '8. Use Asynchronous Video Interviews',
-          content: 'For remote roles or geographically dispersed candidates, asynchronous video interviews eliminate scheduling complexity. Candidates record answers on their schedule, hiring teams review and score independently, and you move faster.',
-          stats: [
-            { label: '10+ hours', description: 'saved on scheduling' },
-            { label: '3x more', description: 'candidates screened' },
-            { label: 'No timezone', description: 'conflicts' },
-            { label: '48 hours', description: 'to decision' }
-          ]
-        },
-        {
-          heading: '9. Make Offers Immediately After Final Interviews',
-          content: 'The traditional "we\'ll get back to you in a week" approach is career suicide in today\'s market. Be prepared to extend offers within hours of the final interview. Have compensation approved, contracts ready, and decision-makers available.',
-          bulletPoints: [
-            'Pre-approve salary ranges before final interviews',
-            'Have offer letters templated and ready',
-            'Authorize hiring managers to make same-day offers',
-            'Follow up with a phone call, not just email'
-          ]
-        },
-        {
-          heading: '10. Track and Optimize Your Metrics',
-          content: 'You can\'t improve what you don\'t measure. Track time-to-hire by stage, identify bottlenecks, and ruthlessly eliminate them. The best recruiting teams review metrics weekly and make continuous improvements.',
-          bulletPoints: [
-            'Time from application to first contact',
-            'Time from first contact to interview scheduled',
-            'Time from final interview to offer',
-            'Offer acceptance rate and reasons for rejection'
-          ],
-          conclusion: 'Companies that actively track and optimize their hiring metrics reduce time-to-hire by an average of 45%.'
-        },
-        {
           heading: 'The Bottom Line',
           content: "Reducing time-to-hire isn't about cutting corners—it's about eliminating waste. The companies winning the war for talent in 2026 aren't necessarily the biggest or best-known. They're the fastest and most efficient. Every day you shave off your hiring process is a day you gain competitive advantage.",
           highlight: 'Start with strategies 1-2 this week. You\'ll see immediate results.'
@@ -208,93 +137,6 @@ const blogPosts: BlogPost[] = [
           highlight: 'Conservative estimate: $25,000-$40,000 in direct costs'
         },
         {
-          heading: 'The Hidden Costs (Where the Real Damage Happens)',
-          content: 'This is where the numbers get scary. A Department of Labor study found that the average cost of a bad hire is 30% of the employee\'s first-year earnings. For a $60,000 position, that\'s $18,000. But even that significantly underestimates the true impact.',
-          bulletPoints: [
-            'Lost Productivity: A bad hire doesn\'t just fail to contribute—they actively drain productivity trying to fix their mistakes',
-            'Team Impact: Bad hires drag down entire teams, reducing overall productivity by 10-15%',
-            'Customer Impact: Poor work quality damages customer relationships and brand reputation',
-            'Opportunity Cost: The role isn\'t being filled properly while competitors are executing',
-            'Management Time: Managers spend 17 hours per week dealing with underperformers',
-            'Morale Damage: Team members become frustrated, leading to decreased engagement'
-          ]
-        },
-        {
-          heading: 'The Real Numbers: A Case Study',
-          content: 'Let\'s look at a real example: hiring a Sales Manager at $80,000 per year who lasts 6 months before being terminated.',
-          stats: [
-            { label: '$25,000', description: 'Direct hiring costs' },
-            { label: '$60,000', description: 'Lost productivity (6 months)' },
-            { label: '$40,000', description: 'Team productivity drag' },
-            { label: '$75,000', description: 'Lost revenue opportunities' },
-            { label: '$25,000', description: 'Management time wasted' },
-            { label: '$20,000', description: 'Damaged customer relationships' }
-          ],
-          highlight: 'The Real Total: $245,000+ for a single bad hire'
-        },
-        {
-          heading: 'Warning Signs You\'re About to Make a Bad Hire',
-          content: 'Prevention starts with recognizing the red flags during the hiring process. Here are the most common indicators that often get ignored:',
-          bulletPoints: [
-            'Rushing to fill the role because you\'re desperate',
-            'Overlooking cultural fit because the skills look good on paper',
-            'Ignoring your gut feeling because everything else checks out',
-            'Skipping reference checks or taking them at face value',
-            'Not involving the team in the interview process',
-            'Focusing solely on credentials instead of demonstrated ability',
-            'Accepting vague or generic answers in interviews',
-            'Hiring someone significantly overqualified who will likely leave'
-          ]
-        },
-        {
-          heading: 'How AI-Powered Screening Prevents Bad Hires',
-          content: 'Modern AI recruiting tools attack the problem at every stage of the hiring process. Here\'s how they dramatically reduce bad hire rates:',
-          bulletPoints: [
-            'Skills-Based Assessment: AI evaluates actual competencies, not just resume keywords',
-            'Objective Pre-Screening: Eliminates unconscious bias and "gut feeling" hiring',
-            'Behavioral Pattern Recognition: Identifies red flags in work history and communication',
-            'Cultural Fit Analysis: Matches candidates to your company values and work style',
-            'Predictive Analytics: Uses data from your best performers to identify similar patterns',
-            'Consistency: Every candidate is evaluated by the same criteria, every time'
-          ]
-        },
-        {
-          heading: 'The ROI of Better Screening',
-          content: 'Let\'s run the numbers on implementing AI-powered screening for a mid-sized company making 50 hires per year.',
-          stats: [
-            { label: '$15,000', description: 'Annual AI screening investment' },
-            { label: '8 bad hires', description: 'Average before AI (16% rate)' },
-            { label: '2 bad hires', description: 'Average after AI (4% rate)' },
-            { label: '$1.5M', description: 'Total cost savings per year' }
-          ],
-          highlight: 'Net ROI: 9,900% in Year 1 alone'
-        },
-        {
-          heading: 'Beyond Technology: Process Improvements',
-          content: 'While AI screening is powerful, combining it with process improvements multiplies the impact:',
-          bulletPoints: [
-            'Structured Interviews: Use standardized questions and scoring rubrics',
-            'Work Sample Tests: Require candidates to demonstrate actual skills',
-            'Multiple Interviews: Get input from different team members',
-            'Thorough Reference Checks: Actually call and ask probing questions',
-            'Trial Periods: Consider contract-to-hire for critical roles',
-            'Clear Job Descriptions: Know exactly what you need before you start looking'
-          ]
-        },
-        {
-          heading: 'What to Do If You\'ve Already Made a Bad Hire',
-          content: 'Recognizing a bad hire early and acting decisively can minimize the damage. Here\'s what top companies do:',
-          bulletPoints: [
-            'Act Fast: Don\'t wait hoping it will improve—it rarely does',
-            'Document Everything: Protect your company legally',
-            'Provide Clear Feedback: Give them a chance to course-correct',
-            'Set a Deadline: 30-60 days for measurable improvement',
-            'Make the Tough Call: If there\'s no improvement, exit gracefully',
-            'Learn From It: Analyze what went wrong in your process'
-          ],
-          conclusion: 'The average tenure of a bad hire is 6.2 months. Companies that identify and act on bad hires within 90 days save an average of $125,000 per incident.'
-        },
-        {
           heading: 'The Bottom Line',
           content: 'A bad hire doesn\'t just cost money—it costs momentum, morale, and market opportunity. In 2026\'s competitive talent landscape, you literally cannot afford to get hiring wrong. The companies winning the talent war are those that invest in preventing bad hires, not just filling seats quickly.',
           highlight: 'Every dollar spent on better screening saves $100 in bad hire costs.'
@@ -312,9 +154,10 @@ function getRelatedPosts(currentSlug: string) {
   return blogPosts.filter(post => post.slug !== currentSlug).slice(0, 2);
 }
 
-// SEO Metadata
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+// SEO Metadata - FIXED FOR NEXT.JS 15
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   
   if (!post) {
     return {
@@ -342,16 +185,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-
-  const post = getPostBySlug(params.slug);
+// FIXED FOR NEXT.JS 15: params is now a Promise
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = getRelatedPosts(params.slug);
-  const shareUrl = `https://hiriq.com/blog/${post.slug}`;
+  const relatedPosts = getRelatedPosts(slug);
 
   return (
     <div className="min-h-screen bg-white">
@@ -387,17 +230,14 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Article Header Card */}
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-12">
-            {/* Category Badge */}
             <div className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
               {post.category}
             </div>
 
-            {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               {post.title}
             </h1>
 
-            {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 text-slate-600 pb-6 border-b border-slate-200">
               <div className="flex items-center gap-3">
                 <img 
@@ -420,7 +260,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               </div>
             </div>
 
-            {/* Share Buttons */}
             <div className="pt-6 flex items-center gap-4">
               <span className="text-sm font-semibold text-slate-700">Share:</span>
               <div className="flex gap-2">
@@ -442,12 +281,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
           {/* Article Content */}
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
-            {/* Introduction */}
             <p className="text-xl text-slate-700 leading-relaxed mb-12 font-light">
               {post.content.intro}
             </p>
 
-            {/* Sections */}
             {post.content.sections.map((section, idx) => (
               <div key={idx} className="mb-12 last:mb-0">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">
@@ -458,7 +295,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   {section.content}
                 </p>
 
-                {/* Bullet Points */}
                 {section.bulletPoints && (
                   <ul className="space-y-3 mb-6 ml-6">
                     {section.bulletPoints.map((point, i) => (
@@ -470,7 +306,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   </ul>
                 )}
 
-                {/* Stats Grid */}
                 {section.stats && (
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
                     {section.stats.map((stat, i) => (
@@ -486,7 +321,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   </div>
                 )}
 
-                {/* Highlight Box */}
                 {section.highlight && (
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-6 my-6">
                     <p className="text-xl font-semibold text-center">
@@ -495,7 +329,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   </div>
                 )}
 
-                {/* Conclusion */}
                 {section.conclusion && (
                   <p className="text-lg text-slate-700 leading-relaxed mt-6">
                     {section.conclusion}
