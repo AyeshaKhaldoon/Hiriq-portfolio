@@ -181,14 +181,6 @@ export default function BlogPostPage(
   if (!post) {
     notFound();
   }
-
-  const relatedPosts = getRelatedPosts(slug);
-
-  return (
-  );
-}
-
-
   const relatedPosts = getRelatedPosts(slug);
 
   return (
