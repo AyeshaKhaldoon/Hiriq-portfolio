@@ -154,33 +154,24 @@ function getRelatedPosts(currentSlug: string) {
   return blogPosts.filter(post => post.slug !== currentSlug).slice(0, 2);
 }
 
-export async function generateMetadata(
-  { params }: { params: { slug: string } }
-): Promise<Metadata> {
-  const { slug } = params;
-  const post = getPostBySlug(slug);
+// SEO Metadata - FIXED FOR NEXT.JS 15
 
-  if (!post) {
-    return { title: 'Post Not Found' };
-  }
-
-  return {
-    title: `${post.title} | Hiriq Blog`,
-    description: post.excerpt,
-  };
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 
-
-export default function BlogPostPage(
-  { params }: { params: { slug: string } }
-) {
-  const { slug } = params;
+// FIXED FOR NEXT.JS 15: params is now a Promise
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const post = getPostBySlug(slug);
-
+  
   if (!post) {
     notFound();
   }
+
   const relatedPosts = getRelatedPosts(slug);
 
   return (
