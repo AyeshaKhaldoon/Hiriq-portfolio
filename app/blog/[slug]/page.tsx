@@ -156,7 +156,7 @@ function getRelatedPosts(currentSlug: string) {
 
 // SEO Metadata - FIXED FOR NEXT.JS 15
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
