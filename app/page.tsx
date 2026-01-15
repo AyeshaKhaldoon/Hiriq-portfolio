@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'; // Add this import
+import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Zap, Users, CheckCircle, Brain, Calendar, TrendingUp, Shield, CheckSquare, Sparkles, Menu, X, Star } from 'lucide-react';
 
 export default function Home() {

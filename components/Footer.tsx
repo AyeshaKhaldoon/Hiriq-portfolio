@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Linkedin, Twitter, Youtube } from 'lucide-react';
 
 export default function Footer() {
@@ -8,7 +9,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-white font-bold text-xl mb-4">Hiriq</h3>
+            <div className="mb-4">
+              <Image 
+                src="/Logo.png" 
+                alt="Hiriq Logo" 
+                width={100} 
+                height={35}
+                className="object-contain"
+              />
+            </div>
             <p className="text-sm mb-4">
               AI-powered recruitment platform for modern teams. Hire smarter, not harder.
             </p>

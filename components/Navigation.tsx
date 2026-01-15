@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -12,8 +13,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Hiriq
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/Logo.png" 
+              alt="Hiriq Logo" 
+              width={120} 
+              height={40}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

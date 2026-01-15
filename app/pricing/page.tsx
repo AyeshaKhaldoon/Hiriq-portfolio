@@ -19,6 +19,9 @@ const faqs: FAQ[] = [
 const LOCATION_CONFIG = {
   US: { currency: 'USD', symbol: '$', multiplier: 1, name: 'United States' },
   PK: { currency: 'PKR', symbol: 'Rs', multiplier: 280, name: 'Pakistan', discount: 0.6 },
+  IN: { currency: 'INR', symbol: '₹', multiplier: 90.27, name: 'India' },
+  SA: { currency: 'SAR', symbol: 'ر.س', multiplier: 3.75, name: 'Saudi Arabia' },
+  GB: { currency: 'GBP', symbol: '£', multiplier: 0.79, name: 'United Kingdom' },
   QA: { currency: 'QAR', symbol: 'ر.ق', multiplier: 3.64, name: 'Qatar' },
   AE: { currency: 'AED', symbol: 'د.إ', multiplier: 3.67, name: 'UAE' },
   DEFAULT: { currency: 'USD', symbol: '$', multiplier: 1, name: 'International' }
@@ -37,6 +40,12 @@ export default function PricingPage() {
       // Detect location based on timezone
       if (timezone.includes('Karachi') || timezone.includes('Pakistan')) {
         detectedCode = 'PK';
+      } else if (timezone.includes('Kolkata') || timezone.includes('Calcutta') || timezone.includes('India')) {
+        detectedCode = 'IN';
+      } else if (timezone.includes('Riyadh') || timezone.includes('Saudi')) {
+        detectedCode = 'SA';
+      } else if (timezone.includes('London') || timezone.includes('Europe/London')) {
+        detectedCode = 'GB';
       } else if (timezone.includes('Qatar')) {
         detectedCode = 'QA';
       } else if (timezone.includes('Dubai') || timezone.includes('UAE')) {
