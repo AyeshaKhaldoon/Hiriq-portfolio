@@ -154,45 +154,40 @@ function getRelatedPosts(currentSlug: string) {
   return blogPosts.filter(post => post.slug !== currentSlug).slice(0, 2);
 }
 
-// SEO Metadata - FIXED FOR NEXT.JS 15
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
+  const { slug } = params;
   const post = getPostBySlug(slug);
-  
+
   if (!post) {
-    return {
-      title: 'Post Not Found',
-    };
+    return { title: 'Post Not Found' };
   }
 
   return {
     title: `${post.title} | Hiriq Blog`,
     description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
-      type: 'article',
-      publishedTime: post.date,
-      authors: [post.author.name],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
-    },
   };
 }
 
-// FIXED FOR NEXT.JS 15: params is now a Promise
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+
+
+export default function BlogPostPage(
+  { params }: { params: { slug: string } }
+) {
+  const { slug } = params;
   const post = getPostBySlug(slug);
-  
+
   if (!post) {
     notFound();
   }
+
+  const relatedPosts = getRelatedPosts(slug);
+
+  return (
+  );
+}
+
 
   const relatedPosts = getRelatedPosts(slug);
 
