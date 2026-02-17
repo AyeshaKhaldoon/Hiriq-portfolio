@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 const LOCATION_CONFIG = {
-  US: { currency: 'USD', symbol: '$', multiplier: 1, name: 'United States' },
+  US: { currency: 'USD', symbol: '$', multiplier: 1.67, name: 'United States', discount: 0.6 },
   PK: { currency: 'PKR', symbol: 'Rs', multiplier: 280, name: 'Pakistan', discount: 0.6 },
-  QA: { currency: 'QAR', symbol: 'ر.ق', multiplier: 3.64, name: 'Qatar' },
-  AE: { currency: 'AED', symbol: 'د.إ', multiplier: 3.67, name: 'UAE' },
-  DEFAULT: { currency: 'USD', symbol: '$', multiplier: 1, name: 'International' }
+  QA: { currency: 'QAR', symbol: 'ر.ق', multiplier: 6.07, name: 'Qatar', discount: 0.6 },
+  AE: { currency: 'AED', symbol: 'د.إ', multiplier: 6.12, name: 'UAE', discount: 0.6 },
+  DEFAULT: { currency: 'USD', symbol: '$', multiplier: 1.67, name: 'International', discount: 0.6 }
 };
 
 export function useLocationPricing() {

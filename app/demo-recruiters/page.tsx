@@ -25,8 +25,7 @@ export default function DemoRecruiters() {
                             Hiriq
                         </Link>
                         <div className="hidden md:flex items-center space-x-8">
-                            <Link href="/for-recruiters" className="text-slate-700 hover:text-blue-600 transition">For Recruiters</Link>
-                            <Link href="/for-candidates" className="text-slate-700 hover:text-blue-600 transition">For Candidates</Link>
+                            <Link href="/hiring-platform" className="text-slate-700 hover:text-blue-600 transition">Hiring Platform</Link>
                             <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">Pricing</Link>
                             <Link href="/demo-recruiters" className="text-blue-600 font-semibold">Demo</Link>
                             <a
@@ -78,10 +77,6 @@ export default function DemoRecruiters() {
                             </div>
 
                             <div className="flex items-center gap-6 text-sm text-slate-600">
-                                <div className="flex items-center">
-                                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                                    No credit card required
-                                </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                                     Setup in minutes
@@ -473,20 +468,20 @@ export default function DemoRecruiters() {
                         Ready to Transform Your Hiring?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8">
-                        Start your 14-day free trial today. No credit card required.
+                        Start your 14-day free trial today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
                             Start Your Free Trial
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </button>
-                        <Link href="/for-recruiters">
+                        <Link href="/hiring-platform">
                             <button className="px-12 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition text-lg">
                                 View Full Details
                             </button>
                         </Link>
                     </div>
-                    <p className="text-blue-100 mt-6">No credit card required • Setup in 5 minutes</p>
+                    <p className="text-blue-100 mt-6">• Setup in 5 minutes</p>
                 </div>
             </section>
         </div>

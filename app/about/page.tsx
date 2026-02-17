@@ -1,245 +1,298 @@
 import Link from 'next/link';
-import { Target, Users, Zap, Heart, ArrowRight } from 'lucide-react';
+import { Target, Users, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function About() {
-  const values = [
+  const principles = [
     {
       icon: Target,
-      title: 'Customer First',
+      title: 'Precision-Driven',
       description:
-        'We solve real hiring problems with practical solutions, not features for the sake of features.'
+        'Every feature is engineered to solve real recruitment bottlenecks with measurable impact.'
     },
     {
-      icon: Zap,
-      title: 'Move Fast',
+      icon: Shield,
+      title: 'Enterprise-Grade',
       description:
-        'Hiring is time-sensitive. We iterate quickly and continuously improve based on feedback.'
+        'Built on robust infrastructure with security, scalability, and reliability at the core.'
     },
     {
       icon: Users,
-      title: 'Inclusive by Design',
+      title: 'Bias Reduction',
       description:
-        'Structured interviews and consistent evaluation help reduce bias and noise.'
+        'Structured evaluation frameworks ensure consistent, objective candidate assessment.'
     },
     {
-      icon: Heart,
-      title: 'Human-Centered AI',
+      icon: Sparkles,
+      title: 'Intelligence Layer',
       description:
-        'AI should support better decisions, not replace human judgment.'
+        'AI augments human expertise rather than replacing the critical judgment of hiring teams.'
     }
   ];
 
-  const teamMembers = [
+  const milestones = [
     {
-      name: 'Ayesha Khaldoon',
-      role: 'Co-Founder — Product & Growth',
-      bio: 'Focused on product vision, user experience, and building solutions that solve real hiring problems.',
-      img: '/7.jpeg'
+      phase: 'The Challenge',
+      title: 'Identifying the Inefficiency',
+      description:
+        'Modern recruitment technology has barely evolved. Teams still drown in unstructured resumes while exceptional candidates slip through manual screening processes. The problem was not talent scarcity—it was systemic inefficiency in early-stage evaluation.'
     },
     {
-      name: 'Muhammad Ahmad',
-      role: 'Co-Founder — Engineering',
-      bio: 'Leads engineering and system architecture, turning ideas into scalable, reliable technology.',
-      img: '/8.jpg',
-      scale: 'scale-90' // zoomed out image slightly
+      phase: 'The Vision',
+      title: 'Reimagining Recruitment Infrastructure',
+      description:
+        'We recognized that AI could fundamentally transform how companies identify and evaluate talent. Not through automation for automation\'s sake, but by creating structured, intelligent systems that enhance human decision-making at scale.'
+    },
+    {
+      phase: 'The Solution',
+      title: 'Building Hiriq Platform',
+      description:
+        'Hiriq emerged as a comprehensive recruitment intelligence platform—combining automated screening, role-specific interview generation, and consistent evaluation frameworks. Our technology enables teams to make faster, fairer, and more data-driven hiring decisions.'
+    },
+    {
+      phase: 'The Impact',
+      title: 'Democratizing Enterprise Tools',
+      description:
+        'What was once accessible only to Fortune 500 companies with dedicated recruitment technology budgets is now available to growing teams. We are building the recruitment infrastructure that scales with your organization.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link
-              href="/"
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent"
-            >
-              Hiriq
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/for-recruiters" className="text-slate-700 hover:text-blue-600 transition">
-                For Recruiters
-              </Link>
-              <Link href="/for-candidates" className="text-slate-700 hover:text-blue-600 transition">
-                For Candidates
-              </Link>
-              <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">
-                Pricing
-              </Link>
-              <Link href="/blog" className="text-slate-700 hover:text-blue-600 transition">
-                Blog
-              </Link>
-              <a
-                href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition"
-              >
-                Contact for Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-slate-900 mb-6">
-            We Are Building the Future of Recruitment
+      {/* Hero Section - More Editorial */}
+      <section className="relative pt-40 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/5 to-transparent"></div>
+        
+        <div className="relative max-w-6xl mx-auto">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-semibold text-blue-600 tracking-wider uppercase px-4 py-2 bg-blue-50 rounded-full">
+              About Hiriq
+            </span>
+          </div>
+          <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight max-w-4xl">
+            Intelligent Recruitment Infrastructure for Modern Teams
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Hiring today is slow, manual, and inefficient. Companies waste time screening,
-            while great candidates get overlooked. Hiriq is rethinking this process with AI —
-            making hiring faster, fairer, and more structured.
+          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl font-light">
+            A comprehensive platform that transforms how organizations discover, evaluate, and hire talent—combining AI-powered automation with structured decision frameworks.
           </p>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+    
+
+      {/* Mission Statement */}
+      <section className="py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-20">
+            <h2 className="text-lg font-semibold text-blue-600 mb-4 tracking-wide uppercase">
+              Our Mission
+            </h2>
+            <p className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-8">
+              Democratizing enterprise-grade recruitment technology for teams of all sizes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                We believe every team — not just large enterprises — should have access to
-                powerful, intelligent hiring tools. Our mission is to democratize AI-powered
-                recruitment and remove friction from the earliest stages of hiring.
+              <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                The recruitment landscape is fragmented. Large enterprises invest millions in proprietary systems while growing companies struggle with manual processes that do not scale.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                By automating repetitive screening and enabling role-specific interviews,
-                we help teams focus on what actually matters: making better hiring decisions.
+              <p className="text-lg text-slate-700 leading-relaxed">
+                Hiriq bridges this gap by delivering sophisticated recruitment infrastructure that is accessible, scalable, and designed for the modern hiring environment.
               </p>
             </div>
-
-            {/* Metrics Card */}
-            <div className="bg-gradient-to-br from-blue-600 via-cyan-600 to-sky-600 rounded-2xl p-12 text-white shadow-xl hover:shadow-2xl transition">
-              <div className="space-y-8">
-                <div>
-                  <div className="text-5xl font-bold mb-2">Up to 5×</div>
-                  <div className="text-blue-100">Faster Candidate Screening</div>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold mb-2">&lt; 5 min</div>
-                  <div className="text-blue-100">Role Setup</div>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold mb-2">AI-Generated</div>
-                  <div className="text-blue-100">Customized Interviews per Role</div>
-                </div>
-              </div>
+            <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-10 text-white">
+              <h3 className="text-2xl font-bold mb-6">What We Believe</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                  <span>Every organization deserves access to intelligent hiring tools</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                  <span>Structured processes reduce bias and improve outcomes</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                  <span>AI amplifies human judgment, not replaces it</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                  <span>Speed and quality are not mutually exclusive</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Values</h2>
-            <p className="text-xl text-slate-600">The principles that guide how we build and grow</p>
+      {/* Platform Principles */}
+      <section className="py-32 bg-slate-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-lg font-semibold text-blue-600 mb-4 tracking-wide uppercase">
+              Platform Principles
+            </h2>
+            <p className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight max-w-3xl mx-auto">
+              Built on a foundation of reliability, intelligence, and scalability
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, i) => (
+            {principles.map((principle, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1"
+                className="bg-white p-8 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                  <principle.icon className="w-7 h-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
-                <p className="text-slate-600">{value.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{principle.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-slate-900 mb-8">Our Story</h2>
+      {/* Journey/Story Timeline */}
+      <section className="py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-lg font-semibold text-blue-600 mb-4 tracking-wide uppercase">
+              The Journey
+            </h2>
+            <p className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+              How Hiriq came to be
+            </p>
+          </div>
 
-          <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
-            Hiriq started with a simple question: why is hiring still so slow and manual
-            in a world where everything else has been automated?
-          </p>
-
-          <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
-            We noticed recruiters overwhelmed by resumes and candidates struggling to
-            get fair visibility. The issue wasn’t talent — it was how early screening
-            decisions were being made.
-          </p>
-
-          <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
-            Instead of accepting broken workflows, we began building a better system —
-            one where screening is structured, interviews are role-specific, and every
-            candidate is evaluated consistently.
-          </p>
-
-          <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
-            We’re early in our journey, but our goal is clear: build reliable hiring
-            infrastructure that helps teams move faster without compromising quality.
-          </p>
+          <div className="space-y-16">
+            {milestones.map((milestone, i) => (
+              <div key={i} className="relative pl-12 border-l-2 border-blue-200">
+                <div className="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-md"></div>
+                
+                <div className="mb-3">
+                  <span className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                    {milestone.phase}
+                  </span>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  {milestone.title}
+                </h3>
+                
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  {milestone.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Meet the Team</h2>
-            <p className="text-xl text-slate-600">The people building Hiriq</p>
-          </div>
+      {/* Technology & Development */}
+      <section className="py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {teamMembers.map((member, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 text-center"
-              >
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className={`w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-600 ${member.scale || ''}`}
-                />
-                <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
-                <div className="text-blue-600 font-semibold mb-3">{member.role}</div>
-                <p className="text-slate-600">{member.bio}</p>
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-lg font-semibold text-blue-400 mb-4 tracking-wide uppercase">
+                Developed By
+              </h2>
+              <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Smark Technologies
+              </h3>
+              <p className="text-xl text-slate-300 leading-relaxed mb-6">
+                Smark Technologies is a technology company specializing in enterprise software solutions and intelligent automation.
+              </p>
+              <p className="text-lg text-slate-400 leading-relaxed mb-8">
+                Our engineering team brings decades of combined experience in building scalable SaaS platforms, machine learning systems, and mission-critical business applications.
+              </p>
+              <div className="flex items-center space-x-3">
+                <TrendingUp className="w-6 h-6 text-blue-400" />
+                <span className="text-slate-300 font-semibold">Continuous innovation and platform evolution</span>
               </div>
-            ))}
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h4 className="text-2xl font-bold mb-6 text-white">Technical Excellence</h4>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-white mb-1">Enterprise Architecture</div>
+                    <div className="text-slate-400 text-sm">Scalable, secure, and performant infrastructure</div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-white mb-1">AI/ML Capabilities</div>
+                    <div className="text-slate-400 text-sm">Advanced natural language processing and pattern recognition</div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-white mb-1">Data Security</div>
+                    <div className="text-slate-400 text-sm">Industry-standard compliance and encryption protocols</div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-white mb-1">API-First Design</div>
+                    <div className="text-slate-400 text-sm">Seamless integrations with existing HR technology stacks</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Join Us on This Journey
+      <section className="py-32 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Transform Your Hiring Process
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            We’re building the future of hiring and would love to hear from recruiters,
-            founders, and early partners.
+          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+            Join forward-thinking organizations that are building better teams with intelligent recruitment infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center">
-                Get in Touch
+              <button className="px-10 py-5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-2xl transition-all text-lg inline-flex items-center justify-center transform hover:-translate-y-1">
+                Schedule a Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </Link>
             <Link href="/pricing">
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition text-lg">
-                Start Free Trial
+              <button className="px-10 py-5 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all text-lg transform hover:-translate-y-1">
+                View Pricing
               </button>
             </Link>
           </div>
+          <p className="mt-8 text-blue-100 text-sm">
+          Free 14-day trial • Full platform access
+          </p>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

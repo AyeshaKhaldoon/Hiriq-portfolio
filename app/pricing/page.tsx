@@ -1,5 +1,7 @@
 "use client";
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -17,14 +19,14 @@ const faqs: FAQ[] = [
 ];
 
 const LOCATION_CONFIG = {
-  US: { currency: 'USD', symbol: '$', multiplier: 1, name: 'United States' },
+  US: { currency: 'USD', symbol: '$', multiplier: 1.67, name: 'United States', discount: 0.6 },
   PK: { currency: 'PKR', symbol: 'Rs', multiplier: 280, name: 'Pakistan', discount: 0.6 },
-  IN: { currency: 'INR', symbol: '₹', multiplier: 90.27, name: 'India' },
-  SA: { currency: 'SAR', symbol: 'ر.س', multiplier: 3.75, name: 'Saudi Arabia' },
-  GB: { currency: 'GBP', symbol: '£', multiplier: 0.79, name: 'United Kingdom' },
-  QA: { currency: 'QAR', symbol: 'ر.ق', multiplier: 3.64, name: 'Qatar' },
-  AE: { currency: 'AED', symbol: 'د.إ', multiplier: 3.67, name: 'UAE' },
-  DEFAULT: { currency: 'USD', symbol: '$', multiplier: 1, name: 'International' }
+  IN: { currency: 'INR', symbol: '₹', multiplier: 150.45, name: 'India', discount: 0.6 },
+  SA: { currency: 'SAR', symbol: 'ر.س', multiplier: 6.25, name: 'Saudi Arabia', discount: 0.6 },
+  GB: { currency: 'GBP', symbol: '£', multiplier: 1.32, name: 'United Kingdom', discount: 0.6 },
+  QA: { currency: 'QAR', symbol: 'ر.ق', multiplier: 6.07, name: 'Qatar', discount: 0.6 },
+  AE: { currency: 'AED', symbol: 'د.إ', multiplier: 6.12, name: 'UAE', discount: 0.6 },
+  DEFAULT: { currency: 'USD', symbol: '$', multiplier: 1.67, name: 'International', discount: 0.6 }
 };
 
 export default function PricingPage() {
@@ -151,26 +153,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
-              Hiriq
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/for-recruiters" className="text-slate-700 hover:text-blue-600 transition">For Recruiters</Link>
-              <Link href="/for-candidates" className="text-slate-700 hover:text-blue-600 transition">For Candidates</Link>
-              <Link href="/pricing" className="text-blue-600 font-semibold">Pricing</Link>
-              <a
-                href="mailto:contact@hiriq.co?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition"
-              >
-                Contact for Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
@@ -216,7 +199,7 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Basic ATS */}
             <div className="bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300 hover:shadow-xl">
               <div className="text-center mb-6">
@@ -474,6 +457,75 @@ export default function PricingPage() {
                 Start Free Trial
               </a>
             </div>
+
+            {/* Enterprise Plan */}
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 text-white relative hover:shadow-2xl transition-all duration-300 border-2 border-slate-700">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="px-4 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full text-sm font-bold shadow-lg">
+                  ⭐ ENTERPRISE
+                </span>
+              </div>
+
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+                <p className="text-slate-300">For large organizations</p>
+              </div>
+
+              <div className="mb-6 text-center">
+                <div className="text-3xl font-bold mb-2">Custom Pricing</div>
+                <p className="text-sm text-slate-400">Tailored to your needs</p>
+              </div>
+
+              <div className="mb-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                <p className="text-sm text-slate-200 leading-relaxed">
+                  Designed for large organizations with complex hiring needs, advanced workflows, and high hiring volumes.
+                </p>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                {[
+                  'Everything in Smart, plus:',
+                  'Automated pre-screening workflows',
+                  'Knockout questions for candidate filtering',
+                  'Intelligent auto-shortlisting',
+                  'Hiring status automation',
+                  'Priority support and onboarding',
+                  'Advanced workflow customization',
+                  'Scalable team access for large hiring teams',
+                  'Enterprise-grade reliability and performance'
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3 flex-shrink-0 mt-0.5" />
+                    <span className={`text-sm ${i === 0 ? 'font-semibold' : 'text-slate-300'}`}>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mb-6 p-4 bg-amber-500/10 backdrop-blur-sm rounded-xl border border-amber-500/30">
+                <div className="text-sm font-bold mb-2 text-amber-400">Ideal For:</div>
+                <ul className="text-xs text-slate-300 space-y-1">
+                  <li>• Large companies</li>
+                  <li>• Enterprises with ongoing or high-volume hiring</li>
+                  <li>• Organizations requiring structured, automated recruitment processes</li>
+                  <li>• Teams that need scalability, control, and advanced hiring intelligence</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <a
+                  href="mailto:contact@hiriq.co?subject=Enterprise%20Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20Enterprise%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%E2%80%A2%20Expected%20Hiring%20Volume%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
+                  className="block w-full py-3 text-center bg-white text-slate-900 rounded-lg font-semibold hover:bg-slate-100 transition-all shadow-lg"
+                >
+                  Request a Demo
+                </a>
+                <a
+                  href="mailto:contact@hiriq.co?subject=Enterprise%20Sales%20Inquiry%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Sales%20Team%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20Enterprise%20plan.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%E2%80%A2%20Expected%20Hiring%20Volume%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Email%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%0AQuestions%2FRequirements%3A%0A%0A%0ABest%20regards"
+                  className="block w-full py-3 text-center border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all"
+                >
+                  Contact Sales
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -514,7 +566,7 @@ export default function PricingPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Hiring?</h2>
-          <p className="text-xl text-blue-100 mb-8">Start your 14-day free trial today. No credit card required.</p>
+          <p className="text-xl text-blue-100 mb-8">Start your 14-day free trial today.</p>
           <a
             href="https://app.hiriq.co"
             target="_blank"
@@ -529,6 +581,9 @@ export default function PricingPage() {
           </p>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

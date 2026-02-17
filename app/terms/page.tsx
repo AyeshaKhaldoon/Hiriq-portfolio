@@ -1,26 +1,12 @@
 // FILE: src/app/terms/page.tsx
 import Link from 'next/link';
 import { Shield, Lock, Eye } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
-              Hiriq
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/for-recruiters" className="text-slate-700 hover:text-blue-600 transition">For Recruiters</Link>
-              <Link href="/for-candidates" className="text-slate-700 hover:text-blue-600 transition">For Candidates</Link>
-              <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">Pricing</Link>
-              <Link href="/blog" className="text-slate-700 hover:text-blue-600 transition">Blog</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Content */}
       <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -171,7 +157,7 @@ export default function Terms() {
 
               <h3 className="text-xl font-bold text-slate-900 mb-3">Free Trial</h3>
               <p className="text-slate-600 mb-4">
-                Hiriq offers a 14-day free trial for new users. No credit card required during trial. At the end of your trial:
+                Hiriq offers a 14-day free trial for new users. At the end of your trial:
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
                 <li>You will not be automatically charged</li>

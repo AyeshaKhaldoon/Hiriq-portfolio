@@ -1,107 +1,106 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight, Zap, Users, CheckCircle, Brain, Calendar, TrendingUp, Shield, CheckSquare, Sparkles, Menu, X, Star } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import { ArrowRight, Zap, Users, CheckCircle, Brain, Calendar, TrendingUp, Shield, CheckSquare, Sparkles, Star, Target, Volume2, VolumeX } from 'lucide-react';
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const playerRef = useRef<any>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    // Load Vimeo Player API
+    const script = document.createElement('script');
+    script.src = 'https://player.vimeo.com/api/player.js';
+    script.async = true;
+    
+    script.onload = () => {
+      // @ts-ignore
+      const Player = window.Vimeo?.Player;
+      if (Player) {
+        const iframe = document.getElementById('vimeo-player');
+        if (iframe) {
+          playerRef.current = new Player(iframe);
+          playerRef.current.setVolume(0); // Start muted
+        }
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    document.body.appendChild(script);
+    
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
   }, []);
+
+  const toggleMute = () => {
+    if (playerRef.current) {
+      if (isMuted) {
+        playerRef.current.setVolume(1);
+      } else {
+        playerRef.current.setVolume(0);
+      }
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/40 to-cyan-400/40 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-24 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-cyan-400/40 to-sky-400/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-sky-400/30 to-blue-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
-
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-xl border-b border-cyan-200/50 shadow-lg shadow-cyan-500/5' : 'bg-white/80 backdrop-blur-md'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex items-center group cursor-pointer">
-              <div className="relative">
-                <Sparkles className="w-7 h-7 text-cyan-500 absolute -top-1 -left-1 animate-pulse" />
-                <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent ml-6">
-                  Hiriq
-                </span>
-              </div>
-            </Link>
+      <Navigation />
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/for-recruiters" className="text-slate-700 hover:text-cyan-600 transition-colors duration-200 font-medium">
-                For Recruiters
-              </Link>
-              <Link href="/for-candidates" className="text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                For Candidates
-              </Link>
-              <Link href="/pricing" className="text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                Pricing
-              </Link>
-              <Link href="/blog" className="text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                Blog
-              </Link>
-              <a
-                href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact for Demo
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-slate-800"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+      {/* Video Hero Section - Full Screen Below Header */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Vimeo Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <div style={{position: 'relative', width: '100%', height: '100%'}}>
+            <iframe 
+              id="vimeo-player"
+              src="https://player.vimeo.com/video/1165777395?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&badge=0&autopause=0&controls=0&player_id=0&app_id=58479" 
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+                  style={{
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      width: '100vw',
+      height: '56.25vw',
+      minHeight: '100vh',
+      minWidth: '177.78vh',
+      transform: 'translate(-50%, -50%)'
+    }} 
+              title="slideshow"
+            />
           </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden pb-6 space-y-4">
-              <Link href="/for-recruiters" className="block text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                For Recruiters
-              </Link>
-              <Link href="/for-candidates" className="block text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                For Candidates
-              </Link>
-              <Link href="/pricing" className="block text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                Pricing
-              </Link>
-              <Link href="/blog" className="block text-slate-700 hover:text-purple-600 transition-colors duration-200 font-medium">
-                Blog
-              </Link>
-              <a
-                href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
-                className="block w-full px-6 py-3 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-xl font-semibold text-center"
-              >
-                Contact for Demo
-              </a>
-            </div>
-          )}
+          
+          {/* Unmute Button */}
+          <button
+            onClick={toggleMute}
+            className="absolute bottom-8 right-8 z-20 p-4 bg-white/90 backdrop-blur-md border-2 border-cyan-300 rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all duration-300 group"
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            {isMuted ? (
+              <VolumeX className="w-6 h-6 text-slate-700 group-hover:text-cyan-600 transition-colors" />
+            ) : (
+              <Volume2 className="w-6 h-6 text-cyan-600 group-hover:text-cyan-700 transition-colors" />
+            )}
+          </button>
+          {/* Subtle overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/30"></div>
         </div>
-      </nav>
+      </section>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 z-10">
+      {/* Hero Content Section - Below Slider */}
+      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-100 via-cyan-100 to-sky-100 border border-cyan-200 rounded-full mb-8 backdrop-blur-sm shadow-lg">
+            <div className="inline-flex items-center px-5 py-2 bg-white/90 backdrop-blur-md border border-cyan-200 rounded-full mb-8 shadow-lg">
               <Zap className="w-4 h-4 text-cyan-600 mr-2 animate-pulse" />
-              <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">AI-Powered Recruitment Platform</span>
+              <span className="text-sm font-semibold text-slate-800">AI-Powered Recruitment Platform</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
@@ -111,49 +110,28 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-700 mb-12 leading-relaxed">
               From automated candidate screening to AI-driven pre-screening calls,
               <br className="hidden md:block" />
               Hiriq transforms your recruitment process with intelligent automation.
             </p>
 
-            {/* Dual CTA Cards with Enhanced Design */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
-              {/* Recruiter Card */}
+            {/* CTA Card - Hiring Platform */}
+            <div className="max-w-2xl mx-auto">
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <Link href="/for-recruiters" className="block">
-                  <div className="relative bg-white/90 backdrop-blur-xl p-8 rounded-2xl border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
-                      <Users className="w-8 h-8 text-white" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <Link href="/hiring-platform" className="block">
+                  <div className="relative bg-white/95 backdrop-blur-xl p-10 rounded-2xl border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl">
+                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                      <Users className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3">For Recruiters</h3>
-                    <p className="text-slate-600 mb-6 leading-relaxed">
-                      Smart ATS with AI-powered screening, automated pre-screening calls, and intelligent candidate matching.
+                    <h3 className="text-3xl font-bold text-slate-900 mb-4 text-center">Hiring Platform</h3>
+                    <p className="text-slate-600 mb-6 leading-relaxed text-center text-lg">
+                      Enterprise-grade ATS with AI-powered screening, automated pre-screening calls, and intelligent candidate matching for modern recruitment teams.
                     </p>
-                    <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
-                      Explore Recruiting Solutions
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </div>
-                  </div>
-                </Link>
-              </div>
-
-              {/* Candidate Card */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-sky-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <Link href="/for-candidates" className="block">
-                  <div className="relative bg-white/90 backdrop-blur-xl p-8 rounded-2xl border-2 border-cyan-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
-                      <Brain className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3">For Candidates</h3>
-                    <p className="text-slate-600 mb-6 leading-relaxed">
-                      AI-powered mock interviews and practice sessions to ace your next technical or behavioral interview.
-                    </p>
-                    <div className="flex items-center text-cyan-600 font-semibold group-hover:translate-x-2 transition-transform">
-                      Prepare for Interviews
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                    <div className="flex items-center justify-center text-blue-600 font-semibold text-lg group-hover:translate-x-2 transition-transform">
+                      Explore Our Platform
+                      <ArrowRight className="w-6 h-6 ml-2" />
                     </div>
                   </div>
                 </Link>
@@ -242,9 +220,9 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: CheckCircle,
-                title: 'Smart Resume Parsing',
-                description: 'Automatically extract and structure candidate information from resumes with 99% accuracy.',
+                icon: Sparkles,
+                title: 'Automated Job Distribution',
+                description: 'Create jobs and instantly generate branded resume upload pages. Share LinkedIn-ready posts and automatically collect resumes into your ATS.',
                 gradient: 'from-blue-500 to-cyan-500',
                 border: 'border-blue-200',
                 hoverBorder: 'hover:border-cyan-400'
@@ -252,7 +230,7 @@ export default function Home() {
               {
                 icon: Brain,
                 title: 'AI Criteria Matching',
-                description: 'Intelligent algorithms match candidates to job requirements, surfacing the best fits instantly.',
+                description: 'Intelligent algorithms match candidates to job requirements, surfacing the best fits instantly with advanced scoring.',
                 gradient: 'from-cyan-500 to-sky-500',
                 border: 'border-cyan-200',
                 hoverBorder: 'hover:border-cyan-400'
@@ -260,23 +238,23 @@ export default function Home() {
               {
                 icon: Calendar,
                 title: 'Automated Pre-Screening',
-                description: 'AI conducts initial screening calls on your behalf. No scheduling conflicts, available 24/7.',
+                description: 'AI conducts initial screening calls on your behalf. No scheduling conflicts, available 24/7 with detailed transcripts.',
                 gradient: 'from-green-500 to-emerald-500',
                 border: 'border-green-200',
                 hoverBorder: 'hover:border-green-400'
               },
               {
-                icon: TrendingUp,
-                title: 'Analytics Dashboard',
-                description: 'Track hiring metrics, pipeline health, and team performance in real-time.',
-                gradient: 'from-orange-500 to-red-500',
-                border: 'border-orange-200',
-                hoverBorder: 'hover:border-orange-400'
+                icon: Target,
+                title: 'Multi-Industry Hiring',
+                description: 'Hire across technology, healthcare, logistics, sales, finance, marketing, insurance, and management roles with tailored workflows.',
+                gradient: 'from-purple-500 to-pink-500',
+                border: 'border-purple-200',
+                hoverBorder: 'hover:border-purple-400'
               },
               {
                 icon: Zap,
                 title: 'Instant Shortlisting',
-                description: 'Reduce time-to-hire by 60% with automated candidate ranking and recommendations.',
+                description: 'Reduce time-to-hire by 60% with automated candidate ranking, knockout questions, and intelligent recommendations.',
                 gradient: 'from-yellow-500 to-orange-500',
                 border: 'border-yellow-200',
                 hoverBorder: 'hover:border-yellow-400'
@@ -326,8 +304,16 @@ export default function Home() {
             }
           }
           .animate-scroll {
-            animation: scroll 40s linear infinite;
+            animation: scroll 30s linear infinite;
           }
+          
+          /* Mobile: faster scrolling */
+          @media (max-width: 768px) {
+            .animate-scroll {
+              animation: scroll 20s linear infinite;
+            }
+          }
+          
           .testimonial-track:hover .animate-scroll {
             animation-play-state: paused;
           }
@@ -465,7 +451,7 @@ export default function Home() {
             Ready to Transform Your Hiring Process?
           </h2>
           <p className="text-xl text-slate-600 mb-10">
-            Start your 14-day free trial. No credit card required.
+            Start your 14-day free trial.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -489,51 +475,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      {/* Footer */}
-      <footer className="relative bg-gradient-to-r from-blue-900 via-cyan-900 to-sky-900 text-white py-16 z-10 shadow-inner">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="flex items-center mb-4">
-                <Sparkles className="w-6 h-6 text-cyan-400 mr-2 animate-pulse" />
-                <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-sky-400">
-                  Hiriq
-                </h3>
-              </div>
-              <p className="text-gray-300 text-sm">
-                AI-powered recruitment platform for modern teams.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4 text-white">Product</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><Link href="/for-recruiters" className="hover:text-cyan-400 transition-colors">For Recruiters</Link></li>
-                <li><Link href="/for-candidates" className="hover:text-yellow-400 transition-colors">For Candidates</Link></li>
-                <li><Link href="/pricing" className="hover:text-yellow-400 transition-colors">Pricing</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4 text-white">Resources</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><Link href="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link></li>
-
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4 text-white">Company</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><Link href="/about" className="hover:text-yellow-400 transition-colors">About</Link></li>
-                <li><Link href="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-yellow-400 transition-colors">Privacy Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-cyan-600 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2026 Hiriq. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      {/* Footer with Social Icons */}
+      <Footer showSocialIcons={true} />
 
     </div>
   );

@@ -1,26 +1,12 @@
 // FILE: src/app/privacy/page.tsx
 import Link from 'next/link';
 import { Shield, Lock, Eye, Database, UserCheck, FileCheck } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
-              Hiriq
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/for-recruiters" className="text-slate-700 hover:text-blue-600 transition">For Recruiters</Link>
-              <Link href="/for-candidates" className="text-slate-700 hover:text-blue-600 transition">For Candidates</Link>
-              <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">Pricing</Link>
-              <Link href="/blog" className="text-slate-700 hover:text-blue-600 transition">Blog</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Content */}
       <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
