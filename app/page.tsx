@@ -20,6 +20,16 @@ export default function Home() {
   const [isMuted, setIsMuted] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const playerRef = useRef<{ setVolume: (n: number) => void } | null>(null);
+  const iframeLoadedRef = useRef(false);
+  const minTimeDoneRef = useRef(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      minTimeDoneRef.current = true;
+      if (iframeLoadedRef.current) setVideoLoaded(true);
+    }, 2800);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     let script: HTMLScriptElement | null = null;
@@ -127,7 +137,10 @@ export default function Home() {
                   className="absolute inset-0 w-full h-full"
                   allow="autoplay; fullscreen; muted"
                   title="Hiriq platform demo"
-                  onLoad={() => setVideoLoaded(true)}
+                  onLoad={() => {
+                    iframeLoadedRef.current = true;
+                    if (minTimeDoneRef.current) setVideoLoaded(true);
+                  }}
                 />
                 <button
                   type="button"
