@@ -285,7 +285,7 @@ export default function IndustriesPage() {
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
-                {ind.name.split(' ')[0]}
+                {ind.name.split(/[\s,]+/)[0]}
               </button>
             ))}
           </div>
