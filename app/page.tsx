@@ -132,7 +132,7 @@ export default function Home() {
                 />
                 <iframe
                   id="vimeo-player"
-                  src="https://player.vimeo.com/video/1165777395?autoplay=1&loop=1&muted=1&byline=0&title=0&autopause=0&controls=0"
+                  src="https://player.vimeo.com/video/1179662121?autoplay=1&loop=1&muted=1&byline=0&title=0&autopause=0&controls=0"
                   frameBorder="0"
                   className="absolute inset-0 w-full h-full"
                   allow="autoplay; fullscreen; muted"
