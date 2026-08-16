@@ -1,0 +1,5 @@
+{
+  "/hiring-platform/page": "app/hiring-platform/page.js",
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js"
+}
