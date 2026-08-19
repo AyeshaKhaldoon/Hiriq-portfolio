@@ -53,6 +53,7 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
               <li><Link href="/hiring-platform" className="hover:text-cyan-400 transition-colors">Hiring Platform</Link></li>
               <li><Link href="/solutions" className="hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
               <li><Link href="/solutions/ai-ats" className="hover:text-cyan-400 transition-colors">AI ATS</Link></li>
+              <li><Link href="/solutions/candidate-screening-software" className="hover:text-cyan-400 transition-colors">Candidate Screening</Link></li>
               <li><Link href="/solutions/ai-resume-screening" className="hover:text-cyan-400 transition-colors">Resume Screening</Link></li>
               <li><Link href="/industries" className="hover:text-cyan-400 transition-colors">Industries</Link></li>
               <li><Link href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link></li>
@@ -64,6 +65,7 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
               <li><Link href="/blog" className="hover:text-cyan-400 transition-colors">Blog</Link></li>
               <li><Link href="/solutions/ai-recruiting-software" className="hover:text-cyan-400 transition-colors">AI Recruiting Software</Link></li>
               <li><Link href="/solutions/ai-interview-platform" className="hover:text-cyan-400 transition-colors">AI Interview Platform</Link></li>
+              <li><Link href="/solutions/recruiting-automation-software" className="hover:text-cyan-400 transition-colors">Recruiting Automation</Link></li>
               <li><Link href="/solutions/middle-east-ai-hiring" className="hover:text-cyan-400 transition-colors">Middle East Hiring</Link></li>
               <li><Link href="/solutions/usa-uk-ai-hiring" className="hover:text-cyan-400 transition-colors">USA and UK Hiring</Link></li>
             </ul>

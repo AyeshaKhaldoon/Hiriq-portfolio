@@ -223,6 +223,110 @@ export const solutions: Solution[] = [
     ],
   },
   {
+    slug: 'candidate-screening-software',
+    shortTitle: 'Candidate Screening Software',
+    title: 'Candidate screening software for faster, evidence-backed shortlists',
+    metaTitle: 'Candidate Screening Software for Recruiters | Hiriq',
+    metaDescription:
+      'Hiriq candidate screening software helps recruiters qualify applicants with resume screening, automated pre-screening, AI interviews, and structured shortlist evidence.',
+    eyebrow: 'Candidate screening software',
+    lead:
+      'Hiriq helps hiring teams turn applicant volume into a cleaner shortlist by combining resume review, qualification criteria, and automated pre-screening in one workflow.',
+    market: 'A practical fit for high-volume recruiting, staffing teams, startups, and companies hiring across the USA, UK, Middle East, and remote markets.',
+    primaryKeyword: 'candidate screening software',
+    searchTerms: [
+      'candidate screening software',
+      'candidate screening tools',
+      'resume screening',
+      'recruiting automation software',
+      'AI candidate screening',
+    ],
+    problems: [
+      'Recruiters spend too much time reviewing applicants who do not meet basic role criteria.',
+      'Manual screening creates inconsistent notes and makes it harder to compare candidates fairly.',
+      'Strong candidates can be missed when hiring teams rely on spreadsheets or disconnected inboxes.',
+    ],
+    outcomes: [
+      'Screen candidates against the same role-specific criteria.',
+      'Combine resume signals with automated pre-screening evidence.',
+      'Prioritize candidates who are ready for recruiter or hiring manager review.',
+      'Give hiring teams clearer context before live interviews.',
+    ],
+    workflow: [
+      'Set role criteria and required qualification signals.',
+      'Collect candidate applications and resumes.',
+      'Run AI-assisted resume and profile screening.',
+      'Invite candidates into automated pre-screening where useful.',
+      'Review a structured shortlist with scores, summaries, and next steps.',
+    ],
+    faq: [
+      {
+        q: 'What is candidate screening software?',
+        a: 'Candidate screening software helps recruiters review applicants against job criteria, identify stronger matches, and organize evidence before interviews.',
+      },
+      {
+        q: 'How does Hiriq improve candidate screening?',
+        a: 'Hiriq combines resume screening, role criteria, automated pre-screening, and interview evidence so teams can shortlist candidates faster.',
+      },
+      {
+        q: 'Is candidate screening software useful for high-volume hiring?',
+        a: 'Yes. It is especially useful when teams receive many applicants and need consistent, repeatable qualification before live interviews.',
+      },
+    ],
+  },
+  {
+    slug: 'recruiting-automation-software',
+    shortTitle: 'Recruiting Automation',
+    title: 'Recruiting automation software that reduces manual screening work',
+    metaTitle: 'Recruiting Automation Software for Hiring Teams | Hiriq',
+    metaDescription:
+      'Hiriq recruiting automation software helps teams automate candidate intake, resume screening, pre-screening interviews, and shortlist workflows.',
+    eyebrow: 'Recruiting automation software',
+    lead:
+      'Hiriq removes repetitive recruiting work from the early funnel so recruiters can spend more time with qualified candidates and hiring managers.',
+    market: 'Designed for growing teams, agencies, and operators that need faster hiring workflows without adding recruiter headcount.',
+    primaryKeyword: 'recruiting automation software',
+    searchTerms: [
+      'recruiting automation software',
+      'recruitment automation',
+      'hiring automation software',
+      'automated candidate screening',
+      'AI recruiting automation',
+    ],
+    problems: [
+      'Recruiting teams repeat the same screening, scheduling, and qualification tasks for every open role.',
+      'Early-stage candidate workflows often slow down because recruiters are overloaded.',
+      'Hiring managers need organized evidence, not fragmented notes from multiple tools.',
+    ],
+    outcomes: [
+      'Automate repeatable screening and qualification steps.',
+      'Move qualified candidates forward faster.',
+      'Reduce recruiter time spent on low-signal manual review.',
+      'Create a consistent workflow from application to shortlist.',
+    ],
+    workflow: [
+      'Define the role and automation rules.',
+      'Collect candidates through a structured application flow.',
+      'Screen resumes and qualification signals automatically.',
+      'Run automated interview or pre-screening steps.',
+      'Send recruiters a prioritized shortlist with evidence.',
+    ],
+    faq: [
+      {
+        q: 'What recruiting tasks can Hiriq automate?',
+        a: 'Hiriq can help automate candidate intake, resume screening, matching, pre-screening interviews, summaries, and shortlist preparation.',
+      },
+      {
+        q: 'Does recruiting automation replace recruiters?',
+        a: 'No. Hiriq automates repetitive early-funnel work so recruiters can focus on judgment, candidate relationships, and hiring manager alignment.',
+      },
+      {
+        q: 'Is recruiting automation useful for small teams?',
+        a: 'Yes. Small teams often benefit because automation helps them handle more applicants without immediately adding headcount.',
+      },
+    ],
+  },
+  {
     slug: 'middle-east-ai-hiring',
     shortTitle: 'Middle East AI Hiring',
     title: 'AI hiring platform for Middle East recruiting teams',

@@ -21,7 +21,9 @@ const routes = [
   '/solutions/ai-interview-platform',
   '/solutions/ai-recruiting-software',
   '/solutions/ai-resume-screening',
+  '/solutions/candidate-screening-software',
   '/solutions/middle-east-ai-hiring',
+  '/solutions/recruiting-automation-software',
   '/solutions/usa-uk-ai-hiring',
   '/terms',
 ];

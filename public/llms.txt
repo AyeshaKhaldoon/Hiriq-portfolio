@@ -17,6 +17,8 @@
 - AI ATS and applicant tracking: https://hiriq.com/solutions/ai-ats
 - AI interview platform: https://hiriq.com/solutions/ai-interview-platform
 - AI resume screening: https://hiriq.com/solutions/ai-resume-screening
+- Candidate screening software: https://hiriq.com/solutions/candidate-screening-software
+- Recruiting automation software: https://hiriq.com/solutions/recruiting-automation-software
 - Middle East AI hiring: https://hiriq.com/solutions/middle-east-ai-hiring
 - USA and UK AI hiring: https://hiriq.com/solutions/usa-uk-ai-hiring
 
@@ -38,6 +40,8 @@
 - AI resume screening
 - AI CV screening
 - Candidate screening software
+- Candidate screening tools
+- Recruiting automation software
 - AI interview platform
 - Automated pre-screening interviews
 - Recruiting automation

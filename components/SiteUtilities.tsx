@@ -42,6 +42,18 @@ const searchItems = [
     keywords: 'ai resume screening cv screening candidate matching shortlist',
   },
   {
+    title: 'Candidate Screening Software',
+    href: '/solutions/candidate-screening-software',
+    description: 'Qualify applicants with resume screening, automated pre-screening, and shortlist evidence.',
+    keywords: 'candidate screening software candidate screening tools ai candidate screening',
+  },
+  {
+    title: 'Recruiting Automation Software',
+    href: '/solutions/recruiting-automation-software',
+    description: 'Automate candidate intake, resume screening, pre-screening interviews, and shortlist workflows.',
+    keywords: 'recruiting automation software recruitment automation hiring automation',
+  },
+  {
     title: 'AI Interview Platform',
     href: '/solutions/ai-interview-platform',
     description: 'Automated pre-screening interviews with transcripts, summaries, and evaluation context.',
