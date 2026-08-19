@@ -122,7 +122,7 @@ export default function Terms() {
                 <li>Not share your account credentials with unauthorized individuals</li>
               </ul>
               <p className="text-slate-600 mb-4">
-                <strong>Security Breach Notification:</strong> If you suspect unauthorized access to your account, contact us immediately at contact@hiriq.com. We will investigate and take appropriate action within 24 hours.
+                <strong>Security Breach Notification:</strong> If you suspect unauthorized access to your account, contact us immediately at <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a>. We will investigate and take appropriate action within 24 hours.
               </p>
             </section>
 
@@ -313,19 +313,19 @@ export default function Terms() {
                 <ul className="list-none text-slate-600 space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">General Inquiries:</span>
-                    <span>contact@hiriq.com</span>
+                    <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Security Issues:</span>
-                    <span>contact@hiriq.com (24/7 monitored)</span>
+                    <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com (24/7 monitored)</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Privacy Requests:</span>
-                    <span>contact@hiriq.com</span>
+                    <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Phone:</span>
-                    <span>+1 (888) HIRIQ-AI</span>
+                    <a href="tel:+15406648490" className="text-blue-600 hover:underline">+1 (540) 664-8490</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Mail:</span>

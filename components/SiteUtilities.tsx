@@ -24,6 +24,42 @@ const searchItems = [
     keywords: 'ats recruitment platform hiring candidate screening interviews automation',
   },
   {
+    title: 'AI Recruiting Software',
+    href: '/solutions/ai-recruiting-software',
+    description: 'Recruiting automation for resume screening, AI interviews, and evidence-backed shortlists.',
+    keywords: 'ai recruiting software recruitment platform hiring automation shortlist',
+  },
+  {
+    title: 'AI ATS',
+    href: '/solutions/ai-ats',
+    description: 'Applicant tracking with AI screening, candidate ranking, and recruiter workflow support.',
+    keywords: 'ai ats applicant tracking system candidate ranking recruiting software',
+  },
+  {
+    title: 'AI Resume Screening',
+    href: '/solutions/ai-resume-screening',
+    description: 'Screen resumes against role criteria and build faster candidate shortlists.',
+    keywords: 'ai resume screening cv screening candidate matching shortlist',
+  },
+  {
+    title: 'AI Interview Platform',
+    href: '/solutions/ai-interview-platform',
+    description: 'Automated pre-screening interviews with transcripts, summaries, and evaluation context.',
+    keywords: 'ai interview platform automated interviews pre screening transcript',
+  },
+  {
+    title: 'Middle East AI Hiring',
+    href: '/solutions/middle-east-ai-hiring',
+    description: 'AI hiring workflows for teams operating across the UAE, Qatar, Pakistan, Saudi Arabia, and the wider Middle East.',
+    keywords: 'ai hiring middle east uae qatar saudi pakistan recruitment',
+  },
+  {
+    title: 'USA and UK AI Hiring',
+    href: '/solutions/usa-uk-ai-hiring',
+    description: 'AI recruiting workflows for hiring teams in the United States, United Kingdom, and remote markets.',
+    keywords: 'ai hiring usa uk recruitment software ats interview screening',
+  },
+  {
     title: 'Industries',
     href: '/industries',
     description: 'Industry-specific hiring workflows for tech, healthcare, finance, logistics, retail, and sales.',

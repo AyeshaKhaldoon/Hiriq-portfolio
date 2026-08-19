@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Hiriq - AI-Powered Recruitment ATS & Interview Practice Platform',
   description: 'Transform your hiring process with Hiriq. Smart ATS with AI-powered candidate screening, automated pre-screening calls, and intelligent matching. Plus interview practice tools for job seekers.',
-  keywords: 'ATS, recruitment software, AI recruiting, applicant tracking system, candidate screening, pre-screening calls, interview practice, job interview prep',
+  keywords: 'AI recruiting software, AI ATS, applicant tracking system, AI resume screening, AI interview platform, candidate screening software, automated pre-screening, recruitment automation, hiring platform, job interview prep',
   authors: [{ name: 'Hiriq Team' }],
   openGraph: {
     title: 'Hiriq - AI-Powered Recruitment ATS',
@@ -60,24 +60,63 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const localBusinessSchema = {
+  const organizationId = `${siteUrl}/#organization`;
+  const websiteId = `${siteUrl}/#website`;
+  const softwareId = `${siteUrl}/#software`;
+  const siteSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Hiriq',
-    url: siteUrl,
-    email: 'contact@hiriq.com',
-    telephone: '+1-540-664-8490',
-    image: `${siteUrl}/123.png`,
-    priceRange: '$$',
-    areaServed: ['United States', 'Pakistan', 'Qatar', 'United Arab Emirates'],
-    sameAs: ['https://linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'sales',
-      email: 'contact@hiriq.com',
-      telephone: '+1-540-664-8490',
-      availableLanguage: ['English'],
-    },
+    '@graph': [
+      {
+        '@type': ['Organization', 'LocalBusiness'],
+        '@id': organizationId,
+        name: 'Hiriq',
+        url: siteUrl,
+        logo: `${siteUrl}/Logo.png`,
+        email: 'contact@hiriq.com',
+        telephone: '+1-540-664-8490',
+        image: `${siteUrl}/123.png`,
+        priceRange: '$$',
+        areaServed: ['United States', 'United Kingdom', 'Middle East', 'Pakistan', 'Qatar', 'United Arab Emirates'],
+        sameAs: ['https://linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          email: 'contact@hiriq.com',
+          telephone: '+1-540-664-8490',
+          availableLanguage: ['English'],
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': websiteId,
+        name: 'Hiriq',
+        url: siteUrl,
+        publisher: { '@id': organizationId },
+        inLanguage: 'en',
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': softwareId,
+        name: 'Hiriq',
+        url: siteUrl,
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web',
+        description:
+          'AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, AI interviews, and candidate shortlisting.',
+        publisher: { '@id': organizationId },
+        image: `${siteUrl}/123.png`,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: `${siteUrl}/pricing`,
+        },
+        audience: {
+          '@type': 'BusinessAudience',
+          audienceType: 'Recruiters, hiring managers, founders, HR teams, staffing agencies',
+        },
+      },
+    ],
   };
 
   return (
@@ -97,9 +136,9 @@ export default function RootLayout({
           </>
         )}
         <Script
-          id="local-business-schema"
+          id="site-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
         <a href="#main-content" className="skip-link">
           Skip to content
