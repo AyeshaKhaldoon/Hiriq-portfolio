@@ -1,5 +1,7 @@
 "use client";
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { CheckCircle, Zap, Clock, Target, Users, TrendingUp, Calendar, Shield, ArrowRight, FileText, CheckSquare, MessageSquare, Play } from 'lucide-react';
 import { useState } from 'react';
 
@@ -17,27 +19,7 @@ export default function DemoRecruiters() {
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Navigation */}
-            <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
-                            Hiriq
-                        </Link>
-                        <div className="hidden md:flex items-center space-x-8">
-                            <Link href="/hiring-platform" className="text-slate-700 hover:text-blue-600 transition">Hiring Platform</Link>
-                            <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">Pricing</Link>
-                            <Link href="/demo-recruiters" className="text-blue-600 font-semibold">Demo</Link>
-                            <a
-                                href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
-                                className="px-6 py-2 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition"
-                            >
-                                Contact for Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Navigation />
 
             {/* Hero Section with Demo Badge */}
             <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50">
@@ -67,13 +49,13 @@ export default function DemoRecruiters() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                                <button className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg flex items-center justify-center">
+                                <a href="https://app.hiriq.co" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg flex items-center justify-center">
                                     Start 14-Day Free Trial
                                     <ArrowRight className="ml-2 w-5 h-5" />
-                                </button>
-                                <button className="px-8 py-4 bg-white border-2 border-slate-300 text-slate-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition font-semibold text-lg">
+                                </a>
+                                <Link href="/contact" className="px-8 py-4 bg-white border-2 border-slate-300 text-slate-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition font-semibold text-lg text-center">
                                     Schedule Live Demo
-                                </button>
+                                </Link>
                             </div>
 
                             <div className="flex items-center gap-6 text-sm text-slate-600">
@@ -87,7 +69,7 @@ export default function DemoRecruiters() {
                         <div className="relative">
                             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                                 <img
-                                    src="https://i.imgur.com/YourImage3.png"
+                                    src="/job_setup_interface_1768142202904.png"
                                     alt="Real-time candidate pipeline showing stages from Upload to Offer"
                                     className="w-full h-auto"
                                 />
@@ -406,7 +388,6 @@ export default function DemoRecruiters() {
                                     type="number"
                                     value={candidates}
                                     onChange={(e) => setCandidates(Number(e.target.value) || 0)}
-                                    placeholder="e.g., 200"
                                     className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
                                 />
                             </div>
@@ -419,7 +400,6 @@ export default function DemoRecruiters() {
                                     type="number"
                                     value={minutesPerResume}
                                     onChange={(e) => setMinutesPerResume(Number(e.target.value) || 0)}
-                                    placeholder="e.g., 5"
                                     className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
                                 />
                             </div>
@@ -471,19 +451,18 @@ export default function DemoRecruiters() {
                         Start your 14-day free trial today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
+                        <a href="https://app.hiriq.co" target="_blank" rel="noopener noreferrer" className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
                             Start Your Free Trial
                             <ArrowRight className="ml-2 w-5 h-5" />
-                        </button>
-                        <Link href="/hiring-platform">
-                            <button className="px-12 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition text-lg">
-                                View Full Details
-                            </button>
+                        </a>
+                        <Link href="/hiring-platform" className="px-12 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition text-lg">
+                            View Full Details
                         </Link>
                     </div>
                     <p className="text-blue-100 mt-6">• Setup in 5 minutes</p>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 }

@@ -1,7 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+const SENDGRID_EMAIL = process.env.SENDGRID_EMAIL;
+const isSendGridConfigured =
+  typeof SENDGRID_API_KEY === 'string' &&
+  SENDGRID_API_KEY.startsWith('SG.') &&
+  typeof SENDGRID_EMAIL === 'string' &&
+  SENDGRID_EMAIL.length > 0;
+
+if (isSendGridConfigured) {
+  sgMail.setApiKey(SENDGRID_API_KEY);
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -13,7 +23,7 @@ export async function POST(req: NextRequest) {
 
     const msg = {
       to: email,
-      from: process.env.SENDGRID_EMAIL!,
+      from: SENDGRID_EMAIL!,
       subject: '🎉 Welcome to Hiriq Candidates Waitlist!',
       html: `
         <div style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #1f2937; max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9fb; border-radius: 12px; border: 1px solid #e5e7eb;">
@@ -44,7 +54,9 @@ export async function POST(req: NextRequest) {
       `,
     };
 
-    await sgMail.send(msg);
+    if (isSendGridConfigured) {
+      await sgMail.send(msg);
+    }
 
     console.log('[Candidates] Waitlist signup:', { email, utm });
 

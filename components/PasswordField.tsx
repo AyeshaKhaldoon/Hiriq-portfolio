@@ -6,14 +6,12 @@ import { Eye, EyeOff } from 'lucide-react';
 type PasswordFieldProps = {
   label?: string;
   name?: string;
-  placeholder?: string;
   required?: boolean;
 };
 
 export default function PasswordField({
   label = 'Password',
   name = 'password',
-  placeholder = 'Enter your password',
   required = false,
 }: PasswordFieldProps) {
   const [visible, setVisible] = useState(false);
@@ -26,7 +24,6 @@ export default function PasswordField({
           type={visible ? 'text' : 'password'}
           name={name}
           required={required}
-          placeholder={placeholder}
           className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 pr-12 text-slate-900 transition focus:border-blue-500 focus:outline-none"
         />
         <button

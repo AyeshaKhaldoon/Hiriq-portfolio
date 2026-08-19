@@ -247,7 +247,6 @@ export default function ForRecruiters() {
                   type="number"
                   value={candidates}
                   onChange={(e) => setCandidates(Number(e.target.value) || 0)}
-                  placeholder="e.g., 200"
                   className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
                 />
               </div>
@@ -260,7 +259,6 @@ export default function ForRecruiters() {
                   type="number"
                   value={minutesPerResume}
                   onChange={(e) => setMinutesPerResume(Number(e.target.value) || 0)}
-                  placeholder="e.g., 5"
                   className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
                 />
               </div>

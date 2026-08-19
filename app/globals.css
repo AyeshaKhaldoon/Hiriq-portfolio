@@ -6,12 +6,23 @@
 html {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 body {
   overflow-x: hidden;
   min-height: 100vh;
   min-height: 100dvh;
+  max-width: 100%;
+  position: relative;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
 }
 
 .skip-link {

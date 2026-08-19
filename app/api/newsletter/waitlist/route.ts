@@ -15,7 +15,7 @@ if (isSendGridConfigured) {
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json();
+    const { email, utm } = await req.json();
 
     if (!email || !email.includes('@')) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
       await sgMail.send(msg);
     } else {
       // SendGrid not configured: still accept signup so the form doesn't break
-      console.log('[Waitlist] Signup (no email sent – set SENDGRID_API_KEY):', email);
+      console.log('[Waitlist] Signup (no email sent - set SENDGRID_API_KEY):', { email, utm });
     }
 
     return NextResponse.json({ message: 'Subscribed successfully!' });

@@ -93,9 +93,12 @@ export default function ForCandidates() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3">
+                  <label htmlFor="candidate-waitlist-email" className="sr-only">
+                    Email address
+                  </label>
                   <input
+                    id="candidate-waitlist-email"
                     type="email"
-                    placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-1 px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none"
@@ -238,12 +241,13 @@ export default function ForCandidates() {
             </div>
 
             <div className="mt-10 text-center">
-              <Link href="/for-candidates">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-xl transition-all text-lg inline-flex items-center gap-2">
-                  <FileText className="w-5 h-5" />
-                  Start Building Your Resume
-                  <ArrowRight className="w-5 h-5" />
-                </button>
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-xl transition-all text-lg inline-flex items-center gap-2"
+              >
+                <FileText className="w-5 h-5" />
+                Start Building Your Resume
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <p className="text-slate-600 mt-4">No signup required • 100% Free Forever</p>
             </div>
@@ -273,9 +277,12 @@ export default function ForCandidates() {
           </p>
 
           <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex gap-3">
+            <label htmlFor="candidate-final-email" className="sr-only">
+              Email address
+            </label>
             <input
+              id="candidate-final-email"
               type="email"
-              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 px-6 py-4 rounded-lg focus:outline-none text-slate-900"

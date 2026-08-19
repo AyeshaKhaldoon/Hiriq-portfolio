@@ -228,13 +228,16 @@ export default function Blog() {
           <p className="text-xl text-blue-100 mb-8">Weekly insights, best practices, and product updates</p>
 
           <form onSubmit={handleSubscribe} className="flex max-w-md mx-auto gap-3 flex-col sm:flex-row">
+            <label htmlFor="blog-newsletter-email" className="sr-only">
+              Email address
+            </label>
             <input
+              id="blog-newsletter-email"
               type="email"
               name="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
               className="flex-1 px-6 py-4 rounded-lg focus:outline-none text-slate-900"
             />
             <button

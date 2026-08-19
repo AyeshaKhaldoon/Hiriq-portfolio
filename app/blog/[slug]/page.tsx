@@ -1,8 +1,11 @@
 // FILE: src/app/blog/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowLeft, Share2, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Calendar, Clock, Share2, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { Metadata } from 'next';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import NewsletterForm from '@/components/NewsletterForm';
 
 // Type definitions
 interface BlogSection {
@@ -162,6 +165,29 @@ export function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: 'Article Not Found | Hiriq',
+      description: 'The Hiriq article you are looking for could not be found.',
+    };
+  }
+
+  return {
+    title: `${post.title} | Hiriq Blog`,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      images: [{ url: post.image }],
+    },
+  };
+}
+
 
 // FIXED FOR NEXT.JS 15: params is now a Promise
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -173,23 +199,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   const relatedPosts = getRelatedPosts(slug);
+  const articleUrl = `https://hiriq.com/blog/${post.slug}`;
+  const encodedUrl = encodeURIComponent(articleUrl);
+  const encodedTitle = encodeURIComponent(post.title);
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Hiriq
-            </Link>
-            <Link href="/blog" className="text-slate-700 hover:text-blue-600 transition flex items-center gap-2 font-medium">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Image */}
       <div className="pt-16">
@@ -241,18 +257,40 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="pt-6 flex items-center gap-4">
               <span className="text-sm font-semibold text-slate-700">Share:</span>
               <div className="flex gap-2">
-                <button className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition">
+                <a
+                  href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition"
+                  aria-label="Share on X"
+                >
                   <Twitter className="w-4 h-4" />
-                </button>
-                <button className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition">
+                </a>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition"
+                  aria-label="Share on LinkedIn"
+                >
                   <Linkedin className="w-4 h-4" />
-                </button>
-                <button className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition">
+                </a>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition"
+                  aria-label="Share on Facebook"
+                >
                   <Facebook className="w-4 h-4" />
-                </button>
-                <button className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition">
+                </a>
+                <a
+                  href={`mailto:?subject=${encodedTitle}&body=${encodedUrl}`}
+                  className="p-2 rounded-lg bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition"
+                  aria-label="Share by email"
+                >
                   <Share2 className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -324,9 +362,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join 1,000+ companies using Hiriq to hire faster and smarter with AI-powered recruitment
             </p>
-            <button className="px-10 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <a href="https://app.hiriq.co" target="_blank" rel="noopener noreferrer" className="inline-flex px-10 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               Start Free Trial →
-            </button>
+            </a>
             <p className="text-blue-100 text-sm mt-4">No credit card required • 14-day free trial</p>
           </div>
         </div>
@@ -386,18 +424,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <p className="text-xl text-slate-300 mb-8">
             Get weekly insights on AI recruitment, hiring strategies, and industry news
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-xl border-2 border-slate-700 bg-slate-800 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500"
-            />
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold hover:shadow-xl transition">
-              Subscribe
-            </button>
-          </div>
+          <NewsletterForm />
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

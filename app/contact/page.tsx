@@ -81,7 +81,17 @@ export default function Contact() {
                   <option.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{option.title}</h3>
-                <p className="text-blue-600 font-semibold mb-1">{option.content}</p>
+                {option.title === 'Email Us' ? (
+                  <a href="mailto:contact@hiriq.com" className="text-blue-600 font-semibold mb-1 inline-block hover:underline">
+                    {option.content}
+                  </a>
+                ) : option.title === 'Call Us' ? (
+                  <a href="tel:+15406648490" className="text-blue-600 font-semibold mb-1 inline-block hover:underline">
+                    {option.content}
+                  </a>
+                ) : (
+                  <p className="text-blue-600 font-semibold mb-1">{option.content}</p>
+                )}
                 <p className="text-sm text-slate-500">{option.subtext}</p>
                 {option.copy && (
                   <div className="mt-4">
@@ -106,24 +116,24 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">First Name *</label>
-                  <input type="text" name="firstName" required className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" placeholder="John" />
+                  <input type="text" name="firstName" required className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">Last Name *</label>
-                  <input type="text" name="lastName" required className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" placeholder="Doe" />
+                  <input type="text" name="lastName" required className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" />
                 </div>
               </div>
 
               {/* Email */}
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
-                <input type="email" name="email" required className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" placeholder="john@company.com" />
+                <input type="email" name="email" required className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" />
               </div>
 
               {/* Company */}
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Company Name</label>
-                <input type="text" name="company" className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" placeholder="Your Company" />
+                <input type="text" name="company" className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition" />
               </div>
 
               {/* Subject */}
@@ -142,7 +152,7 @@ export default function Contact() {
               {/* Message */}
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Message *</label>
-                <textarea name="message" required rows={6} className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition resize-none" placeholder="Tell us more about your needs..."></textarea>
+                <textarea name="message" required rows={6} className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none transition resize-none"></textarea>
               </div>
 
               {/* Submit */}

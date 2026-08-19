@@ -352,7 +352,9 @@ export default function IndustriesPage() {
             Stronger hiring decisions.
           </h2>
           <a
-            href="/recruiter/job/setup"
+            href="https://app.hiriq.co"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-14 rounded-full px-8 text-lg font-semibold bg-white text-slate-900 hover:bg-slate-100 transition-all duration-300 hover:scale-[1.02] mt-8"
           >
             Get Started

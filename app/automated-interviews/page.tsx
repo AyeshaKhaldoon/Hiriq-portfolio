@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { getStoredUtmParams } from '@/components/SiteUtilities';
 import { useInView } from '@/hooks/useInView';
 import {
   ArrowRight,
@@ -117,7 +118,7 @@ export default function AutomatedInterviewsPage() {
       const res = await fetch('/api/newsletter/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, utm: getStoredUtmParams() }),
       });
       const data = await res.json();
       if (res.ok) {
@@ -328,7 +329,6 @@ export default function AutomatedInterviewsPage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
-                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-5 py-3.5 rounded-full text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/50"
@@ -344,7 +344,7 @@ export default function AutomatedInterviewsPage() {
               </button>
             </div>
             {message && (
-              <p className={`mt-4 text-sm font-medium ${status === 'success' ? 'text-emerald-400' : 'text-red-400'}`}>
+              <p className={`mt-4 rounded-xl border px-4 py-3 text-sm font-medium ${status === 'success' ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300' : 'border-red-500/30 bg-red-500/10 text-red-300'}`} role="status">
                 {message}
               </p>
             )}

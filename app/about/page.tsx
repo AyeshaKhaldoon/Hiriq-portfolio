@@ -206,16 +206,18 @@ export default function About() {
             Join forward-thinking organizations that are building better teams with intelligent recruitment infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <button className="px-10 py-5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-2xl transition-all text-lg inline-flex items-center justify-center transform hover:-translate-y-1">
-                Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+            <Link
+              href="/contact"
+              className="px-10 py-5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-2xl transition-all text-lg inline-flex items-center justify-center transform hover:-translate-y-1"
+            >
+              Schedule a Demo
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link href="/pricing">
-              <button className="px-10 py-5 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all text-lg transform hover:-translate-y-1">
-                View Pricing
-              </button>
+            <Link
+              href="/pricing"
+              className="px-10 py-5 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all text-lg transform hover:-translate-y-1"
+            >
+              View Pricing
             </Link>
           </div>
           <p className="mt-8 text-blue-100 text-sm">

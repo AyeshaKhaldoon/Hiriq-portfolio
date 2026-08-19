@@ -8,6 +8,8 @@ interface FooterProps {
 }
 
 export default function Footer({ showSocialIcons = false }: FooterProps) {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="relative bg-gradient-to-r from-blue-900 via-cyan-900 to-sky-900 text-white pt-8 pb-4 z-10 shadow-inner overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
@@ -22,6 +24,14 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
             <p className="text-gray-300 text-sm">
               AI-powered recruitment platform for modern teams.
             </p>
+            <div className="mt-4 space-y-2 text-sm text-gray-300">
+              <a href="mailto:contact@hiriq.com" className="block hover:text-cyan-400 transition-colors">
+                contact@hiriq.com
+              </a>
+              <a href="tel:+15406648490" className="block hover:text-cyan-400 transition-colors">
+                +1 (540) 664-8490
+              </a>
+            </div>
 
             {showSocialIcons && (
               <div className="flex gap-4 mt-6">
@@ -61,7 +71,7 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
           </div>
         </div>
         <div className="border-t border-cyan-600 pt-4 text-center text-sm text-gray-400 pb-safe">
-          <p className="m-0">&copy; 2026 Hiriq. All rights reserved.</p>
+          <p className="m-0">&copy; {year} Hiriq. All rights reserved.</p>
           <p className="m-0 mt-1">Last updated: August 20, 2026</p>
         </div>
       </div>
