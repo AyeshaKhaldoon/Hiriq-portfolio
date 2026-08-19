@@ -5,7 +5,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json();
+    const { email, utm } = await req.json();
 
     if (!email || !email.includes('@')) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
@@ -37,6 +37,8 @@ export async function POST(req: NextRequest) {
     };
 
     await sgMail.send(msg);
+
+    console.log('[Newsletter] Subscription:', { email, utm });
 
     return NextResponse.json({ message: 'Subscription successful!' });
   } catch (err: any) {

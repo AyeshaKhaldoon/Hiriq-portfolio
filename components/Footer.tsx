@@ -62,6 +62,7 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
         </div>
         <div className="border-t border-cyan-600 pt-4 text-center text-sm text-gray-400 pb-safe">
           <p className="m-0">&copy; 2026 Hiriq. All rights reserved.</p>
+          <p className="m-0 mt-1">Last updated: August 20, 2026</p>
         </div>
       </div>
     </footer>

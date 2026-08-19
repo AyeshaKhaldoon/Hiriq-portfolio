@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, MessageSquare, Phone, MapPin } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Mail, MessageSquare, Phone } from 'lucide-react';
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import CopyButton from '@/components/CopyButton';
+import { getStoredUtmParams } from '@/components/SiteUtilities';
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -23,6 +25,7 @@ export default function Contact() {
       company: (form.elements.namedItem('company') as HTMLInputElement).value,
       subject: (form.elements.namedItem('subject') as HTMLSelectElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      utm: getStoredUtmParams(),
     };
 
     try {
@@ -69,9 +72,9 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mb-12">
             {[
-              { icon: Mail, title: 'Email Us', content: 'contact@hiriq.com', subtext: 'We reply within 24 hours' },
+              { icon: Mail, title: 'Email Us', content: 'contact@hiriq.com', subtext: 'We reply within 24 hours', copy: 'contact@hiriq.com' },
               { icon: MessageSquare, title: 'Live Chat', content: 'Available 9am-6pm EST', subtext: 'Chat with our team' },
-              { icon: Phone, title: 'Call Us', content: '📞 +1 (540) 664-8490', subtext: 'Mon-Fri 9am-6pm EST' },
+              { icon: Phone, title: 'Call Us', content: '+1 (540) 664-8490', subtext: 'Mon-Fri 9am-6pm EST', copy: '+1 (540) 664-8490' },
             ].map((option, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow-md border-2 border-slate-100 hover:border-blue-500 transition text-center w-full max-w-sm">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -80,6 +83,11 @@ export default function Contact() {
                 <h3 className="font-bold text-slate-900 mb-2">{option.title}</h3>
                 <p className="text-blue-600 font-semibold mb-1">{option.content}</p>
                 <p className="text-sm text-slate-500">{option.subtext}</p>
+                {option.copy && (
+                  <div className="mt-4">
+                    <CopyButton value={option.copy} label="Copy" />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -143,9 +151,21 @@ export default function Contact() {
               </button>
 
               {message && (
-                <p className={`text-center mt-4 font-medium ${status === 'success' ? 'text-green-500' : 'text-red-500'}`}>
-                  {message}
-                </p>
+                <div
+                  className={`mt-4 flex items-start gap-3 rounded-xl border p-4 ${
+                    status === 'success'
+                      ? 'border-green-200 bg-green-50 text-green-800'
+                      : 'border-red-200 bg-red-50 text-red-800'
+                  }`}
+                  role="status"
+                >
+                  {status === 'success' ? (
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                  )}
+                  <p className="font-medium">{message}</p>
+                </div>
               )}
 
               <p className="text-sm text-slate-500 text-center">

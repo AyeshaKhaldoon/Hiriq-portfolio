@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
+import { AlertCircle, ArrowRight, Calendar, CheckCircle2, Clock } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { getStoredUtmParams } from '@/components/SiteUtilities';
 
 /* ================= BLOG DATA ================= */
 
@@ -80,13 +81,13 @@ export default function Blog() {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, utm: getStoredUtmParams() }),
       });
       const data = await res.json();
 
       if (res.ok) {
         setStatus('success');
-        setMessage('🎉 Thanks for subscribing! Check your inbox for updates.');
+        setMessage('Thanks for subscribing. Check your inbox for updates.');
         setEmail('');
       } else {
         setStatus('error');
@@ -245,14 +246,22 @@ export default function Blog() {
             </button>
           </form>
 
-          {/* Inline feedback message */}
           {message && (
-            <p
-              className={`mt-4 text-sm font-medium ${status === 'success' ? 'text-green-400' : 'text-red-400'
-                }`}
+            <div
+              className={`mx-auto mt-4 flex max-w-md items-start gap-3 rounded-xl border p-3 text-left text-sm ${
+                status === 'success'
+                  ? 'border-green-200 bg-green-50 text-green-800'
+                  : 'border-red-200 bg-red-50 text-red-800'
+              }`}
+              role="status"
             >
-              {message}
-            </p>
+              {status === 'success' ? (
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              ) : (
+                <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              )}
+              <p className="font-medium">{message}</p>
+            </div>
           )}
         </div>
       </section>

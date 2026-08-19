@@ -14,6 +14,87 @@ body {
   min-height: 100dvh;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-150%);
+  border-radius: 0.5rem;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid #67e8f9;
+  outline-offset: 2px;
+}
+
+.dark body {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+.dark .bg-white,
+.dark .bg-white\/80,
+.dark .bg-white\/90,
+.dark .bg-white\/95,
+.dark .bg-slate-50,
+.dark .from-slate-50,
+.dark .to-white {
+  background-color: #0f172a !important;
+}
+
+.dark .bg-slate-100,
+.dark .bg-blue-50,
+.dark .bg-cyan-50,
+.dark .bg-cyan-50\/40,
+.dark .bg-blue-50\/30 {
+  background-color: #1e293b !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-white\/50,
+.dark .border-cyan-200\/50 {
+  border-color: #334155 !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background: #020617;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+.dark .shadow-xl,
+.dark .shadow-2xl,
+.dark .shadow-lg,
+.dark .shadow-md {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
 /* Safe area insets for notched devices (iPhone X, XR, etc.) */
 @layer utilities {
   .pt-safe {
@@ -180,3 +261,53 @@ body {
 .animate-stagger-8 { animation-delay: 640ms; }
 .animate-stagger-9 { animation-delay: 720ms; }
 .animate-stagger-10 { animation-delay: 800ms; }
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #111827 !important;
+    overflow: visible !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    color: #111827 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after,
+  a[href^="mailto"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+
+  nav,
+  iframe,
+  video,
+  button,
+  form,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  section,
+  article,
+  footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}

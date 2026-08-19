@@ -2,7 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Brain, CheckCircle, Mic, Video, Target, TrendingUp, Award, ArrowRight, Bell, FileText, Sparkles, Download, Edit } from 'lucide-react';
+import { AlertCircle, Brain, CheckCircle, CheckCircle2, Mic, Video, Target, TrendingUp, Award, ArrowRight, Bell, FileText, Sparkles, Download, Edit } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import FAQAccordion from '@/components/FAQAccordion';
+import { getStoredUtmParams } from '@/components/SiteUtilities';
+
+const candidateFaqs = [
+  { q: 'When will Hiriq for candidates launch?', a: "We're targeting Q1 2026 for our official launch. Waitlist members will get early access 2 weeks before the public launch." },
+  { q: 'How is this different from other interview prep tools?', a: "Our AI doesn't just ask static questions. It adapts to your answers, asks follow-ups, and provides detailed feedback on both content and delivery just like a real interviewer." },
+  { q: 'What types of interviews can I practice?', a: 'Technical interviews, behavioral interviews, and role-specific scenarios. We support common job functions and major programming workflows.' },
+  { q: 'Can I practice for specific companies?', a: 'Yes. Pro members get access to company-specific interview prep based on real interview patterns for that company.' },
+  { q: 'Is my practice data private?', a: 'Absolutely. Your practice sessions are private and never shared. We use the data only to improve your personal feedback.' },
+];
 
 export default function ForCandidates() {
   const [email, setEmail] = useState('');
@@ -24,7 +36,7 @@ export default function ForCandidates() {
       const res = await fetch('/api/newsletter/candidates', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, utm: getStoredUtmParams() }),
       });
       const data = await res.json();
 
@@ -44,27 +56,7 @@ export default function ForCandidates() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Hiriq
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/for-recruiters" className="text-slate-700 hover:text-blue-600 transition">For Recruiters</Link>
-              <Link href="/for-candidates" className="text-cyan-600 font-semibold">For Candidates</Link>
-              <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">Pricing</Link>
-              <a
-                href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition"
-              >
-                Contact for Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50">
@@ -119,12 +111,21 @@ export default function ForCandidates() {
                 </div>
 
                 {message && (
-                  <p
-                    className={`text-sm font-medium mt-3 text-center ${status === 'success' ? 'text-green-500' : 'text-red-500'
-                      }`}
+                  <div
+                    className={`mt-3 flex items-start gap-3 rounded-xl border p-3 text-left text-sm ${
+                      status === 'success'
+                        ? 'border-green-200 bg-green-50 text-green-800'
+                        : 'border-red-200 bg-red-50 text-red-800'
+                    }`}
+                    role="status"
                   >
-                    {message}
-                  </p>
+                    {status === 'success' ? (
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                    ) : (
+                      <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                    )}
+                    <p className="font-medium">{message}</p>
+                  </div>
                 )}
 
                 <p className="text-sm text-slate-500 mt-3 text-center">
@@ -257,20 +258,7 @@ export default function ForCandidates() {
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-6">
-            {[
-              { q: 'When will Hiriq for candidates launch?', a: "We're targeting Q1 2026 for our official launch. Waitlist members will get early access 2 weeks before the public launch." },
-              { q: 'How is this different from other interview prep tools?', a: "Our AI doesn't just ask static questions. It adapts to your answers, asks follow-ups, and provides detailed feedback on both content and delivery—just like a real interviewer." },
-              { q: 'What types of interviews can I practice?', a: "Technical interviews (coding, algorithms, system design), behavioral interviews (STAR method), and role-specific scenarios. We support 20+ programming languages and all major job functions." },
-              { q: 'Can I practice for specific companies?', a: "Yes! Pro members get access to company-specific interview prep based on real interview experiences from that company." },
-              { q: 'Is my practice data private?', a: "Absolutely. Your practice sessions are completely private and never shared. We use the data only to improve your personal feedback." },
-            ].map((faq, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={candidateFaqs} />
         </div>
       </section>
 
@@ -303,12 +291,28 @@ export default function ForCandidates() {
           </form>
 
           {message && (
-            <p className={`text-sm font-medium mt-4 ${status === 'success' ? 'text-green-500' : 'text-red-500'}`}>{message}</p>
+            <div
+              className={`mx-auto mt-4 flex max-w-md items-start gap-3 rounded-xl border p-3 text-left text-sm ${
+                status === 'success'
+                  ? 'border-green-200 bg-green-50 text-green-800'
+                  : 'border-red-200 bg-red-50 text-red-800'
+              }`}
+              role="status"
+            >
+              {status === 'success' ? (
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              ) : (
+                <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              )}
+              <p className="font-medium">{message}</p>
+            </div>
           )}
 
           <p className="text-purple-100 mt-4">5,000+ job seekers already on the list</p>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

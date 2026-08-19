@@ -2,6 +2,7 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FAQAccordion from "@/components/FAQAccordion";
 import {
   ArrowRight,
   Building2,
@@ -425,22 +426,7 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <details
-                key={faq.q}
-                className="group bg-slate-50 rounded-2xl border border-slate-200 p-6 open:bg-white open:shadow-sm"
-              >
-                <summary className="cursor-pointer list-none flex items-center justify-between gap-6 text-lg font-bold text-slate-900">
-                  <span>{faq.q}</span>
-                  <span className="text-blue-600 text-2xl leading-none transition-transform group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="text-slate-600 leading-relaxed mt-4 pr-8">{faq.a}</p>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 

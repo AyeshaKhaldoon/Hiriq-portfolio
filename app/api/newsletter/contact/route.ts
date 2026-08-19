@@ -16,7 +16,7 @@ if (isSendGridConfigured) {
 
 export async function POST(req: NextRequest) {
   try {
-    const { firstName, lastName, email, company, subject, message } = await req.json();
+    const { firstName, lastName, email, company, subject, message, utm } = await req.json();
 
     if (!firstName || !lastName || !email || !subject || !message) {
       return NextResponse.json({ error: 'Please fill in all required fields.' }, { status: 400 });
@@ -37,6 +37,7 @@ export async function POST(req: NextRequest) {
           <p><strong>Company:</strong> ${company || 'N/A'}</p>
           <p><strong>Subject:</strong> ${subject}</p>
           <p><strong>Message:</strong><br />${message}</p>
+          <p><strong>UTM:</strong> ${utm ? JSON.stringify(utm) : 'N/A'}</p>
         `,
       };
 
@@ -86,11 +87,11 @@ export async function POST(req: NextRequest) {
       if (SUPPORT_EMAIL && SUPPORT_EMAIL.includes('@')) {
         toSend.push(sgMail.send(internalMsg));
       } else {
-        console.log('[Contact] No SUPPORT_EMAIL set – forwarding skipped. Submission:', { fullName, email, subject });
+        console.log('[Contact] No SUPPORT_EMAIL set - forwarding skipped. Submission:', { fullName, email, subject, utm });
       }
       await Promise.all(toSend);
     } else {
-      console.log('[Contact] Signup (no email sent – set SENDGRID_API_KEY and SENDGRID_EMAIL):', { fullName, email, subject });
+      console.log('[Contact] Signup (no email sent - set SENDGRID_API_KEY and SENDGRID_EMAIL):', { fullName, email, subject, utm });
     }
 
     return NextResponse.json({ success: true, message: 'Your message has been sent! Check your inbox for confirmation.' });
