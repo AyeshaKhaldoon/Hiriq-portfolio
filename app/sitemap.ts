@@ -29,7 +29,7 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://hiriq.com';
+  const baseUrl = 'https://hiriq.co';
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

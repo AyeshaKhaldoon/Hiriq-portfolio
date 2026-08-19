@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import SiteUtilities from '@/components/SiteUtilities';
 import './globals.css';
 
-const siteUrl = 'https://hiriq.com';
+const siteUrl = 'https://hiriq.co';
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {

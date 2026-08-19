@@ -7,7 +7,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { ArrowRight, CheckCircle2, ClipboardCheck, Globe2, SearchCheck } from 'lucide-react';
 import { getSolution, solutions } from '../solutions';
 
-const siteUrl = 'https://hiriq.com';
+const siteUrl = 'https://hiriq.co';
 
 type PageProps = {
   params: Promise<{ slug: string }>;

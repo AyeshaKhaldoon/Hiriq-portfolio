@@ -199,7 +199,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   const relatedPosts = getRelatedPosts(slug);
-  const articleUrl = `https://hiriq.com/blog/${post.slug}`;
+  const articleUrl = `https://hiriq.co/blog/${post.slug}`;
   const encodedUrl = encodeURIComponent(articleUrl);
   const encodedTitle = encodeURIComponent(post.title);
 

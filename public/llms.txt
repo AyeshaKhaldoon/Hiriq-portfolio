@@ -4,23 +4,23 @@
 
 ## Primary URLs
 
-- Website: https://hiriq.com/
-- Hiring platform: https://hiriq.com/hiring-platform
-- AI interviews: https://hiriq.com/automated-interviews
-- Pricing: https://hiriq.com/pricing
-- Contact: https://hiriq.com/contact
-- Blog: https://hiriq.com/blog
+- Website: https://hiriq.co/
+- Hiring platform: https://hiriq.co/hiring-platform
+- AI interviews: https://hiriq.co/automated-interviews
+- Pricing: https://hiriq.co/pricing
+- Contact: https://hiriq.co/contact
+- Blog: https://hiriq.co/blog
 
 ## Solution Pages
 
-- AI recruiting software: https://hiriq.com/solutions/ai-recruiting-software
-- AI ATS and applicant tracking: https://hiriq.com/solutions/ai-ats
-- AI interview platform: https://hiriq.com/solutions/ai-interview-platform
-- AI resume screening: https://hiriq.com/solutions/ai-resume-screening
-- Candidate screening software: https://hiriq.com/solutions/candidate-screening-software
-- Recruiting automation software: https://hiriq.com/solutions/recruiting-automation-software
-- Middle East AI hiring: https://hiriq.com/solutions/middle-east-ai-hiring
-- USA and UK AI hiring: https://hiriq.com/solutions/usa-uk-ai-hiring
+- AI recruiting software: https://hiriq.co/solutions/ai-recruiting-software
+- AI ATS and applicant tracking: https://hiriq.co/solutions/ai-ats
+- AI interview platform: https://hiriq.co/solutions/ai-interview-platform
+- AI resume screening: https://hiriq.co/solutions/ai-resume-screening
+- Candidate screening software: https://hiriq.co/solutions/candidate-screening-software
+- Recruiting automation software: https://hiriq.co/solutions/recruiting-automation-software
+- Middle East AI hiring: https://hiriq.co/solutions/middle-east-ai-hiring
+- USA and UK AI hiring: https://hiriq.co/solutions/usa-uk-ai-hiring
 
 ## What Hiriq Does
 
