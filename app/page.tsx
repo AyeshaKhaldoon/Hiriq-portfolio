@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FeatureSection from '@/components/FeatureSection';
+import FAQAccordion from '@/components/FAQAccordion';
 import {
   ArrowRight,
   Quote,
@@ -15,6 +16,29 @@ import {
 
 const DEMO_MAILTO =
   'mailto:contact@hiriq.com?subject=Book%20a%20Demo&body=Hi%2C%20I%27d%20like%20to%20book%20a%20demo.%0A%0AThanks';
+
+const homeFaqs = [
+  {
+    q: 'How quickly can a team start using Hiriq?',
+    a: 'Most teams can set up a role, define screening criteria, and begin collecting candidates the same day.',
+  },
+  {
+    q: 'Does Hiriq replace recruiters?',
+    a: 'No. Hiriq automates repetitive screening and interview coordination so recruiters can spend more time reviewing evidence and making decisions.',
+  },
+  {
+    q: 'Can Hiriq support different industries?',
+    a: 'Yes. Hiriq supports industry-specific criteria, job forms, resume parsing, and interview workflows across common hiring categories.',
+  },
+  {
+    q: 'What happens after an AI interview?',
+    a: 'Recruiters receive structured interview evidence, transcripts, scores, and summaries to support faster candidate review.',
+  },
+  {
+    q: 'How fast does the team respond to inquiries?',
+    a: 'Hiriq aims to respond within one business day, with demo requests prioritized.',
+  },
+];
 
 export default function Home() {
   const [isMuted, setIsMuted] = useState(true);
@@ -124,7 +148,7 @@ export default function Home() {
                 {/* Placeholder on top until video is ready */}
                 <Image
                   src="/123.png"
-                  alt=""
+                  alt="Hiriq AI recruitment platform dashboard preview"
                   fill
                   className={`object-cover transition-opacity duration-500 z-10 ${videoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                   priority
@@ -162,12 +186,52 @@ export default function Home() {
 
       <FeatureSection />
 
+      <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+              Case Study
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-900">
+              From scattered screening to one repeatable hiring workflow.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              A growing hiring team can use Hiriq to move from manual resume review and disconnected scheduling into a structured pipeline with scoring, evidence, and follow-up in one place.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link href="/hiring-platform" className="inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800">
+                View platform
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link href="/pricing" className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700">
+                Compare plans
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              ['85%', 'less manual screening time'],
+              ['1 day', 'target response time'],
+              ['24/7', 'candidate interview availability'],
+            ].map(([stat, label]) => (
+              <div key={label} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="text-4xl font-bold text-blue-600">{stat}</div>
+                <p className="mt-3 text-sm font-medium leading-6 text-slate-600">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Customer Stories</p>
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Loved by Hiring Teams</h2>
+            <p className="text-slate-600">
+              Review themes from teams evaluating Hiriq for faster, more structured recruiting.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -205,6 +269,16 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">FAQ</p>
+            <h2 className="text-4xl font-bold text-slate-900">Questions before you start</h2>
+          </div>
+          <FAQAccordion items={homeFaqs} />
         </div>
       </section>
 

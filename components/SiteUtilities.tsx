@@ -216,11 +216,30 @@ export default function SiteUtilities() {
       <button
         type="button"
         onClick={() => setContactOpen(true)}
-        className="fixed bottom-5 right-5 z-[55] flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white shadow-xl shadow-cyan-900/20 transition hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-cyan-200 print:hidden"
+        className="fixed bottom-5 right-5 z-[55] hidden h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white shadow-xl shadow-cyan-900/20 transition hover:-translate-y-0.5 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-cyan-200 md:flex print:hidden"
         aria-label="Open contact options"
       >
         <MessageCircle className="h-6 w-6" />
       </button>
+
+      <div className="fixed bottom-0 left-0 right-0 z-[55] border-t border-slate-200 bg-white/95 px-4 py-3 shadow-2xl shadow-slate-900/15 backdrop-blur md:hidden print:hidden">
+        <div className="mx-auto flex max-w-md gap-2">
+          <a
+            href="https://app.hiriq.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-11 flex-1 items-center justify-center rounded-xl bg-slate-900 px-4 text-sm font-semibold text-white"
+          >
+            Start trial
+          </a>
+          <Link
+            href="/contact"
+            className="flex h-11 flex-1 items-center justify-center rounded-xl border border-slate-200 px-4 text-sm font-semibold text-slate-700"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
 
       {cookieVisible && (
         <div className="fixed bottom-5 left-5 right-5 z-50 max-w-xl rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-900/15 md:left-auto print:hidden">

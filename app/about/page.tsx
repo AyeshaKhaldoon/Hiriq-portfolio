@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Target, Users, Zap, Shield, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -83,7 +84,38 @@ export default function About() {
         </div>
       </section>
 
-    
+      <section className="px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-6xl gap-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-10">
+          <div className="relative min-h-[420px] overflow-hidden rounded-2xl bg-slate-100">
+            <Image
+              src="/7.jpeg"
+              alt="Hiriq team founder portrait"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+              Team
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-900">
+              Built by operators who understand early-stage hiring friction.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              Hiriq is shaped around practical recruiter workflows: clearer criteria, faster evidence collection, and fewer manual handoffs between screening, interviews, and decisions.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800">
+                Contact the team
+              </Link>
+              <Link href="/blog" className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700">
+                Read insights
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Mission Statement */}
       <section className="py-32 px-4 sm:px-6 lg:px-8">

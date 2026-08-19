@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { AlertCircle, CheckCircle2, Mail, MessageSquare, Phone } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Clock, Mail, MapPinned, MessageSquare, Navigation as DirectionsIcon, Phone } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -11,6 +12,7 @@ import { getStoredUtmParams } from '@/components/SiteUtilities';
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,6 +42,7 @@ export default function Contact() {
         setStatus('success');
         setMessage(result.message);
         form.reset();
+        router.push('/thank-you');
       } else {
         setStatus('error');
         setMessage(result.error || 'Submission failed');
@@ -63,6 +66,10 @@ export default function Contact() {
           <p className="text-xl text-slate-600">
             Have questions? We would love to hear from you. Send us a message and we will respond as soon as possible.
           </p>
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
+            <Clock className="h-4 w-4" />
+            Response time promise: within one business day
+          </div>
         </div>
       </section>
 
@@ -100,6 +107,38 @@ export default function Contact() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+              <MapPinned className="h-6 w-6" />
+            </div>
+            <h2 className="text-2xl font-bold text-slate-900">Maps and directions</h2>
+            <p className="mt-3 leading-7 text-slate-600">
+              Hiriq is a remote-first team. For in-person visits, use the directions link after confirming an appointment with the team.
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Hiriq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800"
+            >
+              <DirectionsIcon className="mr-2 h-4 w-4" />
+              Open directions
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <iframe
+              title="Map search for Hiriq"
+              src="https://www.google.com/maps?q=Hiriq&output=embed"
+              className="h-80 w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
