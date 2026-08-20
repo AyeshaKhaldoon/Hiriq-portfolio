@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SiteUtilities from '@/components/SiteUtilities';
+import { siteSearchItems } from './siteSearch';
 import './globals.css';
 
 const siteUrl = 'https://hiriq.co';
@@ -67,6 +68,7 @@ export default function RootLayout({
   const organizationId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
   const softwareId = `${siteUrl}/#software`;
+  const primaryNavigation = siteSearchItems.slice(0, 12);
   const siteSchema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -74,14 +76,30 @@ export default function RootLayout({
         '@type': ['Organization', 'LocalBusiness'],
         '@id': organizationId,
         name: 'Hiriq',
+        legalName: 'Hiriq',
+        alternateName: ['Hiriq AI', 'Hiriq Recruiting Platform'],
         url: siteUrl,
-        logo: `${siteUrl}/Logo.png`,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/Logo.png`,
+        },
         email: 'contact@hiriq.com',
         telephone: '+1-540-664-8490',
         image: `${siteUrl}/123.png`,
+        description:
+          'Hiriq is an AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, AI interviews, and evidence-backed hiring shortlists.',
+        slogan: 'Hire smarter. Hire faster.',
         priceRange: '$$',
         areaServed: ['United States', 'United Kingdom', 'Middle East', 'Pakistan', 'Qatar', 'United Arab Emirates'],
         sameAs: ['https://linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
+        knowsAbout: [
+          'AI recruiting software',
+          'Applicant tracking systems',
+          'AI resume screening',
+          'Candidate screening software',
+          'AI interview platforms',
+          'Recruiting automation',
+        ],
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
@@ -97,6 +115,11 @@ export default function RootLayout({
         url: siteUrl,
         publisher: { '@id': organizationId },
         inLanguage: 'en',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${siteUrl}/search?q={search_term_string}`,
+          'query-input': 'required name=search_term_string',
+        },
       },
       {
         '@type': 'SoftwareApplication',
@@ -119,6 +142,12 @@ export default function RootLayout({
           '@type': 'BusinessAudience',
           audienceType: 'Recruiters, hiring managers, founders, HR teams, staffing agencies',
         },
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        '@id': `${siteUrl}/#primary-navigation`,
+        name: primaryNavigation.map((item) => item.title),
+        url: primaryNavigation.map((item) => `${siteUrl}${item.href}`),
       },
     ],
   };

@@ -11,6 +11,7 @@
 - Contact: https://hiriq.co/contact
 - Blog: https://hiriq.co/blog
 - Brand and citation resources: https://hiriq.co/resources/link-to-hiriq
+- Search: https://hiriq.co/search
 
 ## Solution Pages
 

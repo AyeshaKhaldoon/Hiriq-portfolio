@@ -17,6 +17,7 @@ const routes = [
   '/pricing',
   '/privacy',
   '/resources/link-to-hiriq',
+  '/search',
   '/solutions',
   '/solutions/ai-ats',
   '/solutions/ai-interview-platform',
