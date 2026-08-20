@@ -1,15 +1,17 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle2, SearchCheck } from 'lucide-react';
 import { solutions } from './solutions';
+import { buildSeoMetadata, pageKeywords } from '../seo';
 
-export const metadata: Metadata = {
+export const metadata = buildSeoMetadata({
   title: 'AI Recruiting Solutions | Hiriq',
   description:
     'Explore Hiriq solutions for AI recruiting software, AI ATS workflows, automated interviews, resume screening, and regional hiring across the USA, UK, and Middle East.',
-};
+  path: '/solutions',
+  keywords: pageKeywords.solutions,
+});
 
 export default function SolutionsPage() {
   return (

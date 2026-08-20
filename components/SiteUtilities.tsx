@@ -102,6 +102,12 @@ const searchItems = [
     keywords: 'blog articles recruitment trends best practices',
   },
   {
+    title: 'Link to Hiriq',
+    href: '/resources/link-to-hiriq',
+    description: 'Brand, citation, backlink, and directory listing resources for Hiriq.',
+    keywords: 'backlinks citation resources media kit brand directory listing ai recruiting software',
+  },
+  {
     title: 'Contact',
     href: '/contact',
     description: 'Reach the Hiriq team for sales, support, demos, and partnerships.',

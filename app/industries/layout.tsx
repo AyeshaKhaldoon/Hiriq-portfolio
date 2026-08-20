@@ -1,10 +1,12 @@
-import type { Metadata } from 'next';
+import { buildSeoMetadata, pageKeywords } from '../seo';
 
-export const metadata: Metadata = {
+export const metadata = buildSeoMetadata({
   title: 'Industries We Serve | Hiriq - AI Hiring by Industry',
   description:
-    'From tech to healthcare, BFSI to retail — Hiriq adapts screening, evaluation, and interview intelligence to your industry. Explore industry-specific hiring.',
-};
+    'From tech to healthcare, BFSI, logistics, sales, and retail, Hiriq adapts AI screening, evaluation, and interview intelligence to your industry.',
+  path: '/industries',
+  keywords: pageKeywords.industries,
+});
 
 export default function IndustriesLayout({
   children,

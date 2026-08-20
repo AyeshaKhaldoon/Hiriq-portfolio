@@ -65,6 +65,9 @@ export default async function SolutionPage({ params }: PageProps) {
   if (!solution) notFound();
 
   const pageUrl = `${siteUrl}/solutions/${solution.slug}`;
+  const relatedSolutions = solutions
+    .filter((item) => item.slug !== solution.slug)
+    .slice(0, 3);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -74,13 +77,43 @@ export default async function SolutionPage({ params }: PageProps) {
         url: pageUrl,
         name: solution.metaTitle,
         description: solution.metaDescription,
+        keywords: [solution.primaryKeyword, ...solution.searchTerms].join(', '),
         isPartOf: { '@id': `${siteUrl}/#website` },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/123.png`,
+        },
         about: {
           '@type': 'SoftwareApplication',
           '@id': `${siteUrl}/#software`,
           name: 'Hiriq',
         },
         inLanguage: 'en',
+        relatedLink: relatedSolutions.map((item) => `${siteUrl}/solutions/${item.slug}`),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Solutions',
+            item: `${siteUrl}/solutions`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: solution.shortTitle,
+            item: pageUrl,
+          },
+        ],
       },
       {
         '@type': 'FAQPage',
@@ -233,6 +266,31 @@ export default async function SolutionPage({ params }: PageProps) {
               </p>
             </div>
             <FAQAccordion items={solution.faq} />
+          </div>
+        </section>
+
+        <section className="bg-white px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-8 max-w-3xl">
+              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+                Related Hiriq pages
+              </p>
+              <h2 className="text-3xl font-bold text-slate-900">
+                Continue through the strongest matching search paths.
+              </h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {relatedSolutions.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/solutions/${item.slug}`}
+                  className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-cyan-300 hover:bg-cyan-50"
+                >
+                  <h3 className="font-bold text-slate-900">{item.shortTitle}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.metaDescription}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

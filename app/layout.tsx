@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   description: 'Transform your hiring process with Hiriq. Smart ATS with AI-powered candidate screening, automated pre-screening calls, and intelligent matching. Plus interview practice tools for job seekers.',
   keywords: 'AI recruiting software, AI ATS, applicant tracking system, AI resume screening, AI interview platform, candidate screening software, automated pre-screening, recruitment automation, hiring platform, job interview prep',
   authors: [{ name: 'Hiriq Team' }],
+  alternates: {
+    canonical: '/',
+  },
+  category: 'AI recruiting software',
   openGraph: {
     title: 'Hiriq - AI-Powered Recruitment ATS',
     description: 'Hire smarter with AI-powered candidate screening and automated pre-screening calls',

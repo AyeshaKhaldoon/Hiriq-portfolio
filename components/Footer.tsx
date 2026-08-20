@@ -68,6 +68,7 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
               <li><Link href="/solutions/recruiting-automation-software" className="hover:text-cyan-400 transition-colors">Recruiting Automation</Link></li>
               <li><Link href="/solutions/middle-east-ai-hiring" className="hover:text-cyan-400 transition-colors">Middle East Hiring</Link></li>
               <li><Link href="/solutions/usa-uk-ai-hiring" className="hover:text-cyan-400 transition-colors">USA and UK Hiring</Link></li>
+              <li><Link href="/resources/link-to-hiriq" className="hover:text-cyan-400 transition-colors">Link to Hiriq</Link></li>
             </ul>
           </div>
           <div>

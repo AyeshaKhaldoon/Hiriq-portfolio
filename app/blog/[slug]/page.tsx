@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import NewsletterForm from '@/components/NewsletterForm';
+import { siteUrl } from '@/app/seo';
 
 // Type definitions
 interface BlogSection {
@@ -157,6 +158,30 @@ function getRelatedPosts(currentSlug: string) {
   return blogPosts.filter(post => post.slug !== currentSlug).slice(0, 2);
 }
 
+const blogSeoKeywords: Record<string, string[]> = {
+  'ai-transforming-recruitment-2026': [
+    'AI recruiting trends 2026',
+    'AI recruitment software',
+    'automated candidate screening',
+    'AI hiring platform',
+    'recruitment automation',
+  ],
+  'reduce-time-to-hire': [
+    'reduce time to hire',
+    'time to hire strategies',
+    'AI resume screening',
+    'automated pre-screening',
+    'recruiting workflow automation',
+  ],
+  'cost-of-bad-hire': [
+    'cost of a bad hire',
+    'prevent bad hires',
+    'candidate screening software',
+    'AI candidate matching',
+    'structured hiring process',
+  ],
+};
+
 // SEO Metadata - FIXED FOR NEXT.JS 15
 
 export function generateStaticParams() {
@@ -179,11 +204,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} | Hiriq Blog`,
     description: post.excerpt,
+    keywords: blogSeoKeywords[post.slug] || ['AI recruiting', 'hiring automation', 'candidate screening'],
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
-      images: [{ url: post.image }],
+      url: `${siteUrl}/blog/${post.slug}`,
+      siteName: 'Hiriq',
+      images: [{ url: post.image, alt: post.title }],
+      publishedTime: post.date,
+      authors: [post.author.name],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
     },
   };
 }
@@ -199,13 +238,47 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   const relatedPosts = getRelatedPosts(slug);
-  const articleUrl = `https://hiriq.co/blog/${post.slug}`;
+  const articleUrl = `${siteUrl}/blog/${post.slug}`;
   const encodedUrl = encodeURIComponent(articleUrl);
   const encodedTitle = encodeURIComponent(post.title);
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${articleUrl}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image,
+    datePublished: post.date,
+    dateModified: 'Aug 20, 2026',
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Hiriq',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/Logo.png`,
+      },
+    },
+    mainEntityOfPage: articleUrl,
+    keywords: (blogSeoKeywords[post.slug] || []).join(', '),
+    about: [
+      'AI recruiting software',
+      'candidate screening',
+      'recruiting automation',
+      'AI interview platform',
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
 
       {/* Hero Image */}
       <div className="pt-16">

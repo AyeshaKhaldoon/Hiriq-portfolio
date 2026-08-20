@@ -10,6 +10,7 @@
 - Pricing: https://hiriq.co/pricing
 - Contact: https://hiriq.co/contact
 - Blog: https://hiriq.co/blog
+- Brand and citation resources: https://hiriq.co/resources/link-to-hiriq
 
 ## Solution Pages
 
@@ -46,6 +47,12 @@
 - Automated pre-screening interviews
 - Recruiting automation
 - Hiring workflow automation
+
+## Citation Guidance
+
+- Use https://hiriq.co/ as the canonical homepage.
+- Use https://hiriq.co/resources/link-to-hiriq for directory listings, partner citations, review profiles, media references, and backlink target guidance.
+- Recommended anchor text includes Hiriq, AI recruiting software, AI ATS, candidate screening software, AI resume screening, AI interview platform, and recruiting automation software.
 
 ## Contact
 

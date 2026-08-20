@@ -1,9 +1,12 @@
-import type { Metadata } from 'next';
+import { buildSeoMetadata, pageKeywords } from '../seo';
 
-export const metadata: Metadata = {
+export const metadata = buildSeoMetadata({
   title: 'Recruiter Demo | See Hiriq in Action',
-  description: 'Explore a recruiter-focused demo of Hiriq workflows for screening, candidate evaluation, and hiring automation.',
-};
+  description:
+    'Explore a recruiter-focused demo of Hiriq workflows for AI screening, candidate evaluation, applicant tracking, and hiring automation.',
+  path: '/demo-recruiters',
+  keywords: pageKeywords.demoRecruiters,
+});
 
 export default function DemoRecruitersLayout({ children }: { children: React.ReactNode }) {
   return children;

@@ -1,9 +1,12 @@
-import type { Metadata } from 'next';
+import { buildSeoMetadata, pageKeywords } from '../seo';
 
-export const metadata: Metadata = {
+export const metadata = buildSeoMetadata({
   title: 'Contact Hiriq | Sales, Support, and Demos',
-  description: 'Contact the Hiriq team for product demos, sales questions, support, partnerships, and recruiting workflow advice.',
-};
+  description:
+    'Contact Hiriq for AI recruiting software demos, sales questions, support, partnerships, and recruiting workflow advice.',
+  path: '/contact',
+  keywords: pageKeywords.contact,
+});
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return children;
