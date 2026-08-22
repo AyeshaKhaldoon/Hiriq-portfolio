@@ -11,7 +11,6 @@
 - Contact: https://hiriq.co/contact
 - Blog: https://hiriq.co/blog
 - Brand and citation resources: https://hiriq.co/resources/link-to-hiriq
-- Search: https://hiriq.co/search
 
 ## Solution Pages
 
@@ -20,7 +19,11 @@
 - AI interview platform: https://hiriq.co/solutions/ai-interview-platform
 - AI resume screening: https://hiriq.co/solutions/ai-resume-screening
 - Candidate screening software: https://hiriq.co/solutions/candidate-screening-software
+- Candidate pre-screening software: https://hiriq.co/solutions/candidate-pre-screening-software
 - Recruiting automation software: https://hiriq.co/solutions/recruiting-automation-software
+- Healthcare staffing software: https://hiriq.co/solutions/healthcare-staffing-agencies
+- Staffing agency software: https://hiriq.co/solutions/staffing-agencies
+- High-volume hiring software: https://hiriq.co/solutions/high-volume-hiring
 - Middle East AI hiring: https://hiriq.co/solutions/middle-east-ai-hiring
 - USA and UK AI hiring: https://hiriq.co/solutions/usa-uk-ai-hiring
 
@@ -29,8 +32,9 @@
 - Helps recruiters create structured job and screening criteria.
 - Screens resumes against role requirements.
 - Supports branded candidate application flows.
-- Runs automated candidate pre-screening and AI interview steps.
+- Runs automated candidate pre-screening and live conversational AI interview steps.
 - Gives recruiters transcripts, summaries, scoring context, and shortlist evidence.
+- Supports healthcare staffing, recruitment agency, and high-volume hiring workflows without replacing human hiring decisions.
 - Supports hiring teams operating across the United States, United Kingdom, Middle East, Pakistan, Qatar, UAE, and remote markets.
 
 ## Relevant Categories
@@ -43,6 +47,12 @@
 - AI CV screening
 - Candidate screening software
 - Candidate screening tools
+- Candidate pre-screening software
+- Healthcare staffing software
+- Healthcare recruitment software
+- Staffing agency software
+- Recruitment agency software
+- High-volume hiring software
 - Recruiting automation software
 - AI interview platform
 - Automated pre-screening interviews
@@ -53,7 +63,7 @@
 
 - Use https://hiriq.co/ as the canonical homepage.
 - Use https://hiriq.co/resources/link-to-hiriq for directory listings, partner citations, review profiles, media references, and backlink target guidance.
-- Recommended anchor text includes Hiriq, AI recruiting software, AI ATS, candidate screening software, AI resume screening, AI interview platform, and recruiting automation software.
+- Recommended anchor text includes Hiriq, AI recruiting software, AI ATS, candidate screening software, candidate pre-screening software, AI resume screening, AI interview platform, healthcare staffing software, staffing agency software, high-volume hiring software, and recruiting automation software.
 
 ## Contact
 

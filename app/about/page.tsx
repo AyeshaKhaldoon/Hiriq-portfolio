@@ -68,7 +68,7 @@ export default function About() {
       phase: 'The Solution',
       title: 'Building Hiriq Platform',
       description:
-        'Hiriq emerged as a comprehensive recruitment intelligence platform—combining automated screening, role-specific interview generation, and consistent evaluation frameworks. Our technology enables teams to make faster, fairer, and more data-driven hiring decisions.'
+        'Hiriq emerged as a comprehensive recruitment intelligence platform—combining automated screening, role-specific interview generation, and consistent evaluation frameworks. Our technology helps teams review candidates faster with clearer evidence and human oversight.'
     },
     {
       phase: 'The Impact',
@@ -184,7 +184,7 @@ export default function About() {
               Our Mission
             </h2>
             <p className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-8">
-              Democratizing enterprise-grade recruitment technology for teams of all sizes
+              Making structured recruitment technology accessible for teams of all sizes
             </p>
           </div>
 
@@ -206,7 +206,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
-                  <span>Structured processes reduce bias and improve outcomes</span>
+                  <span>Structured processes make candidate review more consistent and transparent</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />

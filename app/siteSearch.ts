@@ -37,6 +37,12 @@ export const siteSearchItems: SiteSearchItem[] = [
     keywords: 'candidate screening software candidate screening tools ai candidate screening',
   },
   {
+    title: 'Candidate Pre-Screening Software',
+    href: '/solutions/candidate-pre-screening-software',
+    description: 'Qualify applicants on availability, requirements, experience, and role fit before deeper interviews.',
+    keywords: 'candidate pre-screening software recruitment pre-screening automated qualification screening questions',
+  },
+  {
     title: 'Recruiting Automation Software',
     href: '/solutions/recruiting-automation-software',
     description: 'Automate candidate intake, resume screening, pre-screening interviews, and shortlist workflows.',
@@ -47,6 +53,24 @@ export const siteSearchItems: SiteSearchItem[] = [
     href: '/solutions/ai-interview-platform',
     description: 'Live conversational AI interviews with adaptive follow-ups, scorecards, transcripts, and integrity flags.',
     keywords: 'ai interview platform live ai interviews conversational interviews transcript scorecard',
+  },
+  {
+    title: 'Healthcare Staffing Software',
+    href: '/solutions/healthcare-staffing-agencies',
+    description: 'Screen healthcare applicants and prepare recruiter-reviewed evidence for clinical and care-adjacent roles.',
+    keywords: 'healthcare staffing software healthcare recruitment software nurse staffing candidate screening',
+  },
+  {
+    title: 'Staffing Agency Software',
+    href: '/solutions/staffing-agencies',
+    description: 'Screen, qualify, and prepare candidate evidence for staffing agency client submissions.',
+    keywords: 'staffing agency software recruitment agency software recruiter automation candidate submissions',
+  },
+  {
+    title: 'High-Volume Hiring Software',
+    href: '/solutions/high-volume-hiring',
+    description: 'Apply consistent criteria across large applicant pools and build recruiter-ready shortlists.',
+    keywords: 'high-volume hiring software high-volume recruitment bulk applicant screening hiring automation',
   },
   {
     title: 'Middle East AI Hiring',

@@ -17,6 +17,7 @@ export const metadata = buildSeoMetadata({
     'Hiriq candidate screening',
     'Hiriq AI interview platform',
   ],
+  noIndex: true,
 });
 
 type SearchPageProps = {

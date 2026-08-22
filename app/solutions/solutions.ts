@@ -384,6 +384,214 @@ export const solutions: Solution[] = [
     ],
   },
   {
+    slug: 'healthcare-staffing-agencies',
+    shortTitle: 'Healthcare Staffing',
+    title: 'Healthcare staffing software for faster clinical candidate screening',
+    metaTitle: 'Healthcare Staffing Software for Candidate Screening | Hiriq',
+    metaDescription:
+      'Hiriq helps healthcare staffing and recruitment teams screen resumes, verify role-fit evidence, run structured AI interviews, and prepare recruiter-reviewed shortlists.',
+    eyebrow: 'Healthcare staffing software',
+    lead:
+      'Hiriq helps healthcare recruiters move faster from applicant volume to reviewable clinical hiring evidence without making unsupported compliance or hiring-decision claims.',
+    market: 'Built for healthcare staffing agencies, care providers, and recruiting teams hiring nurses, allied health, support, and operations roles across regional or remote markets.',
+    primaryKeyword: 'healthcare staffing software',
+    searchTerms: [
+      'healthcare staffing software',
+      'healthcare recruitment software',
+      'nurse staffing software',
+      'healthcare candidate screening',
+      'AI healthcare hiring',
+    ],
+    problems: [
+      'Healthcare recruiters often need to compare applicants across credentials, role requirements, availability, and communication signals.',
+      'Generic ATS workflows can hide the details that matter for clinical and care-adjacent roles.',
+      'Recruiters need structured evidence before sending candidates to facilities or hiring managers.',
+    ],
+    outcomes: [
+      'Screen resumes against role-specific clinical, operational, and availability criteria.',
+      'Use pre-screening to collect practical qualification context before recruiter review.',
+      'Run structured AI interviews for deeper scenario, technical, and communication evidence where appropriate.',
+      'Keep recruiters in control of every final shortlist and hiring recommendation.',
+    ],
+    workflow: [
+      'Define role requirements, required experience, location, shift, and availability signals.',
+      'Collect applications and resumes through a consistent candidate flow.',
+      'Review AI-assisted fit summaries against the healthcare role criteria.',
+      'Use pre-screening or AI interviews to gather deeper evidence for qualified candidates.',
+      'Share a recruiter-reviewed shortlist with notes, transcript context, and next-step guidance.',
+    ],
+    faq: [
+      {
+        q: 'Is Hiriq only for general business hiring?',
+        a: 'No. Hiriq can support healthcare staffing and healthcare recruitment workflows where teams need structured resume screening, qualification evidence, and interview review.',
+      },
+      {
+        q: 'Does Hiriq replace credentialing or compliance systems?',
+        a: 'No. Hiriq helps with recruiting screening and interview evidence. Teams should continue using their required credentialing, compliance, and employment verification processes.',
+      },
+      {
+        q: 'Can Hiriq support nurse staffing workflows?',
+        a: 'Yes. Hiriq can help screen candidates against nursing or care-role requirements, then give recruiters structured context before facility or hiring-manager review.',
+      },
+    ],
+  },
+  {
+    slug: 'staffing-agencies',
+    shortTitle: 'Staffing Agencies',
+    title: 'Staffing agency software for screening, interviews, and recruiter review',
+    metaTitle: 'Staffing Agency Software for Candidate Screening | Hiriq',
+    metaDescription:
+      'Hiriq helps staffing and recruitment agencies qualify candidates with resume screening, pre-screening, AI interviews, and recruiter-ready shortlist evidence.',
+    eyebrow: 'Staffing agency software',
+    lead:
+      'Hiriq gives staffing agencies a cleaner way to turn inbound applicants into client-ready candidate evidence, while recruiters keep ownership of submission quality.',
+    market: 'Useful for recruitment agencies, staffing firms, boutique search teams, and multi-role hiring teams across the USA, UK, Middle East, and remote markets.',
+    primaryKeyword: 'staffing agency software',
+    searchTerms: [
+      'staffing agency software',
+      'recruitment agency software',
+      'recruiting automation for staffing agencies',
+      'candidate screening for staffing agencies',
+      'recruiter automation software',
+    ],
+    problems: [
+      'Agency recruiters need to qualify applicants quickly without sending weak evidence to clients.',
+      'Candidate notes, resumes, screening answers, and interview context are often split across tools.',
+      'Recruiters need repeatable workflows across many open roles without making every role feel generic.',
+    ],
+    outcomes: [
+      'Standardize intake and qualification across agency roles.',
+      'Build stronger candidate submissions with resume, screening, and interview evidence.',
+      'Reduce repetitive early-funnel work before recruiter judgment is needed.',
+      'Support client-facing shortlists with clearer candidate context.',
+    ],
+    workflow: [
+      'Create role criteria based on the client requirement.',
+      'Collect applicants and resumes through a structured application path.',
+      'Screen candidate fit and qualification evidence.',
+      'Run pre-screening or AI interviews for candidates who need deeper review.',
+      'Prepare recruiter-reviewed shortlists for client or hiring-manager conversations.',
+    ],
+    faq: [
+      {
+        q: 'Can staffing agencies use Hiriq across multiple client roles?',
+        a: 'Yes. Hiriq is designed around role-specific criteria, so agencies can create different screening workflows for different client requirements.',
+      },
+      {
+        q: 'Does Hiriq write final client submissions automatically?',
+        a: 'No. Hiriq organizes candidate evidence and recommendations so recruiters can review, edit, and decide what to send forward.',
+      },
+      {
+        q: 'Is Hiriq useful for boutique recruitment agencies?',
+        a: 'Yes. Smaller agencies can use Hiriq to reduce repetitive screening work while keeping a high-touch recruiter review process.',
+      },
+    ],
+  },
+  {
+    slug: 'high-volume-hiring',
+    shortTitle: 'High-Volume Hiring',
+    title: 'High-volume hiring software for consistent candidate screening',
+    metaTitle: 'High-Volume Hiring Software for Screening | Hiriq',
+    metaDescription:
+      'Hiriq helps high-volume hiring teams screen applicants, prioritize qualified candidates, and review structured evidence before live interviews.',
+    eyebrow: 'High-volume hiring software',
+    lead:
+      'Hiriq helps teams handle applicant volume with repeatable criteria, early qualification, and shortlist evidence instead of manual sorting alone.',
+    market: 'Designed for recruiters hiring across operations, healthcare, sales, BPO, retail, support, technology, and multi-location teams.',
+    primaryKeyword: 'high-volume hiring software',
+    searchTerms: [
+      'high-volume hiring software',
+      'high-volume recruitment software',
+      'high-volume candidate screening',
+      'bulk applicant screening',
+      'AI hiring automation',
+    ],
+    problems: [
+      'Applicant volume can overwhelm recruiters before they reach qualified candidates.',
+      'Manual first-pass screening is hard to keep consistent across many similar applications.',
+      'Hiring managers need faster shortlists without losing visibility into why candidates were advanced.',
+    ],
+    outcomes: [
+      'Apply the same job criteria across large applicant pools.',
+      'Prioritize candidates who meet role requirements and practical qualification signals.',
+      'Use automated pre-screening to reduce low-signal live calls.',
+      'Give recruiters and hiring managers evidence they can inspect before next steps.',
+    ],
+    workflow: [
+      'Define must-have and nice-to-have criteria before applications are reviewed.',
+      'Collect resumes and answers in one candidate flow.',
+      'Screen large applicant pools against the role criteria.',
+      'Route stronger candidates into pre-screening, AI interviews, or recruiter review.',
+      'Review shortlist evidence before scheduling live conversations.',
+    ],
+    faq: [
+      {
+        q: 'What makes Hiriq useful for high-volume hiring?',
+        a: 'Hiriq helps teams apply consistent criteria, organize candidate evidence, and reduce repetitive early-funnel review across large applicant pools.',
+      },
+      {
+        q: 'Can Hiriq handle different role types?',
+        a: 'Yes. Recruiters can define role-specific criteria so high-volume workflows do not become one generic filter.',
+      },
+      {
+        q: 'Does Hiriq automatically reject candidates?',
+        a: 'Hiriq is designed to support recruiter review and recommendations. Hiring teams remain responsible for decisions and candidate communication.',
+      },
+    ],
+  },
+  {
+    slug: 'candidate-pre-screening-software',
+    shortTitle: 'Pre-Screening',
+    title: 'Candidate pre-screening software before AI interviews',
+    metaTitle: 'Candidate Pre-Screening Software for Recruiters | Hiriq',
+    metaDescription:
+      'Hiriq candidate pre-screening software helps recruiters qualify applicants on availability, requirements, experience, and role fit before deeper interviews.',
+    eyebrow: 'Candidate pre-screening software',
+    lead:
+      'Hiriq separates quick qualification from deeper AI interviews, so recruiters can confirm practical fit before spending time on longer interview evidence.',
+    market: 'Useful for recruiters, founders, agencies, and hiring teams that need faster early qualification across remote or regional candidate pools.',
+    primaryKeyword: 'candidate pre-screening software',
+    searchTerms: [
+      'candidate pre-screening software',
+      'recruitment pre-screening software',
+      'automated candidate pre-screening',
+      'pre-employment screening questions',
+      'AI candidate qualification',
+    ],
+    problems: [
+      'Recruiters lose time scheduling candidates who miss practical requirements for the role.',
+      'Early qualification questions are often repeated manually across every applicant.',
+      'Teams need a clear separation between quick pre-screening and deeper structured interviews.',
+    ],
+    outcomes: [
+      'Collect availability, work setup, experience, compensation, and requirement-fit context earlier.',
+      'Route only stronger candidates into AI interviews or recruiter conversations.',
+      'Give recruiters a compact qualification summary before next-step decisions.',
+      'Keep AI interviews focused on deeper technical, behavioral, and scenario evidence.',
+    ],
+    workflow: [
+      'Define practical qualification questions for the role.',
+      'Invite applicants into a short pre-screening step.',
+      'Collect structured answers before live recruiter calls.',
+      'Review fit signals and decide who should enter AI interviews or human interviews.',
+      'Keep the final decision with the recruiter or hiring manager.',
+    ],
+    faq: [
+      {
+        q: 'How is pre-screening different from an AI interview?',
+        a: 'Pre-screening confirms practical role fit such as availability, requirements, and basic qualification signals. Hiriq AI Interviews are deeper live conversational interviews with adaptive follow-ups and scorecards.',
+      },
+      {
+        q: 'Can Hiriq use pre-screening before resume review?',
+        a: 'Teams can use pre-screening alongside resume review depending on the hiring workflow and the information they need first.',
+      },
+      {
+        q: 'Does pre-screening make hiring decisions?',
+        a: 'No. It gathers structured qualification evidence for recruiter and hiring-manager review.',
+      },
+    ],
+  },
+  {
     slug: 'usa-uk-ai-hiring',
     shortTitle: 'USA and UK AI Hiring',
     title: 'AI hiring platform for USA and UK recruiting teams',

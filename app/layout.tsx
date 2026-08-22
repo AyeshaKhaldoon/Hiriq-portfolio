@@ -10,17 +10,20 @@ const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Hiriq - AI-Powered Recruitment ATS & Interview Practice Platform',
-  description: 'Transform your hiring process with Hiriq. Smart ATS with AI-powered candidate screening, automated pre-screening calls, and intelligent matching. Plus interview practice tools for job seekers.',
-  keywords: 'AI recruiting software, AI ATS, applicant tracking system, AI resume screening, AI interview platform, candidate screening software, automated pre-screening, recruitment automation, hiring platform, job interview prep',
+  title: 'Hiriq - AI Recruiting Software for Screening and Interviews',
+  description:
+    'Hiriq helps recruiting teams automate resume screening, candidate pre-screening, live AI interviews, and evidence-backed shortlist review while keeping recruiters in control.',
+  keywords:
+    'AI recruiting software, AI recruitment software, AI ATS, applicant tracking system, AI resume screening, AI interview platform, candidate screening software, healthcare staffing software, staffing agency software, high-volume hiring software, recruitment automation',
   authors: [{ name: 'Hiriq Team' }],
   alternates: {
     canonical: '/',
   },
   category: 'AI recruiting software',
   openGraph: {
-    title: 'Hiriq - AI-Powered Recruitment ATS',
-    description: 'Hire smarter with AI-powered candidate screening and automated pre-screening calls',
+    title: 'Hiriq - AI Recruiting Software for Screening and Interviews',
+    description:
+      'AI recruiting workflows for resume screening, candidate pre-screening, live AI interviews, and recruiter-reviewed shortlists.',
     url: siteUrl,
     siteName: 'Hiriq',
     locale: 'en_US',
@@ -36,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hiriq - AI-Powered Recruitment ATS',
-    description: 'Transform your hiring with AI automation',
+    title: 'Hiriq - AI Recruiting Software',
+    description: 'Automate early-funnel screening and interviews while keeping recruiters in control.',
     images: ['/123.png'],
   },
   robots: {
@@ -73,7 +76,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'LocalBusiness'],
+        '@type': 'Organization',
         '@id': organizationId,
         name: 'Hiriq',
         legalName: 'Hiriq',
@@ -89,7 +92,6 @@ export default function RootLayout({
         description:
           'Hiriq is an AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, AI interviews, and evidence-backed hiring shortlists.',
         slogan: 'Hire smarter. Hire faster.',
-        priceRange: '$$',
         areaServed: ['United States', 'United Kingdom', 'Middle East', 'Pakistan', 'Qatar', 'United Arab Emirates'],
         sameAs: ['https://www.linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
         founder: [
@@ -110,6 +112,10 @@ export default function RootLayout({
           'Candidate screening software',
           'AI interview platforms',
           'Recruiting automation',
+          'Healthcare staffing software',
+          'Staffing agency software',
+          'High-volume hiring software',
+          'Candidate pre-screening software',
         ],
         contactPoint: {
           '@type': 'ContactPoint',
@@ -140,7 +146,7 @@ export default function RootLayout({
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description:
-          'AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, AI interviews, and candidate shortlisting.',
+          'AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, live conversational AI interviews, and candidate shortlisting.',
         publisher: { '@id': organizationId },
         image: `${siteUrl}/123.png`,
         offers: {

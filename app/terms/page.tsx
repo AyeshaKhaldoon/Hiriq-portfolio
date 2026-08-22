@@ -31,18 +31,18 @@ export default function Terms() {
             <div className="grid md:grid-cols-3 gap-4 mt-6">
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <Lock className="w-6 h-6 mb-2" />
-                <p className="font-semibold">Bank-Level Encryption</p>
-                <p className="text-sm text-blue-100">All data encrypted at rest and in transit</p>
+                <p className="font-semibold">Data Safeguards</p>
+                <p className="text-sm text-blue-100">Encryption and access-control practices for platform data</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <Eye className="w-6 h-6 mb-2" />
-                <p className="font-semibold">Zero Data Sharing</p>
-                <p className="text-sm text-blue-100">We never sell or share your data</p>
+                <p className="font-semibold">Limited Data Sharing</p>
+                <p className="text-sm text-blue-100">We do not sell personal data</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <Shield className="w-6 h-6 mb-2" />
-                <p className="font-semibold">SOC 2 Compliant</p>
-                <p className="text-sm text-blue-100">Industry-leading security standards</p>
+                <p className="font-semibold">Recruiter Oversight</p>
+                <p className="text-sm text-blue-100">AI recommendations are designed for human review</p>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function Terms() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Agreement to Terms</h2>
               <p className="text-slate-600 mb-4">
-                Welcome to Hiriq, an AI-powered recruitment platform designed to revolutionize how companies find and hire talent. By accessing or using Hiriq's services, you agree to be bound by these Terms of Service and all applicable laws and regulations.
+                Welcome to Hiriq, an AI-powered recruitment platform designed to support how companies screen, interview, and review candidates. By accessing or using Hiriq's services, you agree to be bound by these Terms of Service and all applicable laws and regulations.
               </p>
               <p className="text-slate-600 mb-4">
                 <strong>Important:</strong> If you do not agree with any part of these terms, you must not use our service. Your use of Hiriq constitutes your acceptance of these terms.
@@ -79,27 +79,25 @@ export default function Terms() {
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-6">
                 <p className="text-slate-700 font-semibold mb-2">
                   <Shield className="inline w-5 h-5 mr-2" />
-                  Hiriq's Data Protection Guarantee
+                  Hiriq's Data Protection Practices
                 </p>
                 <p className="text-slate-600 mb-0">
-                  Your data security is our top priority. We implement enterprise-grade security measures to ensure all candidate and company information remains completely confidential and secure.
+                  We use reasonable administrative, technical, and organizational safeguards to help protect candidate and company information handled through the platform.
                 </p>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-3">We Guarantee:</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Our Practices:</h3>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-                <li><strong>Zero Data Leakage:</strong> Your candidate data, job postings, and company information are never shared, sold, or exposed to third parties</li>
-                <li><strong>End-to-End Encryption:</strong> All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit</li>
-                <li><strong>Isolated Data Storage:</strong> Each company's data is stored in isolated, secure environments with strict access controls</li>
-                <li><strong>SOC 2 Type II Compliance:</strong> We maintain the highest industry security standards</li>
-                <li><strong>GDPR & CCPA Compliant:</strong> Full compliance with international data protection regulations</li>
-                <li><strong>Regular Security Audits:</strong> Third-party penetration testing and security assessments conducted quarterly</li>
-                <li><strong>24/7 Monitoring:</strong> Continuous threat detection and incident response capabilities</li>
+                <li><strong>No sale of personal data:</strong> We do not sell candidate or customer personal data</li>
+                <li><strong>Encryption:</strong> We use encryption in transit and at rest where appropriate</li>
+                <li><strong>Access controls:</strong> Access is limited based on operational and support needs</li>
+                <li><strong>Service providers:</strong> Limited data may be processed by vendors needed to operate the service</li>
+                <li><strong>Customer responsibility:</strong> Customers remain responsible for using Hiriq in line with applicable hiring, privacy, and employment laws</li>
               </ul>
 
               <h3 className="text-xl font-bold text-slate-900 mb-3">Confidentiality Commitment:</h3>
               <p className="text-slate-600 mb-4">
-                Hiriq employees and systems are bound by strict confidentiality agreements. Access to your data is limited to:
+                Access to customer and candidate data is limited to:
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
                 <li>Authorized personnel only, on a need-to-know basis</li>
@@ -227,32 +225,32 @@ export default function Terms() {
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
                 <li>AI recommendations are assistive tools, not final decisions</li>
                 <li>Final hiring decisions remain with human recruiters</li>
-                <li>Our AI is regularly audited for bias and fairness</li>
-                <li>We comply with all AI ethics guidelines and employment laws</li>
+                <li>Customers should review AI output before taking hiring action</li>
+                <li>Customers remain responsible for complying with applicable employment and privacy laws</li>
               </ul>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Bias Prevention</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Responsible AI Review</h3>
               <p className="text-slate-600 mb-4">
-                Hiriq actively works to eliminate bias:
+                Hiriq is designed to support structured review:
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-                <li>AI trained on diverse, representative datasets</li>
-                <li>Regular bias audits by third-party experts</li>
-                <li>Option to anonymize candidate information during screening</li>
-                <li>Transparent scoring criteria available to users</li>
+                <li>Recruiters can review criteria, summaries, transcripts, and scoring context</li>
+                <li>AI output should be treated as decision support, not an automatic hiring decision</li>
+                <li>Customers can configure role-specific criteria and review candidate evidence before next steps</li>
+                <li>Human oversight is required for final hiring decisions</li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Service Level Agreement (SLA)</h2>
               <p className="text-slate-600 mb-4">
-                Hiriq commits to:
+                Hiriq aims to provide a reliable platform experience:
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-                <li><strong>99.9% uptime:</strong> Monthly uptime guarantee (excludes scheduled maintenance)</li>
-                <li><strong>24/7 Support:</strong> Enterprise plans include priority support with &lt;2 hour response time</li>
-                <li><strong>Data Backup:</strong> Automated daily backups with 30-day retention</li>
-                <li><strong>Disaster Recovery:</strong> Complete system recovery within 4 hours</li>
+                <li><strong>Availability:</strong> We work to keep the service available and communicate material interruptions where practical</li>
+                <li><strong>Support:</strong> Support response targets may vary by plan and customer agreement</li>
+                <li><strong>Data protection:</strong> Backup and recovery practices may vary by deployment and service configuration</li>
+                <li><strong>Maintenance:</strong> Scheduled maintenance may occasionally affect service availability</li>
               </ul>
             </section>
 
@@ -273,15 +271,13 @@ export default function Terms() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Compliance & Legal</h2>
               <p className="text-slate-600 mb-4">
-                Hiriq complies with:
+                Customers are responsible for using Hiriq in line with applicable requirements, including:
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-                <li>Equal Employment Opportunity (EEO) laws</li>
-                <li>Fair Credit Reporting Act (FCRA) requirements</li>
-                <li>Americans with Disabilities Act (ADA)</li>
-                <li>General Data Protection Regulation (GDPR)</li>
-                <li>California Consumer Privacy Act (CCPA)</li>
-                <li>SOC 2 Type II security standards</li>
+                <li>Employment and anti-discrimination laws in the jurisdictions where they hire</li>
+                <li>Candidate notice, consent, and transparency obligations that apply to their recruiting process</li>
+                <li>Privacy and data-protection obligations for candidate and employee data</li>
+                <li>Internal review policies for automated tools and AI-assisted recommendations</li>
               </ul>
             </section>
 
@@ -329,7 +325,7 @@ export default function Terms() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Mail:</span>
-                    <span>Hiriq, Inc.<br />100 Innovation Drive<br />San Francisco, CA 94105</span>
+                    <span>Remote-first team. Please contact us by email for formal correspondence.</span>
                   </li>
                 </ul>
               </div>
@@ -341,7 +337,7 @@ export default function Terms() {
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">Security Commitment</p>
                   <p className="text-slate-600 text-sm">
-                    At Hiriq, we treat your data with the same care as our own. Every feature, every line of code, and every security measure is designed with your privacy and security as the top priority. If you ever have concerns about data security, our team is available 24/7 to assist you.
+                    At Hiriq, we treat candidate and customer data carefully and design the platform around human review. If you have concerns about data security or privacy, contact our team at contact@hiriq.com.
                   </p>
                 </div>
               </div>

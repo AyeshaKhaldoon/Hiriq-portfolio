@@ -50,7 +50,7 @@ const FeatureSection = () => {
                   AI Voice Interviews
                 </h3>
                 <p className="text-slate-600 text-lg max-w-xl leading-relaxed font-medium">
-                  Our AI conducts structured, adaptive conversations with candidates—evaluates responses and schedules your top picks. You get transcripts and scores.
+                  Our AI conducts structured, adaptive conversations with candidates and returns transcripts, scorecards, and review context for recruiters.
                 </p>
               </div>
               <div className="mt-8 inline-flex items-center text-blue-600 font-bold group-hover:gap-3 gap-2 transition-all">
@@ -70,7 +70,7 @@ const FeatureSection = () => {
             </div>
             <h3 className="text-xl font-extrabold text-slate-900 mb-2">Smart Distribution</h3>
             <p className="text-slate-600 leading-relaxed font-medium">
-              Auto-post to job boards. One-click shortlists and automated rejection emails.
+              Organize inbound candidates, shortlist evidence, and recruiter handoffs from one workflow.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ const FeatureSection = () => {
             </div>
             <h3 className="text-xl font-extrabold text-slate-900 mb-2">Integrity & Fairness</h3>
             <p className="text-slate-600 leading-relaxed font-medium">
-              Proctoring and transparency so every candidate is evaluated fairly.
+              Integrity signals and transparent scoring context support more consistent recruiter review.
             </p>
           </div>
 

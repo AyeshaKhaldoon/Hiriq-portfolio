@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /thank-you
+Disallow: /search?*
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /super-admin/
+Disallow: /account/
+Disallow: /login
+Disallow: /signup
+Disallow: /candidate/
+Disallow: /reports/
 
 Sitemap: https://hiriq.co/sitemap.xml

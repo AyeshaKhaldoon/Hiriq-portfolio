@@ -24,25 +24,25 @@ export default function Privacy() {
             <div className="flex items-center gap-4 mb-4">
               <Shield className="w-12 h-12" />
               <div>
-                <h2 className="text-2xl font-bold">Your Privacy is Sacred</h2>
-                <p className="text-green-100">We protect your data like it's our own—because trust is everything</p>
+                <h2 className="text-2xl font-bold">Privacy and Security Matter</h2>
+                <p className="text-green-100">We use careful data practices for recruiting teams and candidates</p>
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <Eye className="w-6 h-6 mb-2" />
-                <p className="font-semibold">We NEVER Sell Your Data</p>
-                <p className="text-sm text-green-100">Not now, not ever. Your data is yours alone.</p>
+                <p className="font-semibold">We Do Not Sell Personal Data</p>
+                <p className="text-sm text-green-100">Candidate and customer data is used to operate and improve Hiriq.</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <Lock className="w-6 h-6 mb-2" />
-                <p className="font-semibold">Military-Grade Encryption</p>
-                <p className="text-sm text-green-100">AES-256 encryption, same as banks and governments</p>
+                <p className="font-semibold">Encryption in Transit and Storage</p>
+                <p className="text-sm text-green-100">We use modern encryption and access-control practices.</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <Database className="w-6 h-6 mb-2" />
-                <p className="font-semibold">Zero Data Leakage</p>
-                <p className="text-sm text-green-100">Isolated storage, strict access controls</p>
+                <p className="font-semibold">Limited Access Controls</p>
+                <p className="text-sm text-green-100">Access is restricted to authorized support and operations needs.</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4 backdrop-blur">
                 <UserCheck className="w-6 h-6 mb-2" />

@@ -51,22 +51,22 @@ const blogPosts: BlogPost[] = [
       avatar: 'https://ui-avatars.com/api/?name=Sarah+Johnson&background=0E7490&color=fff'
     },
     content: {
-      intro: "The recruitment landscape has undergone a seismic shift over the past few years, and 2026 marks a pivotal moment where artificial intelligence has moved from experimental technology to essential infrastructure. If you're still manually screening hundreds of resumes or conducting preliminary phone calls, you're not just behind the curve—you're actively losing top talent to faster, smarter competitors.",
+      intro: "The recruitment landscape has changed quickly as artificial intelligence moves from experimental tooling into everyday hiring workflows. If you're still manually screening large applicant pools or repeating the same preliminary calls, it is worth asking where structured automation can give recruiters better evidence earlier.",
       sections: [
         {
           heading: 'The Death of Manual Resume Screening',
-          content: "Let's start with a hard truth: the traditional hiring funnel is broken. The average corporate job posting receives 250 applications, and recruiters spend just 6-7 seconds scanning each resume. This isn't a process—it's a lottery where great candidates slip through the cracks because their resume didn't include the exact keyword you searched for.",
+          content: "Let's start with a practical truth: many hiring funnels create more applicant volume than recruiters can review with care. When resumes arrive faster than the team can compare them, strong candidates can be missed and weak-fit candidates can still consume live interview time.",
           bulletPoints: [
             'Skills context and relevance rather than just keywords',
             'Career trajectory patterns that indicate growth potential',
-            'Cultural fit indicators based on communication style and values alignment',
-            'Red flags like unexplained employment gaps or inconsistent information'
+            'Communication and role-context signals that help recruiters prepare better follow-up questions',
+            'Review flags where information needs clarification before a candidate moves forward'
           ],
-          conclusion: 'The result? What used to take 40+ hours of recruiter time per role now happens in minutes, with higher accuracy and zero unconscious bias.'
+          conclusion: 'The result is a more structured first pass: recruiters get clearer evidence earlier, while final judgment stays with people who understand the role and hiring context.'
         },
         {
           heading: 'Automated Pre-Screening: The Game Changer',
-          content: "Here's where things get really interesting. In 2026, the most innovative companies have eliminated the first-round phone screen entirely—not by skipping it, but by automating it with conversational AI. These aren't robotic, frustrating phone trees. Modern AI interviewers conduct natural, empathetic conversations that feel remarkably human.",
+          content: "This is where automation becomes practical. Teams can move repetitive first-round qualification into structured conversational AI workflows, then reserve human time for the candidates who need deeper judgment and relationship-building.",
           stats: [
             { label: 'Faster review', description: 'when repetitive first screens move into structured workflows' },
             { label: 'More consistency', description: 'when candidates answer comparable role-specific questions' },
@@ -76,15 +76,15 @@ const blogPosts: BlogPost[] = [
         },
         {
           heading: 'The Bottom Line',
-          content: "AI in recruitment isn't the future—it's the present. Companies that embrace these tools in 2026 will dominate the talent market. Those that don't will find themselves perpetually playing catch-up, losing top candidates to faster, smarter competitors. The question isn't whether to adopt AI-powered recruitment. It's whether you can afford not to."
+          content: "AI in recruitment is becoming a normal part of the modern hiring stack. The teams that use it well will combine speed with transparency: clear criteria, reviewable evidence, human oversight, and candidate communication that does not disappear into a black box."
         }
       ]
     }
   },
   {
     slug: 'reduce-time-to-hire',
-    title: '10 Proven Strategies to Reduce Time-to-Hire by 50%',
-    excerpt: 'Learn actionable tactics to speed up your recruitment process without compromising candidate quality.',
+    title: '10 Practical Strategies to Reduce Time-to-Hire',
+    excerpt: 'Learn practical tactics to speed up your recruitment process without compromising candidate quality.',
     category: 'Best Practices',
     date: 'Dec 28, 2025',
     readTime: '7 min read',
@@ -94,17 +94,17 @@ const blogPosts: BlogPost[] = [
       avatar: 'https://ui-avatars.com/api/?name=Michael+Chen&background=0E7490&color=fff'
     },
     content: {
-      intro: 'Time-to-hire is the silent killer of recruitment success. Every extra day a position remains unfilled costs your company money in lost productivity, delayed projects, and burnt-out team members covering the gap. The average time-to-hire in 2026 is 36 days, but top-performing companies are doing it in 18 days or less. Here are 10 proven strategies to cut your hiring time in half.',
+      intro: 'Time-to-hire can quietly damage recruitment performance. Every extra day a position remains open can affect productivity, projects, and team workload. These strategies focus on reducing avoidable delays while keeping candidate review thoughtful.',
       sections: [
         {
           heading: '1. Automate Resume Screening',
-          content: 'The old way: Your recruiter spends 40 hours screening 250 applications, manually searching for keywords and qualifications. The smart way: AI-powered screening analyzes all 250 applications in 10 minutes, ranking candidates by actual fit—not just keyword presence.',
-          highlight: 'Time Saved: 35+ hours per role'
+          content: 'The old way: recruiters manually sort applications, often searching for keywords and qualifications under time pressure. The better way: AI-assisted screening compares candidates against role criteria and gives recruiters structured fit evidence for review.',
+          highlight: 'Best for roles with high applicant volume'
         },
         {
           heading: '2. Replace Initial Phone Screens with AI Interviews',
-          content: 'The traditional phone screen is a bottleneck nightmare. Scheduling alone can add 5-7 days to your process. Automated pre-screening interviews that candidates complete on their schedule eliminate scheduling conflicts and speed up the process dramatically.',
-          highlight: 'Time Saved: 15+ hours per role + 5-7 days in scheduling'
+          content: 'The traditional phone screen can become a scheduling bottleneck. Automated pre-screening lets candidates answer practical qualification questions earlier, then gives recruiters clearer context before deciding who needs a live conversation.',
+          highlight: 'Best for early qualification and calendar-heavy workflows'
         },
         {
           heading: 'The Bottom Line',

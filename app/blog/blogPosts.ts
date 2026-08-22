@@ -35,16 +35,16 @@ The recruitment landscape has undergone a seismic shift over the past few years,
 
 ## The Death of Manual Resume Screening
 
-Let's start with a hard truth: the traditional hiring funnel is broken. The average corporate job posting receives 250 applications, and recruiters spend just 6-7 seconds scanning each resume.
+Let's start with a hard truth: many hiring funnels create more applicant volume than recruiters can review with care. When resumes arrive faster than the team can compare them, strong candidates can be missed and weak-fit candidates can still consume live interview time.
 
 AI-powered screening has evolved beyond simple keyword matching. Modern systems analyze:
 
 - **Skills context and relevance** rather than just keywords
 - **Career trajectory patterns** that indicate growth potential
-- **Cultural fit indicators** based on communication style and values alignment
-- **Red flags** like unexplained employment gaps or inconsistent information
+- **Communication and role-context signals** that help recruiters prepare better follow-up questions
+- **Review flags** where information needs clarification before a candidate moves forward
 
-The result? What used to take 40+ hours of recruiter time per role now happens in minutes, with higher accuracy and zero unconscious bias.
+The result is a more structured first pass: recruiters get clearer evidence earlier, while final judgment stays with people who understand the role and hiring context.
 
 ## Automated Pre-Screening: The Game Changer
 

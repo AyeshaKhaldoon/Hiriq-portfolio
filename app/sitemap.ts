@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { solutions } from './solutions/solutions';
 
 const routes = [
   '',
@@ -17,26 +18,19 @@ const routes = [
   '/pricing',
   '/privacy',
   '/resources/link-to-hiriq',
-  '/search',
   '/solutions',
-  '/solutions/ai-ats',
-  '/solutions/ai-interview-platform',
-  '/solutions/ai-recruiting-software',
-  '/solutions/ai-resume-screening',
-  '/solutions/candidate-screening-software',
-  '/solutions/middle-east-ai-hiring',
-  '/solutions/recruiting-automation-software',
-  '/solutions/usa-uk-ai-hiring',
   '/terms',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://hiriq.co';
+  const solutionRoutes = solutions.map((solution) => `/solutions/${solution.slug}`);
+  const allRoutes = [...routes, ...solutionRoutes];
 
-  return routes.map((route) => ({
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date('2026-08-22'),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : 0.7,
+    lastModified: new Date('2026-08-23'),
+    changeFrequency: route === '' || route === '/solutions' ? 'weekly' : 'monthly',
+    priority: route === '' ? 1 : route.startsWith('/solutions') ? 0.85 : 0.7,
   }));
 }

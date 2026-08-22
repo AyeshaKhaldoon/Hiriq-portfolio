@@ -1,7 +1,21 @@
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Bot, CheckCircle2, FileSearch, Globe2, Layers3, MessageSquareText, Route, SearchCheck, Sparkles } from 'lucide-react';
+import {
+  ArrowRight,
+  Bot,
+  BriefcaseBusiness,
+  CheckCircle2,
+  FileSearch,
+  Globe2,
+  HeartPulse,
+  Layers3,
+  MessageSquareText,
+  Route,
+  SearchCheck,
+  Sparkles,
+  UsersRound,
+} from 'lucide-react';
 import { solutions } from './solutions';
 import { buildSeoMetadata, pageKeywords } from '../seo';
 
@@ -36,6 +50,13 @@ const featuredPaths = [
     accent: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   },
   {
+    title: 'Healthcare staffing',
+    copy: 'Use this path when clinical role-fit, availability, and structured recruiter evidence matter.',
+    href: '/solutions/healthcare-staffing-agencies',
+    icon: HeartPulse,
+    accent: 'bg-rose-50 text-rose-700 border-rose-200',
+  },
+  {
     title: 'Interview bottlenecks',
     copy: 'Use this path when scheduling first screens and comparing early answers slows the team down.',
     href: '/solutions/ai-interview-platform',
@@ -48,12 +69,17 @@ const intentGroups = [
   {
     label: 'Core workflows',
     description: 'Product pages focused on what Hiriq does inside the recruiting funnel.',
-    slugs: ['ai-recruiting-software', 'ai-ats', 'candidate-screening-software', 'ai-resume-screening'],
+    slugs: ['ai-recruiting-software', 'ai-ats', 'candidate-screening-software', 'ai-resume-screening', 'candidate-pre-screening-software'],
   },
   {
     label: 'Automation and interviews',
     description: 'Pages for buyers looking specifically at repeatable screening tasks and structured AI interviews.',
-    slugs: ['ai-interview-platform', 'recruiting-automation-software'],
+    slugs: ['ai-interview-platform', 'recruiting-automation-software', 'high-volume-hiring'],
+  },
+  {
+    label: 'Industries and agencies',
+    description: 'Pages for commercial buyers searching by hiring model or specialist staffing need.',
+    slugs: ['healthcare-staffing-agencies', 'staffing-agencies'],
   },
   {
     label: 'Regional search',
@@ -139,7 +165,7 @@ export default function SolutionsPage() {
               <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">Fast paths</p>
               <h2 className="text-3xl font-bold text-slate-900">Choose by bottleneck, not by buzzword.</h2>
             </div>
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
               {featuredPaths.map((path, index) => {
                 const Icon = path.icon;
                 return (
@@ -188,7 +214,7 @@ export default function SolutionsPage() {
                     </div>
                     <CheckCircle2 className="h-6 w-6 text-emerald-600" />
                   </div>
-                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {group.slugs.map((slug) => {
                       const solution = solutionLookup.get(slug);
                       if (!solution) return null;
@@ -239,6 +265,27 @@ export default function SolutionsPage() {
               <h2 className="text-2xl font-bold text-slate-900">Interview pages</h2>
               <p className="mt-3 leading-7 text-slate-600">
                 Interview automation pages explain structured interviews, transcripts, and recruiter review.
+              </p>
+            </div>
+            <div className="rounded-lg border border-rose-200 bg-rose-50 p-6">
+              <HeartPulse className="mb-5 h-7 w-7 text-rose-700" />
+              <h2 className="text-2xl font-bold text-slate-900">Healthcare pages</h2>
+              <p className="mt-3 leading-7 text-slate-600">
+                Healthcare staffing pages target clinical role-fit and structured screening evidence without fake compliance claims.
+              </p>
+            </div>
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-6">
+              <BriefcaseBusiness className="mb-5 h-7 w-7 text-amber-700" />
+              <h2 className="text-2xl font-bold text-slate-900">Agency pages</h2>
+              <p className="mt-3 leading-7 text-slate-600">
+                Staffing agency pages focus on client-ready candidate evidence and recruiter-reviewed submissions.
+              </p>
+            </div>
+            <div className="rounded-lg border border-violet-200 bg-violet-50 p-6">
+              <UsersRound className="mb-5 h-7 w-7 text-violet-700" />
+              <h2 className="text-2xl font-bold text-slate-900">Volume pages</h2>
+              <p className="mt-3 leading-7 text-slate-600">
+                High-volume and pre-screening pages separate quick qualification from deeper AI interview evidence.
               </p>
             </div>
           </div>

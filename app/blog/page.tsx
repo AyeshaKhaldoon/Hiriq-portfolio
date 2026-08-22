@@ -23,9 +23,9 @@ const blogPosts = [
   },
   {
     slug: 'reduce-time-to-hire',
-    title: '10 Proven Strategies to Reduce Time-to-Hire by 50%',
+    title: '10 Practical Strategies to Reduce Time-to-Hire',
     excerpt:
-      'Learn actionable tactics to speed up your recruitment process without compromising candidate quality.',
+      'Learn practical tactics to speed up your recruitment process without compromising candidate quality.',
     category: 'Best Practices',
     date: 'Dec 28, 2025',
     readTime: '7 min read',

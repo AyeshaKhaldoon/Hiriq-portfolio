@@ -119,7 +119,7 @@ export default function Home() {
 
               <p className="text-xl sm:text-2xl text-slate-600 leading-relaxed max-w-lg pl-1">
                 The first recruitment platform that conducts interviews for you.
-                Our AI speaks with candidates, evaluates responses, and schedules your top picks.
+                Our AI speaks with candidates, scores responses, and gives recruiters evidence for the next step.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5 pt-2">

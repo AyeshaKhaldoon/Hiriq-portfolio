@@ -55,7 +55,7 @@ export function buildSeoMetadata({
     },
     robots: {
       index: !noIndex,
-      follow: !noIndex,
+      follow: true,
     },
   };
 }
@@ -156,6 +156,10 @@ export const pageKeywords = {
     'AI resume screening solutions',
     'candidate screening software',
     'AI interview platform',
+    'candidate pre-screening software',
+    'healthcare staffing software',
+    'staffing agency software',
+    'high-volume hiring software',
   ],
   linkToHiriq: [
     'link to Hiriq',

@@ -11,6 +11,7 @@ const DEMO_MAILTO =
 const links = [
   { href: '/', label: 'Home' },
   { href: '/hiring-platform', label: 'Hiring Platform' },
+  { href: '/solutions', label: 'Solutions' },
   { href: '/industries', label: 'Industries' },
   { href: '/automated-interviews', label: 'AI Interviews' },
   { href: '/pricing', label: 'Pricing' },
@@ -66,7 +67,7 @@ export default function Navigation() {
               </div>
             </Link>
 
-            <div className="hidden md:flex items-center space-x-6 text-base lg:text-lg">
+            <div className="hidden md:flex items-center space-x-4 text-sm lg:space-x-5 lg:text-base">
               {links.map((link) => (
                 <Link
                   key={link.href}
