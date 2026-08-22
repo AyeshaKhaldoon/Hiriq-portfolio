@@ -169,12 +169,10 @@ export default function SiteUtilities() {
       <div className="fixed bottom-0 left-0 right-0 z-[55] border-t border-slate-200 bg-white/95 px-4 py-3 shadow-2xl shadow-slate-900/15 backdrop-blur md:hidden print:hidden">
         <div className="mx-auto flex max-w-md gap-2">
           <a
-            href="https://app.hiriq.co"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="flex h-11 flex-1 items-center justify-center rounded-xl bg-slate-900 px-4 text-sm font-semibold text-white"
           >
-            Start trial
+            Book demo
           </a>
           <Link
             href="/contact"

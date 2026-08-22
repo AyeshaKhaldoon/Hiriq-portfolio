@@ -203,21 +203,21 @@ const solutionVariants: Record<string, SolutionVariant> = {
   'ai-interview-platform': {
     mode: 'interview',
     kicker: 'Structured interview evidence',
-    sectionTitle: 'Use this page when the buyer cares about pre-screening conversations.',
+    sectionTitle: 'Use this page when the buyer needs a real AI interview engine.',
     sectionCopy:
-      'This page separates interview automation from resume screening. It explains transcripts, summaries, and repeatable criteria without pretending AI interviews should make final hiring decisions alone.',
+      'This page separates Hiriq AI Interviews from basic pre-screening. The value is a live, conversational, 30-minute interview that adapts to candidate answers and turns the session into recruiter-reviewable evidence.',
     cards: [
-      { label: 'Candidate', value: 'Async screen', detail: 'Complete early screening without calendar delays.', icon: Clock3 },
-      { label: 'Recruiter', value: 'Transcript', detail: 'Review answers, summaries, and evidence.', icon: MessageSquareText },
-      { label: 'Manager', value: 'Comparable notes', detail: 'See structured signals before live interviews.', icon: ClipboardCheck },
+      { label: 'Candidate', value: 'Live conversation', detail: 'Answer adaptive questions in a structured interview flow.', icon: Clock3 },
+      { label: 'Recruiter', value: 'Scorecard + transcript', detail: 'Review per-turn ratings, subtopic scores, flags, and recommendation.', icon: MessageSquareText },
+      { label: 'Manager', value: 'Comparable evidence', detail: 'See technical, behavioral, and scenario signals before live rounds.', icon: ClipboardCheck },
     ],
     lensTitle: 'Interview-specific buyer questions',
-    lensItems: ['Can candidates complete screens outside business hours?', 'Are transcripts available?', 'Can recruiters compare answers consistently?'],
-    workflowTitle: 'Interview flow from question set to review',
-    workflowCopy: 'The page emphasizes conversation, review, and evidence because interview-platform searches are not the same as ATS searches.',
+    lensItems: ['Can it ask follow-up questions?', 'Does it score by subtopic?', 'Can recruiters inspect transcripts and integrity flags?'],
+    workflowTitle: 'Live interview flow from role setup to scorecard',
+    workflowCopy: 'The page emphasizes adaptive conversation, industry-specific probing, anti-cheating review signals, and recruiter oversight because interview-platform buyers need more than one-way recordings.',
     relatedSlugs: ['recruiting-automation-software', 'candidate-screening-software', 'ai-resume-screening'],
-    ctaTitle: 'Reduce early interview scheduling drag.',
-    ctaCopy: 'Give recruiters structured interview context before asking the team to spend time on live calls.',
+    ctaTitle: 'Turn first-round interviews into structured evidence.',
+    ctaCopy: 'Give recruiters technical depth, behavioral context, transcript access, and integrity flags before deciding who deserves live team time.',
   },
   'ai-resume-screening': {
     mode: 'resume',
@@ -817,12 +817,10 @@ export default async function SolutionPage({ params }: PageProps) {
               <p className="mt-4 text-base leading-7 text-slate-500">{solution.market}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://app.hiriq.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact"
                   className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
                 >
-                  Start free trial
+                  Book a demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
                 <Link
@@ -922,12 +920,10 @@ export default async function SolutionPage({ params }: PageProps) {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://app.hiriq.co"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 font-semibold text-slate-900 transition hover:bg-cyan-50"
               >
-                Start free trial
+                Book a demo
               </a>
               <Link
                 href="/contact"

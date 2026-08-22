@@ -155,15 +155,15 @@ export default function Terms() {
                 <li>Failed payments may result in service suspension after 7-day grace period</li>
               </ul>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Free Trial</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Plan Access</h3>
               <p className="text-slate-600 mb-4">
-                Hiriq offers a 14-day free trial for new users. At the end of your trial:
+                Hiriq access is provided according to the plan, pilot, demo, or commercial agreement confirmed with your organization.
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-                <li>You will not be automatically charged</li>
-                <li>You must explicitly choose a paid plan to continue</li>
-                <li>Trial data is retained for 30 days to allow plan selection</li>
-                <li>After 30 days, trial accounts and data are permanently deleted</li>
+                <li>Billing terms are confirmed before paid access begins</li>
+                <li>Demo or pilot access may be limited by role, candidate volume, or time period</li>
+                <li>Account data retention follows the active agreement and Hiriq privacy controls</li>
+                <li>Service access may be paused or ended if the agreed plan is not continued</li>
               </ul>
 
               <h3 className="text-xl font-bold text-slate-900 mb-3">Refund Policy</h3>

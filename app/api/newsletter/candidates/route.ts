@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
             <ul style="padding-left: 20px; color: #374151;">
               <li>⚡ Early access to AI-powered interview practice</li>
               <li>📈 Tips to ace technical and behavioral interviews</li>
-              <li>🎁 Exclusive free trial interviews when we launch</li>
+              <li>🎁 Launch updates and early access invitations</li>
             </ul>
             <p>We’re excited to help you prepare smarter, not harder, and make your next interview a success!</p>
           </div>

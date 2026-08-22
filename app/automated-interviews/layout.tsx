@@ -1,9 +1,9 @@
 import { buildSeoMetadata, pageKeywords } from '../seo';
 
 export const metadata = buildSeoMetadata({
-  title: 'Fully Automated AI Interviews | Coming Soon | Hiriq',
+  title: 'Live Conversational AI Interviews | Hiriq',
   description:
-    'End-to-end AI interview intelligence: structured delivery, multi-layer evaluation, integrity monitoring, and unified scoring. Join the waitlist for early access.',
+    'Run live conversational AI interviews with adaptive follow-ups, industry-specific evaluation, integrity signals, transcripts, and recruiter-controlled scoring.',
   path: '/automated-interviews',
   keywords: pageKeywords.automatedInterviews,
 });

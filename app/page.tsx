@@ -124,24 +124,22 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-5 pt-2">
                 <a
-                  href="https://app.hiriq.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={DEMO_MAILTO}
                   className="group inline-flex items-center justify-center h-16 rounded-full px-10 text-xl font-semibold bg-slate-900 text-white shadow-xl hover:shadow-2xl hover:bg-slate-800 transition-all duration-300 hover:scale-[1.02]"
                 >
-                  Start Free Trial
+                  Book a Demo
                   <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
-                  href={DEMO_MAILTO}
+                  href="/pricing"
                   className="group inline-flex items-center justify-center h-16 rounded-full px-10 text-xl font-semibold border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50 transition-all duration-300"
                 >
-                  Book a Demo
+                  View Pricing
                 </a>
               </div>
 
               <p className="text-base text-slate-500">
-                No credit card required • 14-day free trial • Cancel anytime
+                See the workflow, scoring, and interview evidence before rollout.
               </p>
             </div>
 
@@ -314,24 +312,22 @@ export default function Home() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://app.hiriq.co" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href={DEMO_MAILTO}
               className="inline-flex items-center justify-center h-14 rounded-full px-8 text-lg font-semibold bg-white text-slate-900 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              Start Free Trial
+              Book a Demo
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
-              href={DEMO_MAILTO} 
+              href="/automated-interviews"
               className="inline-flex items-center justify-center h-14 rounded-full px-8 text-lg font-semibold border-2 border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500 transition-all duration-300"
             >
-              Book a Demo
+              Explore AI Interviews
             </a>
           </div>
           
           <p className="mt-8 text-sm text-slate-500">
-            No credit card required • 14-day free trial • Cancel anytime
+            See how Hiriq maps to your hiring workflow before implementation.
           </p>
         </div>
       </section>

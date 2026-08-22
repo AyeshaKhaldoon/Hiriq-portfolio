@@ -45,8 +45,8 @@ export const siteSearchItems: SiteSearchItem[] = [
   {
     title: 'AI Interview Platform',
     href: '/solutions/ai-interview-platform',
-    description: 'Automated pre-screening interviews with transcripts, summaries, and evaluation context.',
-    keywords: 'ai interview platform automated interviews pre screening transcript',
+    description: 'Live conversational AI interviews with adaptive follow-ups, scorecards, transcripts, and integrity flags.',
+    keywords: 'ai interview platform live ai interviews conversational interviews transcript scorecard',
   },
   {
     title: 'Middle East AI Hiring',
@@ -69,8 +69,8 @@ export const siteSearchItems: SiteSearchItem[] = [
   {
     title: 'AI Interviews',
     href: '/automated-interviews',
-    description: 'Structured automated interviews, transcripts, evaluation reports, and candidate evidence.',
-    keywords: 'automated ai interviews transcript evaluation calls',
+    description: 'Live 30-minute AI interviews with industry-specific questions, adaptive follow-ups, scoring, and recruiter oversight.',
+    keywords: 'live ai interviews conversational interview engine integrity flags recruiter scorecard',
   },
   {
     title: 'Pricing',

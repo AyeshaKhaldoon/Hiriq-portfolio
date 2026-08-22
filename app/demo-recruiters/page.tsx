@@ -47,10 +47,10 @@ export default function DemoRecruiters() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                                <a href="https://app.hiriq.co" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg flex items-center justify-center">
-                                    Start 14-Day Free Trial
+                                <Link href="/contact" className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg flex items-center justify-center">
+                                    Book a Demo
                                     <ArrowRight className="ml-2 w-5 h-5" />
-                                </a>
+                                </Link>
                                 <Link href="/contact" className="px-8 py-4 bg-white border-2 border-slate-300 text-slate-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition font-semibold text-lg text-center">
                                     Schedule Live Demo
                                 </Link>
@@ -443,13 +443,13 @@ export default function DemoRecruiters() {
                         Ready to Transform Your Hiring?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8">
-                        Start your 14-day free trial today.
+                        See how Hiriq fits your hiring workflow.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://app.hiriq.co" target="_blank" rel="noopener noreferrer" className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
-                            Start Your Free Trial
+                        <Link href="/contact" className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
+                            Book a Demo
                             <ArrowRight className="ml-2 w-5 h-5" />
-                        </a>
+                        </Link>
                         <Link href="/hiring-platform" className="px-12 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition text-lg">
                             View Full Details
                         </Link>

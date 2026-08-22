@@ -86,12 +86,10 @@ export default function SolutionsPage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://app.hiriq.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact"
                   className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
                 >
-                  Start free trial
+                  Book a demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
                 <Link

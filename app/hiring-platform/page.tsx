@@ -99,12 +99,10 @@ export default function ForRecruiters() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
-                  href="https://app.hiriq.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition font-semibold text-lg flex items-center justify-center"
                 >
-                  Start Free Trial
+                  Book a Demo
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
                 <a
@@ -541,12 +539,10 @@ export default function ForRecruiters() {
             Bring resume screening, pre-screening, interviews, and shortlist review into one structured workflow.
           </p>
           <a
-            href="https://app.hiriq.co"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center"
           >
-            Start Your 14-Day Free Trial
+            Book a Demo
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
           <p className="text-blue-100 mt-4">• Setup in 5 minutes</p>

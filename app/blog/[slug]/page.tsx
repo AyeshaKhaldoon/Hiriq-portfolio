@@ -433,12 +433,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               Ready to Transform Your Hiring?
             </h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join 1,000+ companies using Hiriq to hire faster and smarter with AI-powered recruitment
+              See how Hiriq turns screening and interviews into structured recruiter evidence.
             </p>
-            <a href="https://app.hiriq.co" target="_blank" rel="noopener noreferrer" className="inline-flex px-10 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              Start Free Trial →
-            </a>
-            <p className="text-blue-100 text-sm mt-4">No credit card required • 14-day free trial</p>
+            <Link href="/contact" className="inline-flex px-10 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              Book a Demo →
+            </Link>
+            <p className="text-blue-100 text-sm mt-4">Review the workflow with the Hiriq team.</p>
           </div>
         </div>
       </article>

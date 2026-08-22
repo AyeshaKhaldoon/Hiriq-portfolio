@@ -69,9 +69,9 @@ export const pageKeywords = {
     'candidate screening platform',
   ],
   automatedInterviews: [
-    'fully automated AI interviews',
-    'AI interview automation',
-    'automated pre-screening calls',
+    'live conversational AI interviews',
+    'AI interview engine',
+    'AI interview scoring',
     'AI candidate interviews',
     'structured interview evaluation',
   ],

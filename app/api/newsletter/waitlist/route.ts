@@ -30,13 +30,13 @@ export async function POST(req: NextRequest) {
         <div style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #1f2937; max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9fb; border-radius: 12px; border: 1px solid #e5e7eb;">
           <div style="text-align: center; margin-bottom: 20px;">
             <h1 style="color: #0f172a; font-size: 28px; margin-bottom: 10px;">You're on the list</h1>
-            <p style="color: #6b7280; font-size: 16px;">Thanks for subscribing to early access. We'll notify you when Fully Automated AI Interviews is ready.</p>
+            <p style="color: #6b7280; font-size: 16px;">Thanks for subscribing to Hiriq AI Interview updates. We'll share product and demo updates with you.</p>
           </div>
 
           <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; border: 1px solid #e5e7eb;">
             <p>Hi there,</p>
-            <p>You're officially on the waitlist for Hiriq's Fully Automated AI Interviews. You'll be among the first to get early access when we launch.</p>
-            <p>We'll only email you when it's ready — no spam.</p>
+            <p>You're officially subscribed to Hiriq AI Interview updates. You'll be among the first to receive product and demo information.</p>
+            <p>We'll only email you relevant updates — no spam.</p>
           </div>
 
           <hr style="margin: 30px 0; border-color: #e5e7eb;" />

@@ -9,7 +9,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { getStoredUtmParams } from '@/components/SiteUtilities';
 
 const candidateFaqs = [
-  { q: 'When will Hiriq for candidates launch?', a: "We're targeting Q1 2026 for our official launch. Waitlist members will get early access 2 weeks before the public launch." },
+  { q: 'When will Hiriq for candidates launch?', a: 'The candidate experience is being prepared separately from the recruiter platform. Waitlist members will receive product updates and early access information when it is available.' },
   { q: 'How is this different from other interview prep tools?', a: "Our AI doesn't just ask static questions. It adapts to your answers, asks follow-ups, and provides detailed feedback on both content and delivery just like a real interviewer." },
   { q: 'What types of interviews can I practice?', a: 'Technical interviews, behavioral interviews, and role-specific scenarios. We support common job functions and major programming workflows.' },
   { q: 'Can I practice for specific companies?', a: 'Yes. Pro members get access to company-specific interview prep based on real interview patterns for that company.' },
@@ -89,7 +89,7 @@ export default function ForCandidates() {
                   Be the First to Know When We Launch
                 </h3>
                 <p className="text-slate-600 mb-4 text-center">
-                  Join our waitlist and get exclusive early access + free interviews when we launch.
+                  Join our waitlist and get exclusive early access when the candidate experience launches.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -132,7 +132,7 @@ export default function ForCandidates() {
                 )}
 
                 <p className="text-sm text-slate-500 mt-3 text-center">
-                  🎁 Early access members get free trial interviews (worth $$$)
+                  Early access members will be notified first when interview practice opens.
                 </p>
               </form>
             </div>
@@ -140,11 +140,11 @@ export default function ForCandidates() {
             <div className="flex items-center justify-center gap-8 text-sm text-slate-600">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                Launching Q2 2026
+                Early access updates
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                No credit card needed
+                Candidate-first preparation
               </div>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function ForCandidates() {
             Be Ready When Opportunity Knocks
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join the waitlist and get free when we launch
+            Join the waitlist and get notified when we launch
           </p>
 
           <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex gap-3">
@@ -315,7 +315,7 @@ export default function ForCandidates() {
             </div>
           )}
 
-          <p className="text-purple-100 mt-4">5,000+ job seekers already on the list</p>
+          <p className="text-purple-100 mt-4">Product updates will be shared with waitlist members first.</p>
         </div>
       </section>
 

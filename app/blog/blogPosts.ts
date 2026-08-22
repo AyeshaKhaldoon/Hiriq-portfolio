@@ -56,7 +56,7 @@ The practical value is clearer when early screening becomes more structured:
 - Cleaner transcripts and summaries
 - Better context for human decision-makers
 
-Ready to transform your hiring process? [Start your free trial](#) today.
+Ready to transform your hiring process? [Book a Hiriq demo](/contact) today.
     `
   }
 ];

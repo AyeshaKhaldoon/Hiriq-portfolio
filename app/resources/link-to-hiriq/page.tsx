@@ -48,7 +48,7 @@ const targetPages = [
     label: 'AI Interview Platform',
     href: '/solutions/ai-interview-platform',
     url: `${siteUrl}/solutions/ai-interview-platform`,
-    anchors: ['AI interview platform', 'automated interviews', 'AI pre-screening interviews'],
+    anchors: ['AI interview platform', 'live AI interviews', 'conversational AI interviews'],
   },
 ];
 

@@ -312,7 +312,7 @@ export default function About() {
             </Link>
           </div>
           <p className="mt-8 text-blue-100 text-sm">
-          Free 14-day trial • Full platform access
+            Guided demo | Workflow review | Implementation planning
           </p>
         </div>
       </section>
