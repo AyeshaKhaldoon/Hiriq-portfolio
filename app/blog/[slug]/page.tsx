@@ -68,10 +68,10 @@ const blogPosts: BlogPost[] = [
           heading: 'Automated Pre-Screening: The Game Changer',
           content: "Here's where things get really interesting. In 2026, the most innovative companies have eliminated the first-round phone screen entirely—not by skipping it, but by automating it with conversational AI. These aren't robotic, frustrating phone trees. Modern AI interviewers conduct natural, empathetic conversations that feel remarkably human.",
           stats: [
-            { label: '85% reduction', description: 'in time-to-first-interview' },
-            { label: '3x increase', description: 'in candidate satisfaction scores' },
-            { label: '60% decrease', description: 'in early-stage dropoff rates' },
-            { label: 'Zero conflicts', description: 'scheduling or timezone issues' }
+            { label: 'Faster review', description: 'when repetitive first screens move into structured workflows' },
+            { label: 'More consistency', description: 'when candidates answer comparable role-specific questions' },
+            { label: 'Clearer context', description: 'when transcripts and summaries are available before review' },
+            { label: 'Less scheduling drag', description: 'when early screening is not blocked by calendar availability' }
           ]
         },
         {

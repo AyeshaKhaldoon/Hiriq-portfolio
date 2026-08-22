@@ -9,7 +9,10 @@ import FeatureSection from '@/components/FeatureSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import {
   ArrowRight,
-  Quote,
+  ClipboardCheck,
+  FileText,
+  MessageSquare,
+  ShieldCheck,
   Volume2,
   VolumeX,
 } from 'lucide-react';
@@ -190,13 +193,15 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
-              Case Study
+              Workflow
             </p>
             <h2 className="text-4xl font-bold tracking-tight text-slate-900">
-              From scattered screening to one repeatable hiring workflow.
+              From job criteria to recruiter-ready evidence.
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              A growing hiring team can use Hiriq to move from manual resume review and disconnected scheduling into a structured pipeline with scoring, evidence, and follow-up in one place.
+              Hiriq is built around the early hiring steps that usually create delay:
+              role criteria, resume review, candidate pre-screening, AI interviews,
+              and structured summaries for recruiter review.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link href="/hiring-platform" className="inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800">
@@ -208,66 +213,79 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ['85%', 'less manual screening time'],
-              ['1 day', 'target response time'],
-              ['24/7', 'candidate interview availability'],
-            ].map(([stat, label]) => (
-              <div key={label} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="text-4xl font-bold text-blue-600">{stat}</div>
-                <p className="mt-3 text-sm font-medium leading-6 text-slate-600">{label}</p>
+              { icon: FileText, title: 'Resume context', copy: 'Extract role-relevant experience, skills, and candidate background before review.' },
+              { icon: MessageSquare, title: 'Interview evidence', copy: 'Use structured pre-screening and interview responses instead of scattered notes.' },
+              { icon: ClipboardCheck, title: 'Shortlist clarity', copy: 'Compare candidates against the same criteria before moving them forward.' },
+              { icon: ShieldCheck, title: 'Human decisioning', copy: 'Keep final decisions with recruiters and hiring managers, not automation alone.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                  <item.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                <p className="mt-3 text-sm font-medium leading-6 text-slate-600">{item.copy}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Customer Stories</p>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Loved by Hiring Teams</h2>
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <p className="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Product Intelligence</p>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Built for structured candidate evaluation</h2>
             <p className="text-slate-600">
-              Review themes from teams evaluating Hiriq for faster, more structured recruiting.
+              Hiriq focuses on evidence recruiters can review: resume signals, role criteria,
+              candidate responses, interview integrity indicators, and summarized next steps.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-3">
             {[
-              { 
-                quote: "With Hiriq's branded application page, candidates apply directly—no manual resume uploads. It feels seamless, and our team spends less time chasing documents.", 
-                role: 'VP of Talent',
-                color: 'border-blue-200 bg-blue-50/30'
+              {
+                title: 'Role-specific setup',
+                copy: 'Recruiters define requirements, focus areas, difficulty, and question types so screening follows the actual job.',
+                color: 'border-blue-200 bg-blue-50/50',
               },
-              { 
-                quote: "Before Hiriq, we used separate tools for screening, assessments, and scheduling. Now, everything happens in one place, and our workflow finally makes sense.", 
-                role: 'CEO',
-                color: 'border-purple-200 bg-purple-50/30'
+              {
+                title: 'Dynamic interviews',
+                copy: 'AI interviews can ask technical, behavioral, situational, and role-specific questions with follow-ups.',
+                color: 'border-cyan-200 bg-cyan-50/50',
               },
-              { 
-                quote: "The AI reacts to candidate answers, not just scripts. It feels like having a recruiter on our team 24/7, especially during our busiest weeks.", 
-                role: 'Head of Recruiting',
-                color: 'border-emerald-200 bg-emerald-50/30'
+              {
+                title: 'Recruiter control',
+                copy: 'Hiriq gives structured evidence and recommendations, while final hiring decisions remain with the team.',
+                color: 'border-emerald-200 bg-emerald-50/50',
               },
-              { 
-                quote: "Hiriq flagged candidates we might have missed. They're already performing at the top of our sales team, and it's changed how we approach hiring.", 
-                role: 'Sales Director',
-                color: 'border-amber-200 bg-amber-50/30'
-              },
-            ].map((t, i) => (
+            ].map((item) => (
               <div 
-                key={i} 
-                className={`relative p-8 rounded-2xl border ${t.color} hover:shadow-lg transition-shadow duration-300`}
+                key={item.title}
+                className={`p-8 rounded-2xl border ${item.color} transition hover:-translate-y-1 hover:shadow-xl`}
               >
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-slate-300" />
-                <p className="text-slate-700 leading-relaxed mb-6 text-lg">
-                  "{t.quote}"
-                </p>
-                <p className="font-bold text-slate-900">{t.role}</p>
+                <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+                <p className="mt-4 leading-7 text-slate-700">{item.copy}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">Founder Interview</p>
+            <p className="mt-3 text-lg leading-8 text-slate-700">
+              Read Ayesha Khaldoon&apos;s BoardroomPK interview on Hiriq&apos;s approach to intelligent,
+              human-centered hiring.
+            </p>
+            <a
+              href="https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
+            >
+              Read the interview
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>

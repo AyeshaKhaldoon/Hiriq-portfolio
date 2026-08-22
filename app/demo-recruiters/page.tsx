@@ -10,12 +10,10 @@ export default function DemoRecruiters() {
     const [minutesPerResume, setMinutesPerResume] = useState(5);
     const [activeDemo, setActiveDemo] = useState<number | null>(null);
 
-    // Calculations
     const totalMinutes = candidates * minutesPerResume;
-    const hoursSaved = (totalMinutes * 0.85) / 60; // AI saves 85% of time
+    const manualReviewHours = totalMinutes / 60;
     const hourlyCost = 50; // Average recruiter hourly rate
-    const monthlySavings = hoursSaved * hourlyCost;
-    const timeSavedPercent = 85;
+    const manualReviewCost = manualReviewHours * hourlyCost;
 
     return (
         <div className="min-h-screen bg-white">
@@ -334,38 +332,35 @@ export default function DemoRecruiters() {
                 </div>
             </section>
 
-            {/* Social Proof Section */}
+            {/* Workflow Evidence Section */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-slate-900 mb-4">
-                            Trusted by Forward-Thinking Companies
+                            What this demo helps you inspect
                         </h2>
                         <p className="text-xl text-slate-600">
-                            Join hundreds of companies that have transformed their hiring process
+                            Review the core workflow areas before connecting Hiriq to your hiring process.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         <div className="text-center p-8 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 hover:shadow-xl transition-shadow">
-                            <div className="text-6xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent mb-3">
-                                60%
-                            </div>
-                            <div className="text-slate-900 font-semibold text-lg">Reduction in Time-to-Hire</div>
+                            <FileText className="mx-auto mb-4 h-10 w-10 text-blue-600" />
+                            <div className="text-slate-900 font-semibold text-lg">Job setup</div>
+                            <p className="mt-3 text-sm leading-6 text-slate-600">See how requirements, criteria, and screening focus areas are structured.</p>
                         </div>
 
                         <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-white rounded-2xl border border-purple-100 hover:shadow-xl transition-shadow">
-                            <div className="text-6xl font-bold bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent mb-3">
-                                10,000+
-                            </div>
-                            <div className="text-slate-900 font-semibold text-lg">Candidates Screened Monthly</div>
+                            <MessageSquare className="mx-auto mb-4 h-10 w-10 text-cyan-600" />
+                            <div className="text-slate-900 font-semibold text-lg">Candidate evidence</div>
+                            <p className="mt-3 text-sm leading-6 text-slate-600">Review how resumes, pre-screening responses, and interviews become recruiter context.</p>
                         </div>
 
                         <div className="text-center p-8 bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100 hover:shadow-xl transition-shadow">
-                            <div className="text-6xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-3">
-                                94%
-                            </div>
-                            <div className="text-slate-900 font-semibold text-lg">Customer Satisfaction Rate</div>
+                            <CheckSquare className="mx-auto mb-4 h-10 w-10 text-green-600" />
+                            <div className="text-slate-900 font-semibold text-lg">Review workflow</div>
+                            <p className="mt-3 text-sm leading-6 text-slate-600">Understand how structured notes and candidate comparisons support human decisions.</p>
                         </div>
                     </div>
                 </div>
@@ -410,23 +405,23 @@ export default function DemoRecruiters() {
                                 <div className="grid md:grid-cols-3 gap-6 text-center">
                                     <div>
                                         <div className="text-3xl font-bold text-white mb-2">
-                                            {hoursSaved.toFixed(1)}hrs
+                                            {manualReviewHours.toFixed(1)}hrs
                                         </div>
-                                        <div className="text-blue-100">Saved per month</div>
+                                        <div className="text-blue-100">Manual review load</div>
                                     </div>
 
                                     <div>
                                         <div className="text-3xl font-bold text-white mb-2">
-                                            ${monthlySavings.toLocaleString()}
+                                            ${manualReviewCost.toLocaleString()}
                                         </div>
-                                        <div className="text-blue-100">Cost savings</div>
+                                        <div className="text-blue-100">Estimated labor value</div>
                                     </div>
 
                                     <div>
                                         <div className="text-3xl font-bold text-white mb-2">
-                                            {timeSavedPercent}%
+                                            {candidates.toLocaleString()}
                                         </div>
-                                        <div className="text-blue-100">Time reduction</div>
+                                        <div className="text-blue-100">Candidates entered</div>
                                     </div>
                                 </div>
                             </div>

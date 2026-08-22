@@ -18,9 +18,10 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden">
       <Navigation />
       <main>
-        <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 px-4 pb-20 pt-32 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="max-w-3xl">
+        <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+          <div className="absolute right-10 top-32 hidden h-32 w-32 rounded-full border border-cyan-200 bg-white/60 blur-sm lg:block" aria-hidden="true" />
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+            <div className="fade-in-up max-w-3xl">
               <div className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
                 <SearchCheck className="mr-2 h-4 w-4" />
                 AI recruiting solutions
@@ -51,18 +52,38 @@ export default function SolutionsPage() {
                 </Link>
               </div>
             </div>
+            <div className="fade-in-up animation-delay-200 rounded-2xl border border-cyan-200 bg-white/80 p-6 shadow-xl">
+              <h2 className="text-xl font-bold text-slate-900">Choose by hiring bottleneck</h2>
+              <div className="mt-5 space-y-4">
+                {[
+                  ['Too many applicants', '/solutions/candidate-screening-software'],
+                  ['Manual resume review', '/solutions/ai-resume-screening'],
+                  ['Scheduling early screens', '/solutions/ai-interview-platform'],
+                  ['Disconnected applicant tracking', '/solutions/ai-ats'],
+                ].map(([label, href], index) => (
+                  <Link key={label} href={href} className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-cyan-300 hover:bg-cyan-50">
+                    <span className="font-semibold text-slate-800">{label}</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                      {index + 1}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {solutions.map((solution) => (
+            {solutions.map((solution, index) => (
               <Link
                 key={solution.slug}
                 href={`/solutions/${solution.slug}`}
                 className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl"
               >
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <div className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${
+                  index % 3 === 0 ? 'bg-blue-50 text-blue-600' : index % 3 === 1 ? 'bg-cyan-50 text-cyan-600' : 'bg-emerald-50 text-emerald-600'
+                }`}>
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900 group-hover:text-cyan-700">

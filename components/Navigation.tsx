@@ -44,6 +44,7 @@ export default function Navigation() {
     const next = !darkMode;
     document.documentElement.classList.toggle('dark', next);
     window.localStorage.setItem('hiriq_theme', next ? 'dark' : 'light');
+    window.localStorage.setItem('hiriq_theme_explicit_v2', 'true');
     setDarkMode(next);
   };
 

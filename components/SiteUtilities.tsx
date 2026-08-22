@@ -39,9 +39,9 @@ export default function SiteUtilities() {
   useEffect(() => {
     const root = document.documentElement;
     const storedTheme = window.localStorage.getItem('hiriq_theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const hasCurrentThemeChoice = window.localStorage.getItem('hiriq_theme_explicit_v2') === 'true';
 
-    root.classList.toggle('dark', storedTheme ? storedTheme === 'dark' : prefersDark);
+    root.classList.toggle('dark', hasCurrentThemeChoice && storedTheme === 'dark');
     setCookieVisible(window.localStorage.getItem('hiriq_cookie_consent') !== 'accepted');
   }, []);
 

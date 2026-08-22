@@ -91,7 +91,18 @@ export default function RootLayout({
         slogan: 'Hire smarter. Hire faster.',
         priceRange: '$$',
         areaServed: ['United States', 'United Kingdom', 'Middle East', 'Pakistan', 'Qatar', 'United Arab Emirates'],
-        sameAs: ['https://linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
+        sameAs: ['https://www.linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
+        founder: [
+          { '@id': `${siteUrl}/#ayesha-khaldoon` },
+          { '@id': `${siteUrl}/#muhammad-ahmad` },
+        ],
+        subjectOf: [
+          {
+            '@type': 'Article',
+            url: 'https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq',
+            name: 'Intelligent. Human-Centered. Hiring. | Ayesha Khaldoon | Founder of Hiriq',
+          },
+        ],
         knowsAbout: [
           'AI recruiting software',
           'Applicant tracking systems',
@@ -142,6 +153,30 @@ export default function RootLayout({
           '@type': 'BusinessAudience',
           audienceType: 'Recruiters, hiring managers, founders, HR teams, staffing agencies',
         },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#ayesha-khaldoon`,
+        name: 'Ayesha Khaldoon',
+        jobTitle: 'Co-Founder CEO',
+        worksFor: { '@id': organizationId },
+        image: `${siteUrl}/team/ayesha-khaldoon.jpg`,
+        sameAs: ['https://pk.linkedin.com/in/ayesha-khaldoon'],
+        subjectOf: [
+          {
+            '@type': 'Article',
+            url: 'https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq',
+            name: 'Intelligent. Human-Centered. Hiring. | Ayesha Khaldoon | Founder of Hiriq',
+          },
+        ],
+      },
+      {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#muhammad-ahmad`,
+        name: 'Muhammad Ahmad',
+        jobTitle: 'Co-Founder CTO',
+        worksFor: { '@id': organizationId },
+        image: `${siteUrl}/team/muhammad-ahmad.jpg`,
       },
       {
         '@type': 'SiteNavigationElement',

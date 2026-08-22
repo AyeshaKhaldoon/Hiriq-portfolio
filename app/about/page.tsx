@@ -1,10 +1,29 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Target, Users, Zap, Shield, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Target, Users, Shield, CheckCircle, ArrowRight, Sparkles, ExternalLink, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 export default function About() {
+  const founders = [
+    {
+      name: 'Ayesha Khaldoon',
+      role: 'Co-Founder CEO',
+      image: '/team/ayesha-khaldoon.jpg',
+      alt: 'Ayesha Khaldoon, Co-Founder CEO of Hiriq',
+      description:
+        'Leads Hiriq around intelligent, human-centered hiring workflows for recruiters and hiring teams.',
+    },
+    {
+      name: 'Muhammad Ahmad',
+      role: 'Co-Founder CTO',
+      image: '/team/muhammad-ahmad.jpg',
+      alt: 'Muhammad Ahmad, Co-Founder CTO of Hiriq',
+      description:
+        'Leads Hiriq technology across AI screening, interview workflows, product architecture, and platform reliability.',
+    },
+  ];
+
   const principles = [
     {
       icon: Target,
@@ -85,34 +104,74 @@ export default function About() {
       </section>
 
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl gap-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-10">
-          <div className="relative min-h-[420px] overflow-hidden rounded-2xl bg-slate-100">
-            <Image
-              src="/7.jpeg"
-              alt="Hiriq team founder portrait"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="flex flex-col justify-center">
-            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
-              Team
-            </p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-900">
-              Built by operators who understand early-stage hiring friction.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Hiriq is shaped around practical recruiter workflows: clearer criteria, faster evidence collection, and fewer manual handoffs between screening, interviews, and decisions.
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800">
-                Contact the team
-              </Link>
-              <Link href="/blog" className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700">
-                Read insights
-              </Link>
+        <div className="mx-auto max-w-6xl rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-10">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+                Founders
+              </p>
+              <h2 className="text-4xl font-bold tracking-tight text-slate-900">
+                Led by a founder team building practical AI recruiting infrastructure.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                Hiriq is shaped around real recruiter workflows: clearer criteria, faster evidence collection,
+                and fewer manual handoffs between screening, interviews, and decisions.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="https://www.linkedin.com/company/hiriq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
+                >
+                  <Linkedin className="mr-2 h-4 w-4" />
+                  Hiriq on LinkedIn
+                </a>
+                <a
+                  href="https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700"
+                >
+                  BoardroomPK interview
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </div>
             </div>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {founders.map((founder) => (
+                <article
+                  key={founder.name}
+                  className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl"
+                >
+                  <div className="relative aspect-[4/5] bg-slate-100">
+                    <Image
+                      src={founder.image}
+                      alt={founder.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 320px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-sm font-bold uppercase tracking-wide text-blue-600">{founder.role}</p>
+                    <h3 className="mt-2 text-2xl font-bold text-slate-900">{founder.name}</h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">{founder.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-blue-100 bg-blue-50/60 p-6">
+            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+              Public interview
+            </p>
+            <p className="text-lg leading-8 text-slate-700">
+              In BoardroomPK, Ayesha Khaldoon explains Hiriq as a workflow that can move from
+              job requirements to CV analysis, candidate matching, pre-screening, AI interview,
+              structured evaluation, and recruiter decision while keeping the final decision with people.
+            </p>
           </div>
         </div>
       </section>

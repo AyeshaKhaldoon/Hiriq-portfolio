@@ -4,13 +4,90 @@ import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
-import { ArrowRight, CheckCircle2, ClipboardCheck, Globe2, SearchCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ClipboardCheck, Globe2, SearchCheck, Sparkles } from 'lucide-react';
 import { getSolution, solutions } from '../solutions';
 
 const siteUrl = 'https://hiriq.co';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
+};
+
+const solutionThemes: Record<
+  string,
+  {
+    hero: string;
+    eyebrow: string;
+    accent: string;
+    icon: string;
+    panel: string;
+    ring: string;
+  }
+> = {
+  'ai-recruiting-software': {
+    hero: 'from-blue-50 via-white to-cyan-50',
+    eyebrow: 'bg-blue-100 text-blue-700',
+    accent: 'text-blue-600',
+    icon: 'bg-blue-50 text-blue-700',
+    panel: 'border-blue-200 bg-blue-50/50',
+    ring: 'bg-blue-500',
+  },
+  'ai-ats': {
+    hero: 'from-slate-50 via-white to-sky-50',
+    eyebrow: 'bg-slate-900 text-white',
+    accent: 'text-slate-700',
+    icon: 'bg-slate-100 text-slate-800',
+    panel: 'border-slate-200 bg-slate-50',
+    ring: 'bg-slate-900',
+  },
+  'ai-interview-platform': {
+    hero: 'from-cyan-50 via-white to-teal-50',
+    eyebrow: 'bg-cyan-100 text-cyan-700',
+    accent: 'text-cyan-600',
+    icon: 'bg-cyan-50 text-cyan-700',
+    panel: 'border-cyan-200 bg-cyan-50/50',
+    ring: 'bg-cyan-500',
+  },
+  'ai-resume-screening': {
+    hero: 'from-emerald-50 via-white to-cyan-50',
+    eyebrow: 'bg-emerald-100 text-emerald-700',
+    accent: 'text-emerald-600',
+    icon: 'bg-emerald-50 text-emerald-700',
+    panel: 'border-emerald-200 bg-emerald-50/50',
+    ring: 'bg-emerald-500',
+  },
+  'candidate-screening-software': {
+    hero: 'from-sky-50 via-white to-blue-50',
+    eyebrow: 'bg-sky-100 text-sky-700',
+    accent: 'text-sky-600',
+    icon: 'bg-sky-50 text-sky-700',
+    panel: 'border-sky-200 bg-sky-50/50',
+    ring: 'bg-sky-500',
+  },
+  'recruiting-automation-software': {
+    hero: 'from-indigo-50 via-white to-cyan-50',
+    eyebrow: 'bg-indigo-100 text-indigo-700',
+    accent: 'text-indigo-600',
+    icon: 'bg-indigo-50 text-indigo-700',
+    panel: 'border-indigo-200 bg-indigo-50/50',
+    ring: 'bg-indigo-500',
+  },
+  'middle-east-ai-hiring': {
+    hero: 'from-teal-50 via-white to-blue-50',
+    eyebrow: 'bg-teal-100 text-teal-700',
+    accent: 'text-teal-600',
+    icon: 'bg-teal-50 text-teal-700',
+    panel: 'border-teal-200 bg-teal-50/50',
+    ring: 'bg-teal-500',
+  },
+  'usa-uk-ai-hiring': {
+    hero: 'from-blue-50 via-white to-slate-50',
+    eyebrow: 'bg-blue-100 text-blue-700',
+    accent: 'text-blue-600',
+    icon: 'bg-blue-50 text-blue-700',
+    panel: 'border-blue-200 bg-white',
+    ring: 'bg-blue-500',
+  },
 };
 
 export function generateStaticParams() {
@@ -65,6 +142,7 @@ export default async function SolutionPage({ params }: PageProps) {
   if (!solution) notFound();
 
   const pageUrl = `${siteUrl}/solutions/${solution.slug}`;
+  const theme = solutionThemes[solution.slug] || solutionThemes['ai-recruiting-software'];
   const relatedSolutions = solutions
     .filter((item) => item.slug !== solution.slug)
     .slice(0, 3);
@@ -139,10 +217,12 @@ export default async function SolutionPage({ params }: PageProps) {
       />
 
       <main>
-        <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <section className={`relative overflow-hidden bg-gradient-to-br ${theme.hero} px-4 pb-20 pt-32 sm:px-6 lg:px-8`}>
+          <div className="absolute left-8 top-32 hidden h-24 w-24 rounded-full border border-white/80 bg-white/50 blur-sm lg:block" aria-hidden="true" />
+          <div className={`absolute right-8 top-48 hidden h-2 w-40 origin-left rounded-full ${theme.ring} opacity-70 animate-progress-fill lg:block`} aria-hidden="true" />
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <div>
-              <div className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+            <div className="fade-in-up">
+              <div className={`mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold ${theme.eyebrow}`}>
                 <SearchCheck className="mr-2 h-4 w-4" />
                 {solution.eyebrow}
               </div>
@@ -170,9 +250,9 @@ export default async function SolutionPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
+            <div className={`fade-in-up animation-delay-200 rounded-2xl border p-6 shadow-xl ${theme.panel}`}>
               <div className="mb-5 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700">
+                <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${theme.icon}`}>
                   <Globe2 className="h-5 w-5" />
                 </div>
                 <div>
@@ -190,6 +270,22 @@ export default async function SolutionPage({ params }: PageProps) {
                   </span>
                 ))}
               </div>
+              <div className="mt-6 rounded-xl border border-white/70 bg-white/80 p-4">
+                <div className="mb-3 flex items-center gap-2 text-sm font-bold text-slate-900">
+                  <Sparkles className={`h-4 w-4 ${theme.accent}`} />
+                  Workflow snapshot
+                </div>
+                <div className="space-y-3">
+                  {solution.workflow.slice(0, 3).map((step, index) => (
+                    <div key={step} className="flex items-start gap-3">
+                      <span className={`mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-white ${theme.ring}`}>
+                        {index + 1}
+                      </span>
+                      <p className="text-sm leading-6 text-slate-700">{step}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -197,7 +293,7 @@ export default async function SolutionPage({ params }: PageProps) {
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
             <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+              <p className={`mb-3 text-sm font-bold uppercase tracking-wide ${theme.accent}`}>
                 Problems Hiriq solves
               </p>
               <h2 className="text-3xl font-bold text-slate-900">
@@ -205,7 +301,7 @@ export default async function SolutionPage({ params }: PageProps) {
               </h2>
               <div className="mt-8 space-y-4">
                 {solution.problems.map((problem) => (
-                  <div key={problem} className="rounded-xl border border-slate-200 bg-white p-5">
+                  <div key={problem} className="rounded-xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-lg">
                     <p className="leading-7 text-slate-700">{problem}</p>
                   </div>
                 ))}
@@ -221,7 +317,7 @@ export default async function SolutionPage({ params }: PageProps) {
               </h2>
               <div className="mt-8 space-y-4">
                 {solution.outcomes.map((outcome) => (
-                  <div key={outcome} className="flex gap-3 rounded-xl border border-slate-200 bg-white p-5">
+                  <div key={outcome} className="flex gap-3 rounded-xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-lg">
                     <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-green-600" />
                     <p className="leading-7 text-slate-700">{outcome}</p>
                   </div>

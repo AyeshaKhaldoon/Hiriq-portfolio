@@ -50,11 +50,11 @@ The result? What used to take 40+ hours of recruiter time per role now happens i
 
 In 2026, the most innovative companies have eliminated the first-round phone screen entirely—not by skipping it, but by automating it with conversational AI.
 
-**The numbers speak for themselves:**
-- 85% reduction in time-to-first-interview
-- 3x increase in candidate satisfaction scores
-- 60% decrease in early-stage dropoff rates
-- Zero scheduling conflicts or timezone issues
+The practical value is clearer when early screening becomes more structured:
+- Less calendar friction before recruiter review
+- More consistent candidate questions
+- Cleaner transcripts and summaries
+- Better context for human decision-makers
 
 Ready to transform your hiring process? [Start your free trial](#) today.
     `
