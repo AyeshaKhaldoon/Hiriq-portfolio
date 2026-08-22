@@ -102,6 +102,7 @@ export default function Privacy() {
                   <h3 className="font-bold text-slate-900 mb-2">Marketing Cookies (Optional)</h3>
                   <ul className="text-sm text-slate-600 space-y-1">
                     <li>• Newsletter tracking</li>
+                    <li>• LinkedIn advertising and campaign measurement when enabled</li>
                     <li>• Feedback collection for improvements</li>
                   </ul>
                 </div>

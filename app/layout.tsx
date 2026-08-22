@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import LinkedInInsightTag from '@/components/LinkedInInsightTag';
 import SiteUtilities from '@/components/SiteUtilities';
 import { siteSearchItems } from './siteSearch';
 import './globals.css';
 
 const siteUrl = 'https://hiriq.co';
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const linkedInPartnerId = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -214,6 +216,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
+        <LinkedInInsightTag partnerId={linkedInPartnerId} />
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>

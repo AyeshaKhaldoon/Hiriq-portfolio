@@ -116,6 +116,7 @@ export default function SiteUtilities() {
 
   const acceptCookies = () => {
     window.localStorage.setItem('hiriq_cookie_consent', 'accepted');
+    window.dispatchEvent(new Event('hiriq:cookie-consent-accepted'));
     setCookieVisible(false);
   };
 
