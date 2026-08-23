@@ -762,7 +762,64 @@ export default function ForRecruiters() {
               </div>
             </div>
 
-            {/* Feature 4 - Keep Pre-Screening as is */}
+            {/* Feature 4 - Candidate pre-screening */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-cyan-50 p-6 shadow-2xl">
+                <div className="mb-5 flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-bold uppercase text-amber-700">Qualification layer</p>
+                    <h4 className="mt-1 text-xl font-bold text-slate-900">Candidate pre-screening</h4>
+                  </div>
+                  <CheckSquare className="h-7 w-7 text-amber-700" />
+                </div>
+                <div className="space-y-3">
+                  {[
+                    ['Availability', 'Shift, timezone, notice period, and start date'],
+                    ['Role requirements', 'Must-have skills, certifications, tools, or work setup'],
+                    ['Compensation fit', 'Salary range, contract type, and expectations'],
+                    ['Recruiter routing', 'Move to AI interview, human review, or hold queue'],
+                  ].map(([label, detail]) => (
+                    <div key={label} className="rounded-xl border border-white/80 bg-white p-4">
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <p className="font-bold text-slate-900">{label}</p>
+                          <p className="mt-1 text-sm leading-6 text-slate-600">{detail}</p>
+                        </div>
+                        <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-700">Screen</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <div className="inline-block px-4 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">
+                  Step 4
+                </div>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                  Candidate Pre-Screening Before the Full Interview
+                </h3>
+                <p className="text-lg text-slate-600 mb-6">
+                  Pre-screening handles the practical qualification layer before a deeper AI interview.
+                  Hiriq can collect availability, compensation fit, work setup, must-have requirements,
+                  and knockout-question context so recruiters do not spend interview time on basic mismatches.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    'Short role-fit questions before the full interview',
+                    'Availability, salary, location, work setup, and must-have requirement checks',
+                    'Clear separation between quick qualification and deeper interview evaluation',
+                    'Recruiter review before candidates move forward',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center text-slate-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Feature 5 - Live AI interview engine */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                 <img
@@ -776,7 +833,7 @@ export default function ForRecruiters() {
               </div>
               <div className="order-1 md:order-2">
                 <div className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold mb-4">
-                  Step 4
+                  Step 5
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-4">
                   Live Conversational AI Interviews
