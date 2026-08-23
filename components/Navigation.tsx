@@ -5,19 +5,23 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, Moon, Search, Sparkles, Sun, X } from 'lucide-react';
 
-const DEMO_MAILTO =
-  'mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards';
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
 
-const links = [
+const primaryLinks = [
   { href: '/', label: 'Home' },
   { href: '/hiring-platform', label: 'Hiring Platform' },
-  { href: '/solutions', label: 'Solutions' },
   { href: '/industries', label: 'Industries' },
   { href: '/automated-interviews', label: 'AI Interviews' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/contact', label: 'Contact Us' },
+];
+
+const secondaryLinks = [
+  { href: '/solutions', label: 'Solutions' },
   { href: '/blog', label: 'Blog' },
 ];
+
+const mobileLinks = [...primaryLinks, ...secondaryLinks];
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,8 +71,8 @@ export default function Navigation() {
               </div>
             </Link>
 
-            <div className="hidden md:flex items-center space-x-4 text-sm lg:space-x-5 lg:text-base">
-              {links.map((link) => (
+            <div className="hidden md:flex items-center gap-4 text-sm lg:gap-5 lg:text-base">
+              {primaryLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -77,6 +81,17 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
+              <div className="ml-2 flex items-center gap-4 border-l border-slate-200 pl-5 lg:gap-5">
+                {secondaryLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`font-semibold transition-colors duration-200 hover:text-cyan-600 ${pathname === link.href ? 'text-cyan-700' : 'text-slate-700'}`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               <button
                 type="button"
                 onClick={openSearch}
@@ -94,7 +109,9 @@ export default function Navigation() {
                 {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
               <a
-                href={DEMO_MAILTO}
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-3 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 Contact for Demo
@@ -132,7 +149,7 @@ export default function Navigation() {
 
           {mobileMenuOpen && (
             <div className="md:hidden pb-6 pt-2 space-y-2 pl-safe pr-safe text-lg">
-              {links.map((link) => (
+              {mobileLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -142,7 +159,9 @@ export default function Navigation() {
                 </Link>
               ))}
               <a
-                href={DEMO_MAILTO}
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-3 block w-full px-6 py-3 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-xl font-semibold text-center shadow-lg"
               >
                 Contact for Demo

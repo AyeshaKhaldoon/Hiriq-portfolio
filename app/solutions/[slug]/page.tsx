@@ -30,6 +30,7 @@ import {
 import { getSolution, solutions } from '../solutions';
 
 const siteUrl = 'https://hiriq.co';
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -933,7 +934,9 @@ export default async function SolutionPage({ params }: PageProps) {
               <p className="mt-4 text-base leading-7 text-slate-500">{solution.market}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="/contact"
+                  href={DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
                 >
                   Book a demo
@@ -943,7 +946,7 @@ export default async function SolutionPage({ params }: PageProps) {
                   href="/contact"
                   className="inline-flex h-12 items-center justify-center rounded-lg border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700"
                 >
-                  Book a demo
+                  Contact Hiriq
                 </Link>
               </div>
             </div>
@@ -1036,7 +1039,9 @@ export default async function SolutionPage({ params }: PageProps) {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="/contact"
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 font-semibold text-slate-900 transition hover:bg-cyan-50"
               >
                 Book a demo

@@ -2,8 +2,10 @@
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { CheckCircle, Zap, Clock, Target, Users, TrendingUp, Calendar, Shield, ArrowRight, FileText, CheckSquare, MessageSquare, Sparkles } from 'lucide-react';
+import { CheckCircle, Zap, Clock, Target, Calendar, Shield, ArrowRight, FileText, CheckSquare, MessageSquare } from 'lucide-react';
 import { useState, useEffect } from 'react';
+
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
 
 const LOCATION_CONFIG = {
   US: { currency: 'USD', symbol: '$', multiplier: 1.67, name: 'United States', discount: 0.6 },
@@ -99,17 +101,19 @@ export default function ForRecruiters() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
-                  href="/contact"
+                  href={DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition font-semibold text-lg flex items-center justify-center"
                 >
                   Book a Demo
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
+                  href="/solutions/ai-interview-platform"
                   className="px-8 py-4 bg-white border-2 border-cyan-300 text-slate-700 rounded-lg hover:border-cyan-400 hover:bg-cyan-50 transition font-semibold text-lg flex items-center justify-center"
                 >
-                  Book a Demo
+                  Explore AI Interviews
                 </a>
               </div>
 
@@ -145,33 +149,103 @@ export default function ForRecruiters() {
               <div className="flex items-center justify-center mb-3">
                 <Zap className="w-8 h-8 text-blue-600 mr-2" />
                 <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                  90%
+                  ATS
                 </div>
               </div>
-              <div className="text-slate-900 font-semibold mb-1">Potential Time Savings per Hire</div>
-              <div className="text-sm text-slate-600">Automate screening and initial interviews</div>
+              <div className="text-slate-900 font-semibold mb-1">Structured hiring workflow</div>
+              <div className="text-sm text-slate-600">From job setup to recruiter review</div>
             </div>
 
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
                 <CheckSquare className="w-8 h-8 text-cyan-600 mr-2" />
                 <div className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">
-                  100%
+                  AI
                 </div>
               </div>
-              <div className="text-slate-900 font-semibold mb-1">Customizable Interview & Screening Flows</div>
-              <div className="text-sm text-slate-600">Tailor every step to your needs</div>
+              <div className="text-slate-900 font-semibold mb-1">Custom screening and interviews</div>
+              <div className="text-sm text-slate-600">Tailor criteria, questions, and scorecards</div>
             </div>
 
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
                 <Shield className="w-8 h-8 text-green-600 mr-2" />
                 <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                  Enterprise
+                  Human
                 </div>
               </div>
-              <div className="text-slate-900 font-semibold mb-1">Enterprise-Ready</div>
-              <div className="text-sm text-slate-600">Secure & Scalable Architecture</div>
+              <div className="text-slate-900 font-semibold mb-1">Recruiter-controlled decisions</div>
+              <div className="text-sm text-slate-600">AI evidence with human oversight</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
+                Product depth
+              </p>
+              <h2 className="text-4xl font-bold tracking-tight text-slate-900">
+                More than a resume parser. Hiriq runs the early hiring workflow.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                Recruiters can create role-specific criteria, publish branded candidate flows,
+                screen resumes, run pre-screening, launch live AI interviews, and review
+                transcripts, scorecards, integrity flags, and shortlist evidence in one place.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  ['Custom role setup', 'Control required skills, experience, salary range, question type, and screening threshold.'],
+                  ['Resume intelligence', 'Extract skills, projects, background, and role-fit evidence for recruiter review.'],
+                  ['Adaptive AI interviews', 'Ask follow-up questions when answers lack depth, clarity, or industry-specific evidence.'],
+                  ['Integrity review', 'Flag tab switching, copy-paste behavior, focus changes, background voices, and multi-face signals.'],
+                  ['Scorecards and transcripts', 'Give recruiters per-topic scores, per-turn answer ratings, summaries, and full transcript access.'],
+                  ['Human oversight', 'Use AI recommendations as decision support while recruiters and hiring managers make the final call.'],
+                ].map(([title, copy]) => (
+                  <div key={title} className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-1 hover:border-cyan-300 hover:bg-cyan-50/50">
+                    <h3 className="font-bold text-slate-900">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{copy}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  src: '/job_setup_interface_1768142202904.png',
+                  alt: 'Hiriq job setup interface with automation levels and role requirements',
+                  label: 'Role setup',
+                },
+                {
+                  src: '/criteria_setup_interface_1768142221868.png',
+                  alt: 'Hiriq criteria setup interface with match thresholds and screening questions',
+                  label: 'Screening criteria',
+                },
+                {
+                  src: '/candidate_match_analysis_1768142253998.png',
+                  alt: 'Hiriq candidate match analysis with score and skills evidence',
+                  label: 'Candidate evidence',
+                },
+                {
+                  src: '/prescreening_interface_1768142278950.png',
+                  alt: 'Hiriq AI pre-screening interface with live response and scoring context',
+                  label: 'AI interview review',
+                },
+              ].map((item, index) => (
+                <div
+                  key={item.src}
+                  className={`overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl ${index % 2 === 1 ? 'sm:translate-y-8' : ''}`}
+                >
+                  <img src={item.src} alt={item.alt} className="aspect-[4/3] w-full object-cover object-left-top" />
+                  <div className="border-t border-slate-100 px-4 py-3">
+                    <p className="text-sm font-semibold text-slate-700">{item.label}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -182,10 +256,10 @@ export default function ForRecruiters() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              Traditional Recruiting is Broken. We Fixed It.
+              Early-stage recruiting should not feel scattered.
             </h2>
             <p className="text-xl text-slate-300">
-              Stop wasting time on tasks that AI can handle better
+              Hiriq organizes the repetitive work before recruiter judgment is needed.
             </p>
           </div>
 
@@ -193,17 +267,17 @@ export default function ForRecruiters() {
             {[
               {
                 problem: 'Spending hours screening resumes manually',
-                solution: 'AI screens hundreds in seconds',
+                solution: 'AI-assisted review structures evidence against the role',
                 icon: Clock
               },
               {
                 problem: 'Missing great candidates in the noise',
-                solution: 'Smart matching surfaces top talent',
+                solution: 'Role-fit signals help recruiters review stronger matches',
                 icon: Target
               },
               {
                 problem: 'Scheduling nightmare for initial calls',
-                solution: 'Automated pre-screening 24/7',
+                solution: 'Pre-screening gathers context before live recruiter time',
                 icon: Calendar
               }
             ].map((item, i) => (
@@ -539,7 +613,9 @@ export default function ForRecruiters() {
             Bring resume screening, pre-screening, interviews, and shortlist review into one structured workflow.
           </p>
           <a
-            href="/contact"
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center"
           >
             Book a Demo

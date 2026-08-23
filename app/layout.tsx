@@ -88,7 +88,7 @@ export default function RootLayout({
           '@type': 'ImageObject',
           url: `${siteUrl}/Logo.png`,
         },
-        email: 'contact@hiriq.com',
+        email: 'contact@hiriq.co',
         telephone: '+1-540-664-8490',
         image: `${siteUrl}/123.png`,
         description:
@@ -122,7 +122,7 @@ export default function RootLayout({
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          email: 'contact@hiriq.com',
+          email: 'contact@hiriq.co',
           telephone: '+1-540-664-8490',
           availableLanguage: ['English'],
         },

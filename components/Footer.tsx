@@ -25,8 +25,8 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
               AI-powered recruitment platform for modern teams.
             </p>
             <div className="mt-4 space-y-2 text-sm text-gray-300">
-              <a href="mailto:contact@hiriq.com" className="block hover:text-cyan-400 transition-colors">
-                contact@hiriq.com
+              <a href="mailto:contact@hiriq.co" className="block hover:text-cyan-400 transition-colors">
+                contact@hiriq.co
               </a>
               <a href="tel:+15406648490" className="block hover:text-cyan-400 transition-colors">
                 +1 (540) 664-8490

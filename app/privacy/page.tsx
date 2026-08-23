@@ -158,9 +158,9 @@ export default function Privacy() {
                 For privacy inquiries or to exercise your rights:
               </p>
               <ul className="list-disc pl-6 text-slate-600 space-y-2">
-                <li>Email: <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a></li>
+                <li>Email: <a href="mailto:contact@hiriq.co" className="text-blue-600 hover:underline">contact@hiriq.co</a></li>
                 <li>Phone (US): <a href="tel:+15406648490" className="text-blue-600 hover:underline">+1 (540) 664-8490</a></li>
-                <li>Gulf Contact: <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a> | <a href="tel:+923334057776" className="text-blue-600 hover:underline">+92 333 405 7776</a></li>
+                <li>Gulf Contact: <a href="mailto:contact@hiriq.co" className="text-blue-600 hover:underline">contact@hiriq.co</a> | <a href="tel:+923334057776" className="text-blue-600 hover:underline">+92 333 405 7776</a></li>
               </ul>
             </section>
 

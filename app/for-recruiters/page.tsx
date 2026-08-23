@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { CheckCircle, Zap, Clock, Target, Users, TrendingUp, Calendar, Shield, ArrowRight, FileText, CheckSquare, MessageSquare, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
+
 const LOCATION_CONFIG = {
   US: { currency: 'USD', symbol: '$', multiplier: 1, name: 'United States' },
   PK: { currency: 'PKR', symbol: 'Rs', multiplier: 280, name: 'Pakistan', discount: 0.6 },
@@ -85,7 +87,7 @@ export default function ForRecruiters() {
               <Link href="/for-candidates" className="text-slate-700 hover:text-blue-600 transition">For Candidates</Link>
               <Link href="/pricing" className="text-slate-700 hover:text-blue-600 transition">Pricing</Link>
               <a
-                href="/contact"
+                href={DEMO_URL}
                 className="px-6 py-2 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition"
               >
                 Book a Demo
@@ -116,18 +118,18 @@ export default function ForRecruiters() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
-                  href="/contact"
+                  href={DEMO_URL}
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-lg hover:opacity-90 transition font-semibold text-lg flex items-center justify-center"
                 >
                   Book a Demo
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
-                <a
-                  href="mailto:contact@hiriq.com?subject=Demo%20Request%20-%20Hiriq%20AI%20Recruitment%20Platform&body=Dear%20Hiriq%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20personalized%20demo%20of%20your%20AI-powered%20recruitment%20platform.%0A%0AOrganization%20Details%3A%0A%E2%80%A2%20Company%20Name%3A%20%0A%E2%80%A2%20Industry%3A%20%0A%E2%80%A2%20Team%20Size%3A%20%0A%0AContact%20Information%3A%0A%E2%80%A2%20Full%20Name%3A%20%0A%E2%80%A2%20Job%20Title%3A%20%0A%E2%80%A2%20Phone%20Number%3A%20%0A%E2%80%A2%20Preferred%20Contact%20Method%3A%20%0A%0ASpecific%20Interests%3A%0A%E2%80%A2%20Primary%20Use%20Case%3A%20%0A%E2%80%A2%20Current%20Hiring%20Volume%3A%20%0A%E2%80%A2%20Timeline%20for%20Implementation%3A%20%0A%0APlease%20share%20your%20available%20time%20slots%20for%20a%2030-minute%20demo%20session.%0A%0ABest%20regards"
+                <Link
+                  href="/solutions/ai-interview-platform"
                   className="px-8 py-4 bg-white border-2 border-cyan-300 text-slate-700 rounded-lg hover:border-cyan-400 hover:bg-cyan-50 transition font-semibold text-lg flex items-center justify-center"
                 >
-                  Book a Demo
-                </a>
+                  Explore AI Interviews
+                </Link>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-slate-600">
@@ -330,7 +332,7 @@ export default function ForRecruiters() {
               </div>
 
               <a
-                href="/contact"
+                href={DEMO_URL}
                 className="block w-full py-3 text-center border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all"
               >
                 Book a Demo
@@ -415,7 +417,7 @@ export default function ForRecruiters() {
               </div>
 
               <a
-                href="/contact"
+                href={DEMO_URL}
                 className="block w-full py-3 text-center bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg"
               >
                 Book a Demo
@@ -524,7 +526,7 @@ export default function ForRecruiters() {
               </div>
 
               <a
-                href="/contact"
+                href={DEMO_URL}
                 className="block w-full py-3 text-center border-2 border-cyan-600 text-cyan-600 rounded-lg font-semibold hover:bg-cyan-50 transition-all"
               >
                 Book a Demo
@@ -867,7 +869,7 @@ export default function ForRecruiters() {
             Bring resume screening, pre-screening, interviews, and shortlist review into one structured workflow.
           </p>
           <a
-            href="/contact"
+            href={DEMO_URL}
             className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center"
           >
             Book a Demo

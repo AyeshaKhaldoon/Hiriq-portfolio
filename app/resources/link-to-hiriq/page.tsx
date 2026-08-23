@@ -125,7 +125,7 @@ export default function LinkToHiriqPage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <a
-                  href="mailto:contact@hiriq.com?subject=Hiriq%20partnership%20or%20directory%20listing"
+                  href="mailto:contact@hiriq.co?subject=Hiriq%20partnership%20or%20directory%20listing"
                   className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700"
                 >
                   Contact for listing

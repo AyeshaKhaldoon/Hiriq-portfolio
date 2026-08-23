@@ -435,7 +435,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               See how Hiriq turns screening and interviews into structured recruiter evidence.
             </p>
-            <Link href="/contact" className="inline-flex px-10 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <Link href="https://calendly.com/ayesha786khaldoon/discovery-call-hiriq" className="inline-flex px-10 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               Book a Demo →
             </Link>
             <p className="text-blue-100 text-sm mt-4">Review the workflow with the Hiriq team.</p>

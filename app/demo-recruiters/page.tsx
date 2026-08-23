@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import { CheckCircle, Zap, Clock, Target, Users, TrendingUp, Calendar, Shield, ArrowRight, FileText, CheckSquare, MessageSquare, Play } from 'lucide-react';
 import { useState } from 'react';
 
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
+
 export default function DemoRecruiters() {
     const [candidates, setCandidates] = useState(200);
     const [minutesPerResume, setMinutesPerResume] = useState(5);
@@ -47,11 +49,11 @@ export default function DemoRecruiters() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                                <Link href="/contact" className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg flex items-center justify-center">
+                                <Link href={DEMO_URL} className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg flex items-center justify-center">
                                     Book a Demo
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
-                                <Link href="/contact" className="px-8 py-4 bg-white border-2 border-slate-300 text-slate-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition font-semibold text-lg text-center">
+                                <Link href={DEMO_URL} className="px-8 py-4 bg-white border-2 border-slate-300 text-slate-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition font-semibold text-lg text-center">
                                     Schedule Live Demo
                                 </Link>
                             </div>
@@ -446,7 +448,7 @@ export default function DemoRecruiters() {
                         See how Hiriq fits your hiring workflow.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
+                        <Link href={DEMO_URL} className="px-12 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition text-lg inline-flex items-center justify-center">
                             Book a Demo
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </Link>

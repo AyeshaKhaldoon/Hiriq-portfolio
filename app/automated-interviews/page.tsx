@@ -22,6 +22,8 @@ import {
   UserCheck,
 } from 'lucide-react';
 
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
+
 const INTERVIEW_FLOW = [
   {
     title: 'Role and industry setup',
@@ -123,7 +125,7 @@ export default function AutomatedInterviewsPage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/contact"
+                  href={DEMO_URL}
                   className="inline-flex h-14 items-center justify-center rounded-lg bg-white px-7 font-semibold text-slate-950 transition hover:bg-cyan-50"
                 >
                   Book an AI interview demo
@@ -366,7 +368,7 @@ export default function AutomatedInterviewsPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href={DEMO_URL}
               className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 font-semibold text-slate-900 transition hover:bg-cyan-50"
             >
               Book a demo

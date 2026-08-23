@@ -120,7 +120,7 @@ export default function Terms() {
                 <li>Not share your account credentials with unauthorized individuals</li>
               </ul>
               <p className="text-slate-600 mb-4">
-                <strong>Security Breach Notification:</strong> If you suspect unauthorized access to your account, contact us immediately at <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a>. We will investigate and take appropriate action within 24 hours.
+                <strong>Security Breach Notification:</strong> If you suspect unauthorized access to your account, contact us immediately at <a href="mailto:contact@hiriq.co" className="text-blue-600 hover:underline">contact@hiriq.co</a>. We will investigate and take appropriate action within 24 hours.
               </p>
             </section>
 
@@ -309,15 +309,15 @@ export default function Terms() {
                 <ul className="list-none text-slate-600 space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">General Inquiries:</span>
-                    <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a>
+                    <a href="mailto:contact@hiriq.co" className="text-blue-600 hover:underline">contact@hiriq.co</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Security Issues:</span>
-                    <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com (24/7 monitored)</a>
+                    <a href="mailto:contact@hiriq.co" className="text-blue-600 hover:underline">contact@hiriq.co (24/7 monitored)</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Privacy Requests:</span>
-                    <a href="mailto:contact@hiriq.com" className="text-blue-600 hover:underline">contact@hiriq.com</a>
+                    <a href="mailto:contact@hiriq.co" className="text-blue-600 hover:underline">contact@hiriq.co</a>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold min-w-[140px]">Phone:</span>
@@ -337,7 +337,7 @@ export default function Terms() {
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">Security Commitment</p>
                   <p className="text-slate-600 text-sm">
-                    At Hiriq, we treat candidate and customer data carefully and design the platform around human review. If you have concerns about data security or privacy, contact our team at contact@hiriq.com.
+                    At Hiriq, we treat candidate and customer data carefully and design the platform around human review. If you have concerns about data security or privacy, contact our team at contact@hiriq.co.
                   </p>
                 </div>
               </div>

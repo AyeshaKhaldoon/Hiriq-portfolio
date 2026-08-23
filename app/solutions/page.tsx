@@ -19,6 +19,8 @@ import {
 import { solutions } from './solutions';
 import { buildSeoMetadata, pageKeywords } from '../seo';
 
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
+
 export const metadata = buildSeoMetadata({
   title: 'AI Recruiting Solutions | Hiriq',
   description:
@@ -112,7 +114,9 @@ export default function SolutionsPage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="/contact"
+                  href={DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
                 >
                   Book a demo

@@ -4,6 +4,8 @@ import { Target, Users, Shield, CheckCircle, ArrowRight, Sparkles, ExternalLink,
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
+
 export default function About() {
   const founders = [
     {
@@ -298,7 +300,7 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href={DEMO_URL}
               className="px-10 py-5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-2xl transition-all text-lg inline-flex items-center justify-center transform hover:-translate-y-1"
             >
               Schedule a Demo

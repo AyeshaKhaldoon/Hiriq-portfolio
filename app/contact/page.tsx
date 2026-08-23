@@ -79,7 +79,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mb-12">
             {[
-              { icon: Mail, title: 'Email Us', content: 'contact@hiriq.com', subtext: 'We reply within 24 hours', copy: 'contact@hiriq.com' },
+              { icon: Mail, title: 'Email Us', content: 'contact@hiriq.co', subtext: 'We reply within 24 hours', copy: 'contact@hiriq.co' },
               { icon: MessageSquare, title: 'Live Chat', content: 'Available 9am-6pm EST', subtext: 'Chat with our team' },
               { icon: Phone, title: 'Call Us', content: '+1 (540) 664-8490', subtext: 'Mon-Fri 9am-6pm EST', copy: '+1 (540) 664-8490' },
             ].map((option, i) => (
@@ -89,7 +89,7 @@ export default function Contact() {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{option.title}</h3>
                 {option.title === 'Email Us' ? (
-                  <a href="mailto:contact@hiriq.com" className="text-blue-600 font-semibold mb-1 inline-block hover:underline">
+                  <a href="mailto:contact@hiriq.co" className="text-blue-600 font-semibold mb-1 inline-block hover:underline">
                     {option.content}
                   </a>
                 ) : option.title === 'Call Us' ? (

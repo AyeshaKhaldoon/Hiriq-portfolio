@@ -14,7 +14,8 @@ import {
 } from 'lucide-react';
 import { siteSearchItems } from '@/app/siteSearch';
 
-const CONTACT_EMAIL = 'contact@hiriq.com';
+const CONTACT_EMAIL = 'contact@hiriq.co';
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 
 export function getStoredUtmParams() {
@@ -170,7 +171,9 @@ export default function SiteUtilities() {
       <div className="fixed bottom-0 left-0 right-0 z-[55] border-t border-slate-200 bg-white/95 px-4 py-3 shadow-2xl shadow-slate-900/15 backdrop-blur md:hidden print:hidden">
         <div className="mx-auto flex max-w-md gap-2">
           <a
-            href="/contact"
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex h-11 flex-1 items-center justify-center rounded-xl bg-slate-900 px-4 text-sm font-semibold text-white"
           >
             Book demo

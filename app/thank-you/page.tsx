@@ -27,7 +27,7 @@ export default function ThankYouPage() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <a
-              href="mailto:contact@hiriq.com"
+              href="mailto:contact@hiriq.co"
               className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700"
             >
               <Mail className="mr-2 h-4 w-4" />

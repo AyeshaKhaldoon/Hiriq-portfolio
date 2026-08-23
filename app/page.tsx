@@ -9,16 +9,11 @@ import FeatureSection from '@/components/FeatureSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import {
   ArrowRight,
-  ClipboardCheck,
-  FileText,
-  MessageSquare,
-  ShieldCheck,
   Volume2,
   VolumeX,
 } from 'lucide-react';
 
-const DEMO_MAILTO =
-  'mailto:contact@hiriq.com?subject=Book%20a%20Demo&body=Hi%2C%20I%27d%20like%20to%20book%20a%20demo.%0A%0AThanks';
+const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
 
 const homeFaqs = [
   {
@@ -124,7 +119,9 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-5 pt-2">
                 <a
-                  href={DEMO_MAILTO}
+                  href={DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center h-16 rounded-full px-10 text-xl font-semibold bg-slate-900 text-white shadow-xl hover:shadow-2xl hover:bg-slate-800 transition-all duration-300 hover:scale-[1.02]"
                 >
                   Book a Demo
@@ -187,49 +184,6 @@ export default function Home() {
 
       <FeatureSection />
 
-      <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">
-              Workflow
-            </p>
-            <h2 className="text-4xl font-bold tracking-tight text-slate-900">
-              From job criteria to recruiter-ready evidence.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Hiriq is built around the early hiring steps that usually create delay:
-              role criteria, resume review, candidate pre-screening, AI interviews,
-              and structured summaries for recruiter review.
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link href="/hiring-platform" className="inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800">
-                View platform
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link href="/pricing" className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 px-6 font-semibold text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700">
-                Compare plans
-              </Link>
-            </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              { icon: FileText, title: 'Resume context', copy: 'Extract role-relevant experience, skills, and candidate background before review.' },
-              { icon: MessageSquare, title: 'Interview evidence', copy: 'Use structured pre-screening and interview responses instead of scattered notes.' },
-              { icon: ClipboardCheck, title: 'Shortlist clarity', copy: 'Compare candidates against the same criteria before moving them forward.' },
-              { icon: ShieldCheck, title: 'Human decisioning', copy: 'Keep final decisions with recruiters and hiring managers, not automation alone.' },
-            ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                  <item.icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
-                <p className="mt-3 text-sm font-medium leading-6 text-slate-600">{item.copy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-3xl text-center">
@@ -269,21 +223,51 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">Founder Interview</p>
-            <p className="mt-3 text-lg leading-8 text-slate-700">
-              Read Ayesha Khaldoon&apos;s BoardroomPK interview on Hiriq&apos;s approach to intelligent,
-              human-centered hiring.
-            </p>
+          <div className="mx-auto mt-12 grid max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-xl md:grid-cols-[0.85fr_1.15fr]">
             <a
               href="https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex h-12 items-center justify-center rounded-xl bg-slate-900 px-6 font-semibold text-white transition hover:bg-slate-800"
+              className="group relative min-h-[320px] overflow-hidden bg-slate-900"
+              aria-label="Read Ayesha Khaldoon's BoardroomPK interview"
             >
-              Read the interview
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <Image
+                src="/team/ayesha-khaldoon.jpg"
+                alt="Ayesha Khaldoon, Co-Founder CEO of Hiriq"
+                fill
+                className="object-cover object-center transition duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 380px"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 to-transparent p-5 text-white">
+                <p className="text-sm font-semibold">Ayesha Khaldoon</p>
+                <p className="text-xs text-slate-300">Co-Founder CEO, Hiriq</p>
+              </div>
             </a>
+            <div className="flex flex-col justify-center p-8 text-white sm:p-10">
+              <p className="text-sm font-semibold uppercase tracking-wide text-cyan-300">Founder Interview</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                The story behind Hiriq&apos;s human-centered AI hiring platform.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-slate-300">
+                In BoardroomPK, Ayesha shares how Hiriq connects job requirements, CV analysis,
+                candidate matching, pre-screening, AI interviews, and recruiter decisioning into one workflow.
+              </p>
+              <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+                <p className="text-sm leading-6 text-slate-300">
+                  Sneak peek: the interview explains why Hiriq keeps automation focused on structured
+                  evidence while the final hiring decision stays with people.
+                </p>
+              </div>
+              <a
+                href="https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex h-12 w-fit items-center justify-center rounded-xl bg-white px-6 font-semibold text-slate-950 transition hover:bg-cyan-50"
+              >
+                Read the interview
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -312,7 +296,9 @@ export default function Home() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href={DEMO_MAILTO}
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 rounded-full px-8 text-lg font-semibold bg-white text-slate-900 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               Book a Demo

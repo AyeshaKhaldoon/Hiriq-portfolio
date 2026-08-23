@@ -29,7 +29,7 @@ const FeatureSection = () => {
             </span>
           </h2>
           <p className="text-lg text-slate-600 font-medium">
-            One platform for screening, interviews, and decisions.
+            A full early-funnel hiring system: job setup, resume intelligence, live AI interviews, integrity checks, and recruiter-ready scorecards.
           </p>
         </div>
 
@@ -47,10 +47,10 @@ const FeatureSection = () => {
                   <Mic className="w-9 h-9 text-white" />
                 </div>
                 <h3 className="text-3xl font-extrabold text-slate-900 mb-4">
-                  AI Voice Interviews
+                  Live AI Interview Engine
                 </h3>
                 <p className="text-slate-600 text-lg max-w-xl leading-relaxed font-medium">
-                  Our AI conducts structured, adaptive conversations with candidates and returns transcripts, scorecards, and review context for recruiters.
+                  Run 30-minute conversational interviews that adapt to candidate answers, probe for missing evidence, and return transcripts, per-turn ratings, subtopic scores, integrity flags, and recruiter-review recommendations.
                 </p>
               </div>
               <div className="mt-8 inline-flex items-center text-blue-600 font-bold group-hover:gap-3 gap-2 transition-all">
@@ -68,9 +68,9 @@ const FeatureSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center mb-6 shadow-lg shadow-purple-500/25">
               <Zap className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Smart Distribution</h3>
+            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Role Criteria Builder</h3>
             <p className="text-slate-600 leading-relaxed font-medium">
-              Organize inbound candidates, shortlist evidence, and recruiter handoffs from one workflow.
+              Define must-have skills, experience, salary range, screening thresholds, and custom questions before candidates enter the funnel.
             </p>
           </div>
 
@@ -80,9 +80,9 @@ const FeatureSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/25">
               <LayoutTemplate className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Branded Pages</h3>
+            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Branded Candidate Flows</h3>
             <p className="text-slate-600 leading-relaxed font-medium">
-              Role-specific application flows. Candidates apply directly—no manual resume chasing.
+              Publish role-specific application pages that capture resumes, details, and qualification answers into the hiring workflow.
             </p>
           </div>
 
@@ -92,9 +92,9 @@ const FeatureSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/25">
               <FileSearch className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Resume Intelligence</h3>
+            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Resume Match Analysis</h3>
             <p className="text-slate-600 leading-relaxed font-medium">
-              Industry-aware parsing and extraction so you see what matters.
+              Parse skills, projects, experience, and role fit into evidence recruiters can inspect instead of relying on keyword-only filtering.
             </p>
           </div>
 
@@ -104,9 +104,9 @@ const FeatureSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/25">
               <ShieldCheck className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Integrity & Fairness</h3>
+            <h3 className="text-xl font-extrabold text-slate-900 mb-2">Integrity Signals</h3>
             <p className="text-slate-600 leading-relaxed font-medium">
-              Integrity signals and transparent scoring context support more consistent recruiter review.
+              Surface copy-paste attempts, tab switching, focus changes, background voices, and multi-face signals as review context.
             </p>
           </div>
 
