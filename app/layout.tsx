@@ -34,8 +34,8 @@ export const metadata: Metadata = {
       {
         url: '/123.png',
         width: 1200,
-        height: 783,
-        alt: 'Hiriq AI recruitment platform interface',
+        height: 630,
+        alt: 'Hiriq recruiter dashboard and candidate pipeline interface',
       },
     ],
   },

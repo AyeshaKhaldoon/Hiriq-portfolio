@@ -19,7 +19,7 @@ export function buildSeoMetadata({
   path,
   keywords,
   image = defaultOgImage,
-  imageAlt = 'Hiriq AI recruiting platform dashboard',
+  imageAlt = 'Hiriq recruiter dashboard and candidate pipeline interface',
   noIndex = false,
 }: SeoConfig): Metadata {
   const canonical = `${siteUrl}${path}`;
@@ -42,7 +42,7 @@ export function buildSeoMetadata({
         {
           url: image,
           width: 1200,
-          height: 783,
+          height: 630,
           alt: imageAlt,
         },
       ],

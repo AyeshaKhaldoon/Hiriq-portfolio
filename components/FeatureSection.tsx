@@ -52,6 +52,13 @@ const FeatureSection = () => {
                 <p className="text-slate-600 text-lg max-w-xl leading-relaxed font-medium">
                   Run 30-minute conversational interviews that adapt to candidate answers, probe for missing evidence, and return transcripts, per-turn ratings, subtopic scores, integrity flags, and recruiter-review recommendations.
                 </p>
+                <div className="mt-8 overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-lg">
+                  <img
+                    src="/product/product-ai-behavioral.webp"
+                    alt="Hiriq AI interview behavioral signals and per-question context dashboard"
+                    className="aspect-video w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
               </div>
               <div className="mt-8 inline-flex items-center text-blue-600 font-bold group-hover:gap-3 gap-2 transition-all">
                 Explore the Platform <ArrowUpRight className="w-5 h-5" />

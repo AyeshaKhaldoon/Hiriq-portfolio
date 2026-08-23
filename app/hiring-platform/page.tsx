@@ -128,12 +128,12 @@ export default function ForRecruiters() {
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                 <img
-                  src="https://i.ibb.co/d0VjXx2P/Whats-App-Image-2026-01-11-at-21-11-32.jpg"
-                  alt="Real-time candidate pipeline showing stages from Upload to Offer"
+                  src="/product/product-dashboard.webp"
+                  alt="Hiriq recruiter dashboard showing active jobs, candidate pipeline, and AI contribution metrics"
                   className="w-full h-auto"
                 />
                 <div className="p-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center">
-                  ⚡ Track candidates through every stage: Upload → Email → Screening → Interview → Offer
+                  Recruiter dashboard for active jobs, screening volume, shortlist movement, and AI contribution metrics
                 </div>
               </div>
             </div>
@@ -344,12 +344,12 @@ export default function ForRecruiters() {
               </div>
               <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                 <img
-                  src="/job_setup_interface_1768142202904.png"
-                  alt="Job Role Setup Interface showing automation workflow tiers"
+                  src="/product/product-dashboard.webp"
+                  alt="Hiriq recruiter dashboard with create job action and live hiring metrics"
                   className="w-full h-auto"
                 />
                 <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 text-center text-sm text-slate-600">
-                  ⚡ Choose from 4 automation levels: Basic ATS → Smart ATS → Pre-Screening → Full Automation
+                  Create jobs from the dashboard and track the full candidate pipeline as applications move
                 </div>
               </div>
             </div>
@@ -426,43 +426,26 @@ export default function ForRecruiters() {
               </div>
               <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                 <img
-                  src="/candidate_match_analysis_1768142253998.png"
-                  alt="Candidate match analysis showing 84% score, skills, and experience breakdown"
+                  src="/product/product-pipeline.webp"
+                  alt="Hiriq candidate pipeline showing resume scores, rejected candidates, shortlisted candidates, and pre-screening stages"
                   className="w-full h-auto"
                 />
                 <div className="p-4 bg-gradient-to-r from-green-50 to-blue-50 text-center text-sm text-slate-600">
-                  📊 Detailed match analysis: 84% score with 29 skills, 18 projects identified
+                  Pipeline view with uploaded, shortlisted, pre-screening, AI interview, and offer stages
                 </div>
               </div>
             </div>
 
             {/* Feature 4 - Candidate pre-screening */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-cyan-50 p-6 shadow-2xl">
-                <div className="mb-5 flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-bold uppercase text-amber-700">Qualification layer</p>
-                    <h4 className="mt-1 text-xl font-bold text-slate-900">Candidate pre-screening</h4>
-                  </div>
-                  <CheckSquare className="h-7 w-7 text-amber-700" />
-                </div>
-                <div className="space-y-3">
-                  {[
-                    ['Availability', 'Shift, timezone, notice period, and start date'],
-                    ['Role requirements', 'Must-have skills, certifications, tools, or work setup'],
-                    ['Compensation fit', 'Salary range, contract type, and expectations'],
-                    ['Recruiter routing', 'Move to AI interview, human review, or hold queue'],
-                  ].map(([label, detail]) => (
-                    <div key={label} className="rounded-xl border border-white/80 bg-white p-4">
-                      <div className="flex items-start justify-between gap-4">
-                        <div>
-                          <p className="font-bold text-slate-900">{label}</p>
-                          <p className="mt-1 text-sm leading-6 text-slate-600">{detail}</p>
-                        </div>
-                        <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-700">Screen</span>
-                      </div>
-                    </div>
-                  ))}
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-amber-200">
+                <img
+                  src="/product/product-prescreening-result.webp"
+                  alt="Hiriq pre-screening results modal with pass status, follow-up flag, requirements, and verified responses"
+                  className="w-full h-auto"
+                />
+                <div className="p-4 bg-gradient-to-r from-amber-50 to-cyan-50 text-center text-sm text-slate-600">
+                  Pre-screening results show pass status, follow-up needs, role requirements, and verified responses
                 </div>
               </div>
               <div>
@@ -497,12 +480,12 @@ export default function ForRecruiters() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                 <img
-                  src="/prescreening_interface_1768142278950.png"
-                  alt="Hiriq live AI interview interface with transcript, scoring, and evidence review"
+                  src="/product/product-ai-scorecard.webp"
+                  alt="Hiriq AI interview scorecard with competency breakdown, observed score, and recruiter decision actions"
                   className="w-full h-auto"
                 />
                 <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 text-center text-sm text-slate-600">
-                  Live AI interviews with adaptive follow-ups, scoring, transcript review, and integrity signals
+                  AI interview scorecards show competency coverage, evidence quality, and recruiter decision actions
                 </div>
               </div>
               <div className="order-1 md:order-2">
@@ -534,6 +517,37 @@ export default function ForRecruiters() {
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                src: '/product/product-ai-per-question.webp',
+                alt: 'Hiriq AI interview per-question evidence list with topic and behavioral tags',
+                title: 'Per-question evidence',
+                copy: 'Inspect question-level context instead of relying on one final score.',
+              },
+              {
+                src: '/product/product-ai-behavioral.webp',
+                alt: 'Hiriq behavioral signals panel showing composure, audio, and facial context',
+                title: 'Behavioral context',
+                copy: 'Review voice, fluency, focus, and facial context as supporting evidence.',
+              },
+              {
+                src: '/product/product-integrity-flags.webp',
+                alt: 'Hiriq interview integrity alert showing weak areas, strong areas, and copy attempt flag',
+                title: 'Integrity flags',
+                copy: 'See copy attempts and other integrity signals alongside the interview assessment.',
+              },
+            ].map((item) => (
+              <div key={item.src} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+                <img src={item.src} alt={item.alt} className="aspect-[4/3] w-full object-cover object-top" />
+                <div className="p-5">
+                  <h3 className="font-bold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.copy}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
