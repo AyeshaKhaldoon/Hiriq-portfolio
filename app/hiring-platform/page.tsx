@@ -95,8 +95,8 @@ export default function ForRecruiters() {
               </h1>
 
               <p className="text-xl text-slate-600 mb-8">
-                AI-powered ATS that automates screening, conducts pre-screening calls,
-                and delivers qualified candidates to your inbox—without the manual work.
+                AI-powered ATS that screens resumes, runs live conversational AI interviews,
+                and gives recruiters scorecards, transcripts, and shortlist evidence.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -506,32 +506,39 @@ export default function ForRecruiters() {
               </div>
             </div>
 
-            {/* Feature 4 - Keep Pre-Screening as is */}
+            {/* Feature 4 - Live AI interview engine */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
                 <img
                   src="/prescreening_interface_1768142278950.png"
-                  alt="AI-powered pre-screening interview interface with audio visualization and real-time scoring"
+                  alt="Hiriq live AI interview interface with transcript, scoring, and evidence review"
                   className="w-full h-auto"
                 />
                 <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 text-center text-sm text-slate-600">
-                  🎙️ AI conducts live interviews with real-time scoring and transcript analysis
+                  Live AI interviews with adaptive follow-ups, scoring, transcript review, and integrity signals
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <div className="inline-block px-4 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-semibold mb-4">
-                  Step 4 (Premium)
+                <div className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold mb-4">
+                  Step 4
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-4">
-                  Automated Pre-Screening Calls
+                  Live Conversational AI Interviews
                 </h3>
                 <p className="text-lg text-slate-600 mb-6">
-                  Premium plan: AI conducts initial phone screens 24/7.
-                  No scheduling hassles. Candidates get instant feedback.
-                  You get transcripts, scores, and red flags highlighted.
+                  Hiriq runs structured, 30-minute AI interviews that adapt question by question.
+                  The interview engine probes technical, scenario, behavioral, and industry-specific
+                  depth, then gives recruiters transcripts, subtopic scores, per-turn ratings,
+                  recommendations, and integrity flags for review.
                 </p>
                 <ul className="space-y-3">
-                  {['Available 24/7, any timezone', 'Full Call Summary', 'Automatic scoring'].map((item, i) => (
+                  {[
+                    'Adaptive follow-up questions based on candidate answers',
+                    'Technical, behavioral, scenario, and industry-specific evaluation',
+                    'Transcript, scorecard, per-turn ratings, and recruiter recommendation',
+                    'Integrity flags for tab switching, copy-paste, focus changes, voices, and multi-face signals',
+                    'Final hiring decisions stay with recruiters and hiring managers'
+                  ].map((item, i) => (
                     <li key={i} className="flex items-center text-slate-700">
                       <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
                       {item}
