@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles } from 'lucide-react';
 
 interface FooterProps {
   showSocialIcons?: boolean;
@@ -15,11 +14,12 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
           <div>
-            <div className="flex items-center mb-4">
-              <Sparkles className="w-6 h-6 text-cyan-400 mr-2 animate-pulse" />
-              <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-sky-400">
-                Hiriq
-              </h3>
+            <div className="mb-4 inline-flex rounded-md bg-white px-3 py-2">
+              <img
+                src="/Logo.png"
+                alt="Hiriq"
+                className="h-8 w-32 object-contain object-left"
+              />
             </div>
             <p className="text-gray-300 text-sm">
               AI-powered recruitment platform for modern teams.

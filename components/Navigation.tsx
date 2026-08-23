@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { Menu, Moon, Search, Sparkles, Sun, X } from 'lucide-react';
+import { Menu, Moon, Search, Sun, X } from 'lucide-react';
 
 const DEMO_URL = 'https://calendly.com/ayesha786khaldoon/discovery-call-hiriq';
 
@@ -63,11 +63,12 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <Link href="/" className="flex items-center group cursor-pointer min-w-0" aria-label="Hiriq home">
-              <div className="relative flex items-center min-w-0">
-                <Sparkles className="w-5 h-5 sm:w-7 sm:h-7 text-cyan-500 absolute -top-0.5 -left-0.5 sm:-top-1 sm:-left-1 animate-pulse flex-shrink-0" />
-                <span className="text-xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent ml-5 sm:ml-6 truncate">
-                  Hiriq
-                </span>
+              <div className="flex h-10 w-[138px] items-center sm:h-12 sm:w-[168px]">
+                <img
+                  src="/Logo.png"
+                  alt="Hiriq"
+                  className="h-full w-full object-contain object-left"
+                />
               </div>
             </Link>
 
