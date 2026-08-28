@@ -8,179 +8,7 @@ import Footer from '@/components/Footer';
 import NewsletterForm from '@/components/NewsletterForm';
 import { siteUrl } from '@/app/seo';
 
-// Type definitions
-interface BlogSection {
-  heading: string;
-  content: string;
-  bulletPoints?: string[];
-  stats?: Array<{ label: string; description: string }>;
-  conclusion?: string;
-  highlight?: string;
-}
-
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-  image: string;
-  author: {
-    name: string;
-    avatar: string;
-  };
-  content: {
-    intro: string;
-    sections: BlogSection[];
-  };
-}
-
-// Blog posts data
-const blogPosts: BlogPost[] = [
-  {
-    slug: 'ai-transforming-recruitment-2026',
-    title: 'How AI is Transforming Recruitment in 2026',
-    excerpt: 'Discover the latest trends in AI-powered recruiting and how automated screening is changing the hiring landscape.',
-    category: 'Industry Trends',
-    date: 'Jan 2, 2026',
-    readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop',
-    author: {
-      name: 'Sarah Johnson',
-      avatar: 'https://ui-avatars.com/api/?name=Sarah+Johnson&background=0E7490&color=fff'
-    },
-    content: {
-      intro: "The recruitment landscape has changed quickly as artificial intelligence moves from experimental tooling into everyday hiring workflows. If you're still manually screening large applicant pools or repeating the same preliminary calls, it is worth asking where structured automation can give recruiters better evidence earlier.",
-      sections: [
-        {
-          heading: 'The Death of Manual Resume Screening',
-          content: "Let's start with a practical truth: many hiring funnels create more applicant volume than recruiters can review with care. When resumes arrive faster than the team can compare them, strong candidates can be missed and weak-fit candidates can still consume live interview time.",
-          bulletPoints: [
-            'Skills context and relevance rather than just keywords',
-            'Career trajectory patterns that indicate growth potential',
-            'Communication and role-context signals that help recruiters prepare better follow-up questions',
-            'Review flags where information needs clarification before a candidate moves forward'
-          ],
-          conclusion: 'The result is a more structured first pass: recruiters get clearer evidence earlier, while final judgment stays with people who understand the role and hiring context.'
-        },
-        {
-          heading: 'Automated Pre-Screening: The Game Changer',
-          content: "This is where automation becomes practical. Teams can move repetitive first-round qualification into structured conversational AI workflows, then reserve human time for the candidates who need deeper judgment and relationship-building.",
-          stats: [
-            { label: 'Faster review', description: 'when repetitive first screens move into structured workflows' },
-            { label: 'More consistency', description: 'when candidates answer comparable role-specific questions' },
-            { label: 'Clearer context', description: 'when transcripts and summaries are available before review' },
-            { label: 'Less scheduling drag', description: 'when early screening is not blocked by calendar availability' }
-          ]
-        },
-        {
-          heading: 'The Bottom Line',
-          content: "AI in recruitment is becoming a normal part of the modern hiring stack. The teams that use it well will combine speed with transparency: clear criteria, reviewable evidence, human oversight, and candidate communication that does not disappear into a black box."
-        }
-      ]
-    }
-  },
-  {
-    slug: 'reduce-time-to-hire',
-    title: '10 Practical Strategies to Reduce Time-to-Hire',
-    excerpt: 'Learn practical tactics to speed up your recruitment process without compromising candidate quality.',
-    category: 'Best Practices',
-    date: 'Dec 28, 2025',
-    readTime: '7 min read',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop',
-    author: {
-      name: 'Michael Chen',
-      avatar: 'https://ui-avatars.com/api/?name=Michael+Chen&background=0E7490&color=fff'
-    },
-    content: {
-      intro: 'Time-to-hire can quietly damage recruitment performance. Every extra day a position remains open can affect productivity, projects, and team workload. These strategies focus on reducing avoidable delays while keeping candidate review thoughtful.',
-      sections: [
-        {
-          heading: '1. Automate Resume Screening',
-          content: 'The old way: recruiters manually sort applications, often searching for keywords and qualifications under time pressure. The better way: AI-assisted screening compares candidates against role criteria and gives recruiters structured fit evidence for review.',
-          highlight: 'Best for roles with high applicant volume'
-        },
-        {
-          heading: '2. Replace Initial Phone Screens with AI Interviews',
-          content: 'The traditional phone screen can become a scheduling bottleneck. Automated pre-screening lets candidates answer practical qualification questions earlier, then gives recruiters clearer context before deciding who needs a live conversation.',
-          highlight: 'Best for early qualification and calendar-heavy workflows'
-        },
-        {
-          heading: 'The Bottom Line',
-          content: "Reducing time-to-hire isn't about cutting corners—it's about eliminating waste. The companies winning the war for talent in 2026 aren't necessarily the biggest or best-known. They're the fastest and most efficient. Every day you shave off your hiring process is a day you gain competitive advantage.",
-          highlight: 'Start with strategies 1-2 this week. You\'ll see immediate results.'
-        }
-      ]
-    }
-  },
-  {
-    slug: 'cost-of-bad-hire',
-    title: 'The Real Cost of a Bad Hire (And How to Prevent It)',
-    excerpt: "Bad hires cost companies thousands. Here's how AI-powered screening helps you avoid costly mistakes.",
-    category: 'Recruiting Tips',
-    date: 'Dec 20, 2025',
-    readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop',
-    author: {
-      name: 'Emily Rodriguez',
-      avatar: 'https://ui-avatars.com/api/?name=Emily+Rodriguez&background=0E7490&color=fff'
-    },
-    content: {
-      intro: "Every recruiter has been there: you filled a role quickly, everyone was relieved to have someone in the seat, and then three months later you realize you've made a costly mistake. The person isn't performing, team morale is suffering, and now you have to start the whole process over again. But here's what most companies don't realize: the real cost of that bad hire is 10-15 times higher than you think.",
-      sections: [
-        {
-          heading: 'The Obvious Costs',
-          content: 'Most companies only calculate the direct, visible costs when measuring the impact of a bad hire. These are easy to quantify but represent just the tip of the iceberg.',
-          bulletPoints: [
-            'Recruiting and hiring costs: $15,000-$25,000 (job ads, recruiter fees, interview time)',
-            'Training and onboarding: $3,000-$5,000 (materials, trainer time, lost productivity)',
-            'Separation costs: $5,000-$10,000 (severance, unemployment insurance, legal fees)',
-            'Replacement costs: Another full recruiting cycle'
-          ],
-          highlight: 'Conservative estimate: $25,000-$40,000 in direct costs'
-        },
-        {
-          heading: 'The Bottom Line',
-          content: 'A bad hire doesn\'t just cost money—it costs momentum, morale, and market opportunity. In 2026\'s competitive talent landscape, you literally cannot afford to get hiring wrong. The companies winning the talent war are those that invest in preventing bad hires, not just filling seats quickly.',
-          highlight: 'Every dollar spent on better screening saves $100 in bad hire costs.'
-        }
-      ]
-    }
-  }
-];
-
-function getPostBySlug(slug: string) {
-  return blogPosts.find(post => post.slug === slug);
-}
-
-function getRelatedPosts(currentSlug: string) {
-  return blogPosts.filter(post => post.slug !== currentSlug).slice(0, 2);
-}
-
-const blogSeoKeywords: Record<string, string[]> = {
-  'ai-transforming-recruitment-2026': [
-    'AI recruiting trends 2026',
-    'AI recruitment software',
-    'automated candidate screening',
-    'AI hiring platform',
-    'recruitment automation',
-  ],
-  'reduce-time-to-hire': [
-    'reduce time to hire',
-    'time to hire strategies',
-    'AI resume screening',
-    'automated pre-screening',
-    'recruiting workflow automation',
-  ],
-  'cost-of-bad-hire': [
-    'cost of a bad hire',
-    'prevent bad hires',
-    'candidate screening software',
-    'AI candidate matching',
-    'structured hiring process',
-  ],
-};
+import { blogPosts, getPostBySlug, getRelatedPosts } from '../blogPosts';
 
 // SEO Metadata - FIXED FOR NEXT.JS 15
 
@@ -202,9 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${post.title} | Hiriq Blog`,
+    title: `${post.title} | Hiriq`,
     description: post.excerpt,
-    keywords: blogSeoKeywords[post.slug] || ['AI recruiting', 'hiring automation', 'candidate screening'],
+    keywords: post.keywords,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
@@ -215,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `${siteUrl}/blog/${post.slug}`,
       siteName: 'Hiriq',
       images: [{ url: post.image, alt: post.title }],
-      publishedTime: post.date,
+      publishedTime: post.isoDate,
       authors: [post.author.name],
     },
     twitter: {
@@ -248,8 +76,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.title,
     description: post.excerpt,
     image: post.image,
-    datePublished: post.date,
-    dateModified: 'Aug 20, 2026',
+    datePublished: post.isoDate,
+    dateModified: post.isoModified,
     author: {
       '@type': 'Person',
       name: post.author.name,
@@ -263,7 +91,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       },
     },
     mainEntityOfPage: articleUrl,
-    keywords: (blogSeoKeywords[post.slug] || []).join(', '),
+    keywords: post.keywords.join(', '),
     about: [
       'AI recruiting software',
       'candidate screening',
@@ -422,6 +250,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <p className="text-lg text-slate-700 leading-relaxed mt-6">
                     {section.conclusion}
                   </p>
+                )}
+
+                {section.links && (
+                  <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      Referenced in this section
+                    </p>
+                    <ul className="mt-3 space-y-2">
+                      {section.links.map((link) => (
+                        <li key={link.href}>
+                          <a
+                            href={link.href}
+                            {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
+                            className="font-medium text-cyan-700 underline-offset-4 hover:underline"
+                          >
+                            {link.label}
+                          </a>
+                          {link.source && (
+                            <span className="text-slate-500"> &mdash; {link.source}</span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </div>
             ))}

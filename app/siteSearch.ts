@@ -7,6 +7,48 @@ export type SiteSearchItem = {
 
 export const siteSearchItems: SiteSearchItem[] = [
   {
+    title: 'Software Comparisons',
+    href: '/compare',
+    description: 'Neutral comparisons of AI recruiting, screening, and interview platforms.',
+    keywords: 'compare comparison alternatives vs best ai interview software screening tools',
+  },
+  {
+    title: 'Best AI Interview Software',
+    href: '/compare/best-ai-interview-software',
+    description: 'AI interview platforms compared by what each one actually evaluates.',
+    keywords: 'best ai interview software ai interview tools automated interview platform comparison',
+  },
+  {
+    title: 'HireVue Alternatives',
+    href: '/compare/hirevue-alternatives',
+    description: 'Eight HireVue alternatives compared on evaluation depth, funnel stage, and team size.',
+    keywords: 'hirevue alternatives hirevue competitors video interview alternatives',
+  },
+  {
+    title: 'Paradox AI Alternatives',
+    href: '/compare/paradox-ai-alternatives',
+    description: 'Alternatives to Paradox and Olivia for high-volume hiring and candidate evaluation.',
+    keywords: 'paradox ai alternatives olivia alternatives conversational hiring assistant',
+  },
+  {
+    title: 'Best AI Candidate Screening Tools',
+    href: '/compare/best-ai-candidate-screening-tools',
+    description: 'Resume screening, assessments, and conversational screening compared.',
+    keywords: 'best ai candidate screening tools screening software comparison resume screening tools',
+  },
+  {
+    title: 'Press and Coverage',
+    href: '/press',
+    description: 'Published commentary, media coverage, and directory listings for Hiriq.',
+    keywords: 'press media coverage news hiriq ayesha khaldoon staffing hub interview',
+  },
+  {
+    title: 'Time-to-Qualify',
+    href: '/blog/time-to-qualify',
+    description: 'The recruiting metric that measures the stage your team actually controls.',
+    keywords: 'time to qualify time to fill recruiting metrics submission acceptance rate',
+  },
+  {
     title: 'Hiring Platform',
     href: '/hiring-platform',
     description: 'AI resume screening, candidate matching, pre-screening, and recruiter workflows.',

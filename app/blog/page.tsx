@@ -7,41 +7,7 @@ import { AlertCircle, ArrowRight, Calendar, CheckCircle2, Clock } from 'lucide-r
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { getStoredUtmParams } from '@/components/SiteUtilities';
-
-/* ================= BLOG DATA ================= */
-
-const blogPosts = [
-  {
-    slug: 'ai-transforming-recruitment-2026',
-    title: 'How AI is Transforming Recruitment in 2026',
-    excerpt:
-      'Discover the latest trends in AI-powered recruiting and how automated screening is changing the hiring landscape.',
-    category: 'Industry Trends',
-    date: 'Jan 2, 2026',
-    readTime: '5 min read',
-    image: '/4.jpg',
-  },
-  {
-    slug: 'reduce-time-to-hire',
-    title: '10 Practical Strategies to Reduce Time-to-Hire',
-    excerpt:
-      'Learn practical tactics to speed up your recruitment process without compromising candidate quality.',
-    category: 'Best Practices',
-    date: 'Dec 28, 2025',
-    readTime: '7 min read',
-    image: '/5.webp',
-  },
-  {
-    slug: 'cost-of-bad-hire',
-    title: 'The Real Cost of a Bad Hire (And How to Prevent It)',
-    excerpt:
-      "Bad hires cost companies thousands. Here's how AI-powered screening helps you avoid costly mistakes.",
-    category: 'Recruiting Tips',
-    date: 'Dec 20, 2025',
-    readTime: '6 min read',
-    image: '/time.png',
-  },
-];
+import { blogPosts, blogCategories } from './blogPosts';
 
 /* ================= PAGE ================= */
 
@@ -51,12 +17,7 @@ export default function Blog() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
-  const categories = [
-    'All Posts',
-    'Industry Trends',
-    'Best Practices',
-    'Recruiting Tips',
-  ];
+  const categories = blogCategories;
 
   const filteredPosts =
     selectedCategory === 'All Posts'
