@@ -1,14 +1,12 @@
 import type { MetadataRoute } from 'next';
 import { solutions } from './solutions/solutions';
+import { blogPosts } from './blog/articles';
 
 const routes = [
   '',
   '/about',
   '/automated-interviews',
   '/blog',
-  '/blog/ai-transforming-recruitment-2026',
-  '/blog/reduce-time-to-hire',
-  '/blog/cost-of-bad-hire',
   '/contact',
   '/demo-recruiters',
   '/for-candidates',
@@ -27,10 +25,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const solutionRoutes = solutions.map((solution) => `/solutions/${solution.slug}`);
   const allRoutes = [...routes, ...solutionRoutes];
 
-  return allRoutes.map((route) => ({
+  const pages: MetadataRoute.Sitemap = allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date('2026-08-23'),
+    lastModified: new Date(route === '/blog' || route === '/contact' ? '2026-09-07' : '2026-08-23'),
     changeFrequency: route === '' || route === '/solutions' ? 'weekly' : 'monthly',
     priority: route === '' ? 1 : route.startsWith('/solutions') ? 0.85 : 0.7,
   }));
+  return [...pages, ...blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updated || post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))];
 }

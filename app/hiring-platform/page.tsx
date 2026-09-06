@@ -18,8 +18,7 @@ const LOCATION_CONFIG = {
 export default function ForRecruiters() {
   const [candidates, setCandidates] = useState(200);
   const [minutesPerResume, setMinutesPerResume] = useState(5);
-  const [location, setLocation] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [location, setLocation] = useState<any>(LOCATION_CONFIG.DEFAULT);
 
   useEffect(() => {
     try {
@@ -40,8 +39,6 @@ export default function ForRecruiters() {
       setLocation(LOCATION_CONFIG[detectedCode as keyof typeof LOCATION_CONFIG] || LOCATION_CONFIG.DEFAULT);
     } catch {
       setLocation(LOCATION_CONFIG.DEFAULT);
-    } finally {
-      setIsLoading(false);
     }
   }, []);
 
@@ -63,17 +60,6 @@ export default function ForRecruiters() {
   const manualReviewHours = totalMinutes / 60;
   const hourlyCost = 50; // Average recruiter hourly rate
   const manualReviewCost = manualReviewHours * hourlyCost;
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading pricing for your region...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-white">

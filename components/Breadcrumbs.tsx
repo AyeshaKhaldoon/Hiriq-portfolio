@@ -44,7 +44,7 @@ export default function Breadcrumbs() {
         {crumbs.map((crumb, index) => (
           <li key={crumb.href} className="flex items-center gap-2 whitespace-nowrap">
             <span aria-hidden="true">/</span>
-            {index === crumbs.length - 1 ? (
+            {index === crumbs.length - 1 || crumb.href === '/resources' ? (
               <span className="capitalize text-slate-900">{crumb.label}</span>
             ) : (
               <Link href={crumb.href} className="capitalize transition hover:text-cyan-700">

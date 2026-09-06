@@ -1,3 +1,5 @@
+import { blogPosts } from './blog/articles';
+
 export type SiteSearchItem = {
   title: string;
   href: string;
@@ -138,4 +140,10 @@ export const siteSearchItems: SiteSearchItem[] = [
     description: 'Service terms, account responsibilities, usage rules, and legal information.',
     keywords: 'terms legal service agreement account password',
   },
+  ...blogPosts.map((post) => ({
+    title: post.title,
+    href: `/blog/${post.slug}`,
+    description: post.excerpt,
+    keywords: (post.keywords || [post.category]).join(' '),
+  })),
 ];

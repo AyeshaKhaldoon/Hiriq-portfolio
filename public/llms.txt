@@ -69,3 +69,12 @@
 
 - Email: contact@hiriq.co
 - Phone: +1 540 664 8490
+- Address: 10 Dayton Dr, Apt 53A, Edison, NJ 08820, United States
+
+## Recruiting Guides
+
+- AI ATS buyer checklist: https://hiriq.co/blog/ai-ats-buyers-checklist
+- AI resume screening vs. keyword filtering: https://hiriq.co/blog/ai-resume-screening-vs-keyword-filtering
+- Live AI interviews vs. one-way video: https://hiriq.co/blog/live-ai-interviews-vs-one-way-video
+- Healthcare candidate pre-screening checklist: https://hiriq.co/blog/healthcare-candidate-pre-screening-checklist
+- High-volume hiring automation: https://hiriq.co/blog/high-volume-hiring-automation-playbook

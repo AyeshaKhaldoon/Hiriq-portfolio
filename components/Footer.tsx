@@ -31,6 +31,10 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
               <a href="tel:+15406648490" className="block hover:text-cyan-400 transition-colors">
                 +1 (540) 664-8490
               </a>
+              <address className="not-italic leading-6">
+                10 Dayton Dr, Apt 53A<br />
+                Edison, NJ 08820, United States
+              </address>
             </div>
 
             {showSocialIcons && (

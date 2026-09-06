@@ -89,6 +89,14 @@ export default function RootLayout({
           url: `${siteUrl}/Logo.png`,
         },
         email: 'contact@hiriq.co',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '10 Dayton Dr, Apt 53A',
+          addressLocality: 'Edison',
+          addressRegion: 'NJ',
+          postalCode: '08820',
+          addressCountry: 'US',
+        },
         telephone: '+1-540-664-8490',
         image: `${siteUrl}/123.png`,
         description:

@@ -118,11 +118,15 @@ export default function Contact() {
               <MapPinned className="h-6 w-6" />
             </div>
             <h2 className="text-2xl font-bold text-slate-900">Maps and directions</h2>
+            <address className="mt-3 not-italic leading-7 text-slate-700">
+              10 Dayton Dr, Apt 53A<br />
+              Edison, NJ 08820, United States
+            </address>
             <p className="mt-3 leading-7 text-slate-600">
               Hiriq is a remote-first team. For in-person visits, use the directions link after confirming an appointment with the team.
             </p>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Hiriq"
+              href="https://www.google.com/maps/dir/?api=1&destination=10+Dayton+Dr,+Apt+53A,+Edison,+NJ+08820"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800"
@@ -133,8 +137,8 @@ export default function Contact() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
             <iframe
-              title="Map search for Hiriq"
-              src="https://www.google.com/maps?q=Hiriq&output=embed"
+              title="Hiriq location in Edison, New Jersey"
+              src="https://www.google.com/maps?q=10+Dayton+Dr,+Edison,+NJ+08820&output=embed"
               className="h-80 w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

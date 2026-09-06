@@ -3,7 +3,7 @@ import { buildSeoMetadata, pageKeywords } from '../seo';
 export const metadata = buildSeoMetadata({
   title: 'Contact Hiriq | Sales, Support, and Demos',
   description:
-    'Contact Hiriq for AI recruiting software demos, sales questions, support, partnerships, and recruiting workflow advice.',
+    'Contact Hiriq in Edison, New Jersey for AI recruiting software demos, sales, and support. Serving hiring teams in the USA, UK, and Middle East.',
   path: '/contact',
   keywords: pageKeywords.contact,
 });

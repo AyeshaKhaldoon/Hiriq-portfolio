@@ -8,40 +8,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { getStoredUtmParams } from '@/components/SiteUtilities';
 
-/* ================= BLOG DATA ================= */
-
-const blogPosts = [
-  {
-    slug: 'ai-transforming-recruitment-2026',
-    title: 'How AI is Transforming Recruitment in 2026',
-    excerpt:
-      'Discover the latest trends in AI-powered recruiting and how automated screening is changing the hiring landscape.',
-    category: 'Industry Trends',
-    date: 'Jan 2, 2026',
-    readTime: '5 min read',
-    image: '/4.jpg',
-  },
-  {
-    slug: 'reduce-time-to-hire',
-    title: '10 Practical Strategies to Reduce Time-to-Hire',
-    excerpt:
-      'Learn practical tactics to speed up your recruitment process without compromising candidate quality.',
-    category: 'Best Practices',
-    date: 'Dec 28, 2025',
-    readTime: '7 min read',
-    image: '/5.webp',
-  },
-  {
-    slug: 'cost-of-bad-hire',
-    title: 'The Real Cost of a Bad Hire (And How to Prevent It)',
-    excerpt:
-      "Bad hires cost companies thousands. Here's how AI-powered screening helps you avoid costly mistakes.",
-    category: 'Recruiting Tips',
-    date: 'Dec 20, 2025',
-    readTime: '6 min read',
-    image: '/time.png',
-  },
-];
+import { blogPosts } from './articles';
 
 /* ================= PAGE ================= */
 
@@ -137,14 +104,14 @@ export default function Blog() {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-br from-blue-600 via-cyan-600 to-sky-600 rounded-2xl overflow-hidden shadow-2xl">
-            <div className="grid md:grid-cols-2 gap-8 p-12">
+            <div className="grid md:grid-cols-2 gap-8 p-6 md:p-12">
               <div className="text-white">
                 <span className="inline-block px-4 py-1 bg-yellow-400 text-slate-900 rounded-full text-sm font-bold mb-4">
                   FEATURED
                 </span>
                 <h2 className="text-4xl font-bold mb-4">{featuredPost.title}</h2>
                 <p className="text-blue-100 text-lg mb-6">{featuredPost.excerpt}</p>
-                <div className="flex gap-6 text-blue-100 mb-6">
+                <div className="flex flex-wrap gap-6 text-blue-100 mb-6">
                   <span className="flex items-center">
                     <Calendar className="w-4 h-4 mr-2" />
                     {featuredPost.date}
@@ -183,7 +150,7 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">Latest Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {filteredPosts.slice(1).map((post) => (
+            {filteredPosts.filter((post) => selectedCategory !== 'All Posts' || post.slug !== featuredPost.slug).map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
                   <div className="relative w-full h-48">
