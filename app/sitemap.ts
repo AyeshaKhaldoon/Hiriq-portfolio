@@ -27,6 +27,12 @@ const staticRoutes = [
 ];
 
 const structuralLastModified = '2026-08-29';
+const solutionLastModified: Record<string, string> = {
+  'ai-recruiting-software': '2026-09-07',
+  'candidate-screening-software': '2026-09-07',
+  'recruiting-automation-software': '2026-09-07',
+  'healthcare-staffing-agencies': '2026-09-07',
+};
 
 function priorityFor(route: string) {
   if (route === '') return 1;
@@ -48,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes.map((route) => ({ route, lastModified: ['/blog', '/contact', '/hiring-platform', '/for-recruiters'].includes(route) ? '2026-09-07' : structuralLastModified })),
     ...solutions.map((solution) => ({
       route: `/solutions/${solution.slug}`,
-      lastModified: structuralLastModified,
+      lastModified: solutionLastModified[solution.slug] || structuralLastModified,
     })),
     ...comparisons.map((comparison) => ({
       route: `/compare/${comparison.slug}`,

@@ -33,7 +33,7 @@ export const solutions: Solution[] = [
       'AI recruitment platform',
       'AI hiring software',
       'recruiting automation',
-      'candidate screening AI',
+      'AI talent acquisition software',
     ],
     problems: [
       'Manual resume review slows down every open role.',
@@ -241,10 +241,11 @@ export const solutions: Solution[] = [
     primaryKeyword: 'candidate screening software',
     searchTerms: [
       'candidate screening software',
-      'candidate screening tools',
-      'resume screening',
-      'recruiting automation software',
       'AI candidate screening',
+      'automated candidate screening',
+      'applicant screening software',
+      'HR screening software',
+      'candidate evaluation software',
     ],
     problems: [
       'Recruiters spend too much time reviewing applicants who do not meet basic role criteria.',
@@ -277,26 +278,35 @@ export const solutions: Solution[] = [
         q: 'Is candidate screening software useful for high-volume hiring?',
         a: 'Yes. It is especially useful when teams receive many applicants and need consistent, repeatable qualification before live interviews.',
       },
+      {
+        q: 'What should recruiters look for in automated candidate screening software?',
+        a: 'Look for role-specific criteria, reviewable evidence, consistent applicant comparison, clear handoffs, and human control over every hiring decision. Avoid systems that return a score without showing the evidence behind it.',
+      },
+      {
+        q: 'How is candidate screening different from resume screening?',
+        a: 'Resume screening evaluates the experience and skills documented in a resume. Candidate screening can add qualification answers, pre-screening evidence, interview results, and recruiter review before a shortlist is finalized.',
+      },
     ],
   },
   {
     slug: 'recruiting-automation-software',
     shortTitle: 'Recruiting Automation',
-    title: 'Recruiting automation software that reduces manual screening work',
-    metaTitle: 'Recruiting Automation Software for Hiring Teams | Hiriq',
+    title: 'Recruiting automation software for screening and qualification',
+    metaTitle: 'Recruiting & Recruitment Automation Software | Hiriq',
     metaDescription:
       'Hiriq recruiting automation software helps teams automate candidate intake, resume screening, pre-screening interviews, and shortlist workflows.',
     eyebrow: 'Recruiting automation software',
     lead:
-      'Hiriq removes repetitive recruiting work from the early funnel so recruiters can spend more time with qualified candidates and hiring managers.',
+      'Hiriq recruitment automation software connects candidate intake, resume screening, pre-screening, AI interviews, and shortlist preparation so recruiters can spend more time on qualified candidates.',
     market: 'Designed for growing teams, agencies, and operators that need faster hiring workflows without adding recruiter headcount.',
     primaryKeyword: 'recruiting automation software',
     searchTerms: [
       'recruiting automation software',
+      'recruitment automation software',
       'recruitment automation',
       'hiring automation software',
       'automated candidate screening',
-      'AI recruiting automation',
+      'recruitment automation tools',
     ],
     problems: [
       'Recruiting teams repeat the same screening, scheduling, and qualification tasks for every open role.',
@@ -318,8 +328,8 @@ export const solutions: Solution[] = [
     ],
     faq: [
       {
-        q: 'What recruiting tasks can Hiriq automate?',
-        a: 'Hiriq can help automate candidate intake, resume screening, matching, pre-screening interviews, summaries, and shortlist preparation.',
+        q: 'What is recruitment automation software?',
+        a: 'Recruitment automation software handles repeatable hiring tasks such as candidate intake, resume screening, qualification, interview workflows, summaries, and shortlist preparation while recruiters retain control of decisions.',
       },
       {
         q: 'Does recruiting automation replace recruiters?',
@@ -328,6 +338,14 @@ export const solutions: Solution[] = [
       {
         q: 'Is recruiting automation useful for small teams?',
         a: 'Yes. Small teams often benefit because automation helps them handle more applicants without immediately adding headcount.',
+      },
+      {
+        q: 'How can recruitment automation save recruiter time?',
+        a: 'It reduces repeated first-pass review and qualification work, then gives recruiters organized evidence for the candidates who need human attention. The exact time saved depends on applicant volume, role criteria, and the workflow being replaced.',
+      },
+      {
+        q: 'Can staffing agencies use recruiting automation across client roles?',
+        a: 'Yes. Agencies can configure role-specific criteria and workflows for different clients, then review the resulting candidate evidence before making a submission.',
       },
     ],
   },
@@ -386,21 +404,22 @@ export const solutions: Solution[] = [
   {
     slug: 'healthcare-staffing-agencies',
     shortTitle: 'Healthcare Staffing',
-    title: 'Healthcare staffing software for faster clinical candidate screening',
-    metaTitle: 'Healthcare Staffing Software for Candidate Screening | Hiriq',
+    title: 'Healthcare recruitment software for clinical candidate screening',
+    metaTitle: 'Healthcare Recruitment Software for Screening | Hiriq',
     metaDescription:
       'Hiriq helps healthcare staffing and recruitment teams screen resumes, verify role-fit evidence, run structured AI interviews, and prepare recruiter-reviewed shortlists.',
-    eyebrow: 'Healthcare staffing software',
+    eyebrow: 'Healthcare recruitment software',
     lead:
       'Hiriq helps healthcare recruiters move faster from applicant volume to reviewable clinical hiring evidence without making unsupported compliance or hiring-decision claims.',
     market: 'Built for healthcare staffing agencies, care providers, and recruiting teams hiring nurses, allied health, support, and operations roles across regional or remote markets.',
-    primaryKeyword: 'healthcare staffing software',
+    primaryKeyword: 'healthcare recruitment software',
     searchTerms: [
-      'healthcare staffing software',
       'healthcare recruitment software',
+      'healthcare recruiting software',
+      'healthcare staffing recruitment software',
       'nurse staffing software',
       'healthcare candidate screening',
-      'AI healthcare hiring',
+      'medical recruiting software',
     ],
     problems: [
       'Healthcare recruiters often need to compare applicants across credentials, role requirements, availability, and communication signals.',
@@ -432,6 +451,14 @@ export const solutions: Solution[] = [
       {
         q: 'Can Hiriq support nurse staffing workflows?',
         a: 'Yes. Hiriq can help screen candidates against nursing or care-role requirements, then give recruiters structured context before facility or hiring-manager review.',
+      },
+      {
+        q: 'Is Hiriq a healthcare credentialing system?',
+        a: 'No. Hiriq supports applicant tracking, recruiting screening, pre-screening, and interview review. Formal license, credential, background, and compliance verification should remain in the systems and processes required by the employer.',
+      },
+      {
+        q: 'Can healthcare recruitment software support high-volume hiring?',
+        a: 'Yes. Hiriq can apply role-specific criteria across larger applicant pools and organize qualification evidence before a healthcare recruiter or hiring manager reviews the shortlist.',
       },
     ],
   },
