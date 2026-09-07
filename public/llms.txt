@@ -35,7 +35,7 @@
 - Runs automated candidate pre-screening and live conversational AI interview steps.
 - Gives recruiters transcripts, summaries, scoring context, and shortlist evidence.
 - Supports healthcare staffing, recruitment agency, and high-volume hiring workflows without replacing human hiring decisions.
-- Supports hiring teams operating across the United States, United Kingdom, Middle East, Pakistan, Qatar, UAE, and remote markets.
+- Supports employers and recruitment agencies in the United States, United Kingdom, and Middle East, including the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.
 
 ## Relevant Categories
 

@@ -27,12 +27,7 @@ const staticRoutes = [
 ];
 
 const structuralLastModified = '2026-08-29';
-const solutionLastModified: Record<string, string> = {
-  'ai-recruiting-software': '2026-09-07',
-  'candidate-screening-software': '2026-09-07',
-  'recruiting-automation-software': '2026-09-07',
-  'healthcare-staffing-agencies': '2026-09-07',
-};
+const solutionsLastModified = '2026-09-07';
 
 function priorityFor(route: string) {
   if (route === '') return 1;
@@ -51,10 +46,10 @@ function changeFrequencyFor(route: string): MetadataRoute.Sitemap[number]['chang
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: Array<{ route: string; lastModified: string }> = [
-    ...staticRoutes.map((route) => ({ route, lastModified: ['/blog', '/contact', '/hiring-platform', '/for-recruiters'].includes(route) ? '2026-09-07' : structuralLastModified })),
+    ...staticRoutes.map((route) => ({ route, lastModified: ['', '/blog', '/contact', '/hiring-platform', '/for-recruiters', '/solutions'].includes(route) ? '2026-09-07' : structuralLastModified })),
     ...solutions.map((solution) => ({
       route: `/solutions/${solution.slug}`,
-      lastModified: solutionLastModified[solution.slug] || structuralLastModified,
+      lastModified: solutionsLastModified,
     })),
     ...comparisons.map((comparison) => ({
       route: `/compare/${comparison.slug}`,

@@ -31,7 +31,7 @@ export const metadata = buildSeoMetadata({
 
 const featuredPaths = [
   {
-    title: 'Platform buyers',
+    title: 'AI recruiting software',
     copy: 'Start here if the team wants one workflow for intake, screening, interviews, and shortlist review.',
     href: '/solutions/ai-recruiting-software',
     icon: Sparkles,
@@ -69,23 +69,23 @@ const featuredPaths = [
 
 const intentGroups = [
   {
-    label: 'Core workflows',
-    description: 'Product pages focused on what Hiriq does inside the recruiting funnel.',
+    label: 'Applicant tracking and screening',
+    description: 'Organize applications, review role fit, and qualify candidates before interviews.',
     slugs: ['ai-recruiting-software', 'ai-ats', 'candidate-screening-software', 'ai-resume-screening', 'candidate-pre-screening-software'],
   },
   {
     label: 'Automation and interviews',
-    description: 'Pages for buyers looking specifically at repeatable screening tasks and structured AI interviews.',
+    description: 'Reduce repeated qualification work and collect deeper evidence through live AI interviews.',
     slugs: ['ai-interview-platform', 'recruiting-automation-software', 'high-volume-hiring'],
   },
   {
     label: 'Industries and agencies',
-    description: 'Pages for commercial buyers searching by hiring model or specialist staffing need.',
+    description: 'Set screening requirements for healthcare roles and prepare candidate evidence for agency clients.',
     slugs: ['healthcare-staffing-agencies', 'staffing-agencies'],
   },
   {
-    label: 'Regional search',
-    description: 'Pages for teams searching by market, region, or distributed hiring setup.',
+    label: 'US, UK, and Middle East hiring',
+    description: 'Coordinate applicant tracking, screening, and recruiter review across locations and time zones.',
     slugs: ['middle-east-ai-hiring', 'usa-uk-ai-hiring'],
   },
 ];
@@ -106,11 +106,11 @@ export default function SolutionsPage() {
                 AI recruiting solutions
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-                Pick the Hiriq page by the hiring problem you need to solve.
+                Hiriq AI recruiting solutions
               </h1>
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                These pages are split by real search intent: full recruiting platform, AI ATS,
-                resume screening, candidate screening, interview automation, and regional hiring.
+                Track applicants, screen resumes and CVs, qualify practical fit, and run live AI
+                interviews. Give your hiring team the evidence to decide who moves forward.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -134,7 +134,7 @@ export default function SolutionsPage() {
             <div className="fade-in-up animation-delay-200 rounded-lg border border-cyan-200 bg-white/80 p-6 shadow-xl">
               <div className="mb-6 flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-bold uppercase text-cyan-700">Directory map</p>
+                  <p className="text-sm font-bold uppercase text-cyan-700">Hiring workflow</p>
                   <h2 className="mt-1 text-xl font-bold text-slate-900">From applicant to shortlist</h2>
                 </div>
                 <Route className="h-6 w-6 text-cyan-700" />
@@ -154,8 +154,8 @@ export default function SolutionsPage() {
                 <div className="flex items-start gap-3">
                   <Bot className="mt-1 h-5 w-5 flex-shrink-0 text-blue-700" />
                   <p className="text-sm leading-6 text-slate-700">
-                    Each page below is written for a different buyer question, so internal links help
-                    search engines understand which Hiriq URL should answer which query.
+                    Pre-screening confirms practical fit before a full AI interview.
+                    Recruiters review the resulting evidence and decide the next step.
                   </p>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function SolutionsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 max-w-3xl">
               <p className="mb-3 text-sm font-bold uppercase tracking-wide text-blue-600">Fast paths</p>
-              <h2 className="text-3xl font-bold text-slate-900">Choose by bottleneck, not by buzzword.</h2>
+              <h2 className="text-3xl font-bold text-slate-900">Start with your hiring priority.</h2>
             </div>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
               {featuredPaths.map((path, index) => {
@@ -185,7 +185,7 @@ export default function SolutionsPage() {
                     <h3 className="text-xl font-bold text-slate-900">{path.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-slate-600">{path.copy}</p>
                     <div className="mt-5 inline-flex items-center text-sm font-semibold text-blue-700">
-                      Open path
+                      Explore solution
                       <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
                     </div>
                   </Link>
@@ -199,12 +199,12 @@ export default function SolutionsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
               <div>
-                <p className="mb-3 text-sm font-bold uppercase tracking-wide text-cyan-700">Grouped search intent</p>
-                <h2 className="text-3xl font-bold text-slate-900">Every solution page has its own job.</h2>
+                <p className="mb-3 text-sm font-bold uppercase tracking-wide text-cyan-700">Solutions</p>
+                <h2 className="text-3xl font-bold text-slate-900">Connect the stages your team needs.</h2>
               </div>
               <p className="leading-7 text-slate-600">
-                The directory separates platform, ATS, screening, automation, interview, and regional pages
-                so the site does not make every page compete for the exact same terms.
+                Start with applicant tracking and role criteria. Add pre-screening for practical
+                qualification, then live AI interviews for deeper candidate evidence.
               </p>
             </div>
 
@@ -252,44 +252,44 @@ export default function SolutionsPage() {
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
             <div className="rounded-lg border border-blue-200 bg-blue-50 p-6">
               <Globe2 className="mb-5 h-7 w-7 text-blue-700" />
-              <h2 className="text-2xl font-bold text-slate-900">Regional pages</h2>
+              <h2 className="text-2xl font-bold text-slate-900">Regional hiring</h2>
               <p className="mt-3 leading-7 text-slate-600">
-                Middle East, USA, and UK pages focus on distributed hiring coordination rather than repeating the same product page.
+                Connect US, UK, and Middle East teams around a shared candidate record, with requirements set for each vacancy.
               </p>
             </div>
             <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-6">
               <FileSearch className="mb-5 h-7 w-7 text-emerald-700" />
-              <h2 className="text-2xl font-bold text-slate-900">Screening pages</h2>
+              <h2 className="text-2xl font-bold text-slate-900">Candidate screening</h2>
               <p className="mt-3 leading-7 text-slate-600">
-                Resume and candidate screening pages stay focused on criteria, evidence, and shortlist quality.
+                Compare resume and CV evidence with role requirements, then clarify practical fit through pre-screening.
               </p>
             </div>
             <div className="rounded-lg border border-cyan-200 bg-cyan-50 p-6">
               <MessageSquareText className="mb-5 h-7 w-7 text-cyan-700" />
-              <h2 className="text-2xl font-bold text-slate-900">Interview pages</h2>
+              <h2 className="text-2xl font-bold text-slate-900">Live AI interviews</h2>
               <p className="mt-3 leading-7 text-slate-600">
-                Interview automation pages explain structured interviews, transcripts, and recruiter review.
+                Use adaptive follow-up questions to explore candidate answers. Review topic scores and transcripts before the next round.
               </p>
             </div>
             <div className="rounded-lg border border-rose-200 bg-rose-50 p-6">
               <HeartPulse className="mb-5 h-7 w-7 text-rose-700" />
-              <h2 className="text-2xl font-bold text-slate-900">Healthcare pages</h2>
+              <h2 className="text-2xl font-bold text-slate-900">Healthcare recruiting</h2>
               <p className="mt-3 leading-7 text-slate-600">
-                Healthcare staffing pages target clinical role-fit and structured screening evidence without fake compliance claims.
+                Bring clinical experience, availability, and scenario answers together for healthcare recruiters to review.
               </p>
             </div>
             <div className="rounded-lg border border-amber-200 bg-amber-50 p-6">
               <BriefcaseBusiness className="mb-5 h-7 w-7 text-amber-700" />
-              <h2 className="text-2xl font-bold text-slate-900">Agency pages</h2>
+              <h2 className="text-2xl font-bold text-slate-900">Staffing agencies</h2>
               <p className="mt-3 leading-7 text-slate-600">
-                Staffing agency pages focus on client-ready candidate evidence and recruiter-reviewed submissions.
+                Set criteria for each client role and prepare candidate submissions with supporting screening and interview evidence.
               </p>
             </div>
             <div className="rounded-lg border border-violet-200 bg-violet-50 p-6">
               <UsersRound className="mb-5 h-7 w-7 text-violet-700" />
-              <h2 className="text-2xl font-bold text-slate-900">Volume pages</h2>
+              <h2 className="text-2xl font-bold text-slate-900">High-volume hiring</h2>
               <p className="mt-3 leading-7 text-slate-600">
-                High-volume and pre-screening pages separate quick qualification from deeper AI interview evidence.
+                Apply consistent criteria across larger applicant pools and focus recruiter attention on candidates ready for review.
               </p>
             </div>
           </div>

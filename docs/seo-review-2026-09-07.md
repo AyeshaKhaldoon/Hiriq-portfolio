@@ -37,7 +37,7 @@ Semrush reports estimated traffic, not analytics sessions. The US footprint show
 | --- | --- | --- | --- |
 | Candidate screening software | 480 / 11 | 320 / 19 | /solutions/candidate-screening-software |
 | Automated candidate screening | 260 / 11 | 40 / not scored | /solutions/candidate-screening-software |
-| Recruiting automation software | 590 / 23 | 480 / 36 | /solutions/recruiting-automation-software |
+| Recruitment automation software | 480 / 19 | 480 / 36 | /solutions/recruiting-automation-software |
 | Recruitment automation | 1,000 / 25 | not queried in batch | /solutions/recruiting-automation-software |
 | Healthcare recruitment software | 140 / 12 | 210 / 10 | /solutions/healthcare-staffing-agencies |
 | Healthcare recruiting software | 210 / 16 | not queried in batch | /solutions/healthcare-staffing-agencies |
@@ -95,3 +95,37 @@ Create a Semrush Project for `hiriq.co`, then enable Site Audit and Position Tra
 Check Search Console landing-page queries, indexing, Core Web Vitals, and conversions alongside Semrush. Neither tool can guarantee Google rankings or recommendations by AI systems.
 
 For earned references, prioritize accurate software directory profiles, existing partners, and relevant editorial coverage. Provide real product evidence and consistent company details. No external profiles, reviews, outreach messages, purchased links, or backlinks were created during this review. Google identifies manipulative link practices in its [spam policies](https://developers.google.com/search/docs/essentials/spam-policies).
+
+## Regional buyer search follow-up
+
+The owner confirmed the target markets as the US, UK, and Middle East, excluding Pakistan from marketing targeting. On September 7, Semrush keyword batches were run in US, UK, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman databases. The Gulf countries are an initial Middle East research set, not a claim to have researched every country in the region. English-language keywords were tested; Arabic demand and product language support were not established. The original returned keyword rows are saved in [semrush-regional-keywords-2026-09-07.csv](semrush-regional-keywords-2026-09-07.csv).
+
+| Buyer query | US monthly volume / KD | UK monthly volume / KD | Destination |
+| --- | --- | --- | --- |
+| ATS for staffing agencies | 390 / 4 | 110 / unscored | /solutions/staffing-agencies |
+| ATS for small business | 210 / 34 | 210 / 12 | /solutions/ai-ats |
+| AI recruitment software | 1,000 / 63 | 390 / 61 | /solutions/ai-recruiting-software |
+| CV screening software | 110 / 48 | 110 / 47 | /solutions/ai-resume-screening |
+| Recruitment software UK | 90 / 41 | 720 / 39 | /solutions/usa-uk-ai-hiring |
+
+For "applicant tracking system", monthly search estimates were UAE 320, Saudi Arabia 210, Qatar 110, and Kuwait/Bahrain/Oman 20 each. The Middle East page now describes an ATS and recruiting workflow and links directly to applicant tracking, CV screening, and live interview pages. A separate location-only page was not created for each country.
+
+Semrush SERP samples showed:
+
+- US candidate screening software: Metaview, HireTruffle, Simplicant, HighMatch, and GoHire among the first eight results. Product pages and comparison guides both appear, so Hiriq's screening page now links to its existing buyer comparison.
+- UK recruitment automation software: Bullhorn, Tribepad, Sage, and Teamdash among the first eight results, alongside buyer guides. Hiriq's automation page links to its implementation guide.
+- UAE applicant tracking system: SAP, Zoho, and Avature appear alongside definitions, directories, and candidate resume tools. Hiriq's copy identifies employers and recruitment agencies explicitly.
+- US AI interview software: most of the first eight results were candidate interview-assistance products or discussions, rather than employer interview engines. The Hiriq interview page now explicitly describes recruiters conducting live adaptive interviews. Search volume alone is not proof of buyer fit.
+
+Changes made in this follow-up:
+
+- Replaced published SEO planning instructions throughout the solutions directory and all twelve solution pages with product benefits, concrete workflow descriptions, and recruiter questions.
+- Updated ATS, staffing-agency, resume/CV, interview, and regional titles and visible headings; preserved existing URLs and canonical destinations.
+- Removed Pakistan from solution marketing copy, geographic labels, site search, Organization service regions, and llms.txt. Existing pricing support and legal-policy references were outside this marketing change.
+- Added links between solution pages, existing evaluation guides, and relevant comparisons. Updated solution sitemap modification dates.
+- Browser screenshots exposed a mobile overlap between the sticky demo bar and the cookie banner buttons. Raised the mobile banner above the bar and constrained its height for small screens.
+- Left robots.txt unchanged. No robots directive, keyword meta tag, schema property, or Semrush query can force search placement. The substantive work is in visible content, titles, and useful internal links. Google explains regional signals in its [multi-regional site guidance](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites).
+
+The Projects report was rechecked with filter=all and returned an empty list, including shared projects. The connector currently exposes research/report reads, not campaign creation. Position Tracking and Site Audit are still unconfigured; these keyword lookups do not create an active monitoring campaign. KD=0 accompanied by missing intent or SERP data is treated as unscored, not a guarantee of easy ranking. Missing keyword rows do not prove there is no demand.
+
+Follow-up validation: production compilation, lint, and types passed (57 generated routes). Parsed 48 content pages and 93 JSON-LD blocks; no missing/duplicate titles or descriptions, canonical mismatches, missing main headings, broken internal page links, or remaining SEO planning/Pakistan targeting copy on the solutions pages. Playwright checked the directory and all twelve solution pages at 1440px and 390px (26 route/viewport checks) without page errors or horizontal overflow. Verified cookie dismissal at 390x844, 320x568, and 844x390; tested navigation from screening to its comparison guide and confirmed Organization service regions. Robots.txt has no source diff.

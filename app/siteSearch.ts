@@ -93,16 +93,16 @@ export const siteSearchItems: SiteSearchItem[] = [
     keywords: 'ai interview platform live ai interviews conversational interviews transcript scorecard',
   },
   {
-    title: 'Healthcare Staffing Software',
+    title: 'Healthcare Recruitment Software',
     href: '/solutions/healthcare-staffing-agencies',
     description: 'Screen healthcare applicants and prepare recruiter-reviewed evidence for clinical and care-adjacent roles.',
     keywords: 'healthcare staffing software healthcare recruitment software nurse staffing candidate screening',
   },
   {
-    title: 'Staffing Agency Software',
+    title: 'ATS for Staffing Agencies',
     href: '/solutions/staffing-agencies',
     description: 'Screen, qualify, and prepare candidate evidence for staffing agency client submissions.',
-    keywords: 'staffing agency software recruitment agency software recruiter automation candidate submissions',
+    keywords: 'ats for staffing agencies staffing agency software recruitment agency software recruiter automation candidate submissions',
   },
   {
     title: 'High-Volume Hiring Software',
@@ -111,13 +111,13 @@ export const siteSearchItems: SiteSearchItem[] = [
     keywords: 'high-volume hiring software high-volume recruitment bulk applicant screening hiring automation',
   },
   {
-    title: 'Middle East AI Hiring',
+    title: 'Middle East ATS and AI Recruiting',
     href: '/solutions/middle-east-ai-hiring',
-    description: 'AI hiring workflows for teams operating across the UAE, Qatar, Pakistan, Saudi Arabia, and the wider Middle East.',
-    keywords: 'ai hiring middle east uae qatar saudi pakistan recruitment',
+    description: 'Applicant tracking, CV screening, and live AI interviews for employers and agencies across the Gulf and wider Middle East.',
+    keywords: 'ats applicant tracking ai hiring middle east uae qatar saudi arabia kuwait bahrain oman recruitment',
   },
   {
-    title: 'USA and UK AI Hiring',
+    title: 'US and UK AI Recruitment Software',
     href: '/solutions/usa-uk-ai-hiring',
     description: 'AI recruiting workflows for hiring teams in the United States, United Kingdom, and remote markets.',
     keywords: 'ai hiring usa uk recruitment software ats interview screening',

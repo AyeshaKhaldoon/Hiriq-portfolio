@@ -75,6 +75,7 @@ type SolutionVariant = {
   workflowTitle: string;
   workflowCopy: string;
   relatedSlugs: string[];
+  guide?: { href: string; label: string };
   ctaTitle: string;
   ctaCopy: string;
 };
@@ -206,170 +207,178 @@ const solutionVariants: Record<string, SolutionVariant> = {
   'ai-recruiting-software': {
     mode: 'command',
     kicker: 'Whole recruiting workflow',
-    sectionTitle: 'Use this page when the buyer wants one recruiting operating system.',
+    sectionTitle: 'Bring applicant tracking, screening, and interviews together.',
     sectionCopy:
-      'This page is intentionally broad: it explains how Hiriq connects intake, resume intelligence, interview evidence, and shortlist review without claiming to replace human hiring judgment.',
+      'Hiriq AI recruitment software keeps role requirements, applications, qualification answers, and interview reports in one workflow. Recruiters can review the candidate record before choosing the next step.',
     cards: [
       { label: 'Intake', value: 'Role criteria', detail: 'Define must-haves before screening begins.', icon: SlidersHorizontal },
       { label: 'Evidence', value: 'Resume + interview', detail: 'Keep candidate signals tied to the job.', icon: ClipboardCheck },
       { label: 'Decision', value: 'Recruiter review', detail: 'Support human decisions with clearer context.', icon: ShieldCheck },
     ],
-    lensTitle: 'Best-fit search intent',
-    lensItems: ['AI recruiting software', 'AI hiring platform', 'Recruitment software with screening and interviews'],
+    lensTitle: 'What your team can review',
+    lensItems: ['Candidate status and role requirements', 'Resume and pre-screening evidence', 'Interview scorecards and transcripts'],
     workflowTitle: 'A complete early-funnel command view',
-    workflowCopy: 'The flow is shown as one connected system because this page targets teams comparing full recruiting platforms.',
+    workflowCopy: 'Set the role requirements once, then keep the supporting evidence with the applicant as they move through screening, interviews, and review.',
     relatedSlugs: ['ai-ats', 'candidate-screening-software', 'ai-interview-platform'],
     ctaTitle: 'Map your current hiring funnel to Hiriq.',
+    guide: { href: '/solutions/usa-uk-ai-hiring', label: 'Recruitment software for US and UK teams' },
     ctaCopy: 'Start with the parts that cost recruiter time first: resume review, early qualification, and handoff notes.',
   },
   'ai-ats': {
     mode: 'pipeline',
     kicker: 'Applicant tracking plus intelligence',
-    sectionTitle: 'Use this page when the buyer is replacing spreadsheets or a passive ATS.',
+    sectionTitle: 'Keep every applicant and their evidence in one pipeline.',
     sectionCopy:
-      'The ATS page focuses on candidate status, pipeline movement, and evidence stored with each applicant. It avoids repeating the broader platform pitch unless it helps explain the tracking workflow.',
+      'Hiriq applicant tracking software brings applications, candidate stages, resume matches, and screening results together. Small hiring teams can see who needs attention without reconciling separate spreadsheets.',
     cards: [
       { label: 'Capture', value: 'Applications', detail: 'Collect candidate details in a consistent flow.', icon: FileSearch },
       { label: 'Track', value: 'Pipeline stages', detail: 'Keep every applicant tied to status and context.', icon: Layers3 },
       { label: 'Advance', value: 'Qualified review', detail: 'Move stronger candidates with supporting evidence.', icon: Route },
     ],
-    lensTitle: 'ATS-specific buyer questions',
+    lensTitle: 'Applicant tracking essentials',
     lensItems: ['Can it track applicants?', 'Can it reduce manual review?', 'Can hiring managers see useful context?'],
     workflowTitle: 'Pipeline-first applicant tracking',
-    workflowCopy: 'This layout behaves like a pipeline because ATS searches usually come from teams trying to organize candidate movement.',
+    workflowCopy: 'Follow each candidate from application to recruiter review, with qualification evidence available at each handoff.',
     relatedSlugs: ['ai-recruiting-software', 'candidate-screening-software', 'recruiting-automation-software'],
     ctaTitle: 'Turn applicant tracking into applicant qualification.',
+    guide: { href: '/blog/ai-ats-buyers-checklist', label: 'Evaluate an AI applicant tracking system' },
     ctaCopy: 'Use Hiriq when storing candidates is not enough and the team needs clearer screening evidence.',
   },
   'ai-interview-platform': {
     mode: 'interview',
     kicker: 'Structured interview evidence',
-    sectionTitle: 'Use this page when the buyer needs a real AI interview engine.',
+    sectionTitle: 'Get deeper candidate evidence before your next interview.',
     sectionCopy:
-      'This page separates Hiriq AI Interviews from basic pre-screening. The value is a live, conversational, 30-minute interview that adapts to candidate answers and turns the session into recruiter-reviewable evidence.',
+      'Hiriq runs live conversational AI interviews for hiring teams. During a 30-minute session, role-specific technical and scenario questions adapt to the candidate\'s answers. Recruiters receive topic scores and the transcript for review.',
     cards: [
       { label: 'Candidate', value: 'Live conversation', detail: 'Answer adaptive questions in a structured interview flow.', icon: Clock3 },
       { label: 'Recruiter', value: 'Scorecard + transcript', detail: 'Review per-turn ratings, subtopic scores, flags, and recommendation.', icon: MessageSquareText },
       { label: 'Manager', value: 'Comparable evidence', detail: 'See technical, behavioral, and scenario signals before live rounds.', icon: ClipboardCheck },
     ],
-    lensTitle: 'Interview-specific buyer questions',
+    lensTitle: 'Evidence for your hiring team',
     lensItems: ['Can it ask follow-up questions?', 'Does it score by subtopic?', 'Can recruiters inspect transcripts and integrity flags?'],
     workflowTitle: 'Live interview flow from role setup to scorecard',
-    workflowCopy: 'The page emphasizes adaptive conversation, industry-specific probing, anti-cheating review signals, and recruiter oversight because interview-platform buyers need more than one-way recordings.',
+    workflowCopy: 'Review the summary first, then inspect individual answers and topic scores where more detail is needed. Integrity flags provide context for review; recruiters decide how to proceed.',
     relatedSlugs: ['recruiting-automation-software', 'candidate-screening-software', 'ai-resume-screening'],
     ctaTitle: 'Turn first-round interviews into structured evidence.',
+    guide: { href: '/blog/live-ai-interviews-vs-one-way-video', label: 'Compare live AI interviews and one-way video interviews' },
     ctaCopy: 'Give recruiters technical depth, behavioral context, transcript access, and integrity flags before deciding who deserves live team time.',
   },
   'ai-resume-screening': {
     mode: 'resume',
     kicker: 'Resume matching and shortlist evidence',
-    sectionTitle: 'Use this page when the buyer is drowning in CV review.',
+    sectionTitle: 'Find relevant experience in every resume or CV.',
     sectionCopy:
-      'The resume screening page focuses on criteria, matching signals, and human-readable fit evidence. It does not reuse interview-heavy messaging unless it explains what can happen after resume review.',
+      'Compare documented skills, experience, and projects against your vacancy. Hiriq AI resume and CV screening gives recruiters role-fit evidence and highlights areas to clarify during pre-screening.',
     cards: [
       { label: 'Criteria', value: 'Role fit', detail: 'Match resumes against requirements, not generic keywords.', icon: SearchCheck },
       { label: 'Summary', value: 'Readable context', detail: 'Give recruiters a faster way to understand fit.', icon: FileSearch },
       { label: 'Next step', value: 'Shortlist', detail: 'Move stronger candidates into review or screening.', icon: CheckCircle2 },
     ],
-    lensTitle: 'Resume-screening buyer questions',
+    lensTitle: 'Before you shortlist',
     lensItems: ['Can it reduce manual CV review?', 'Does it explain why a candidate matches?', 'Can humans review the results?'],
     workflowTitle: 'Resume review as a scorecard',
-    workflowCopy: 'This page uses scorecard visuals because resume-screening buyers want clarity on matching, requirements, and candidate evidence.',
+    workflowCopy: 'Define the requirements, review the matching evidence, and check missing context against the original resume before advancing the candidate.',
     relatedSlugs: ['candidate-screening-software', 'ai-ats', 'ai-interview-platform'],
     ctaTitle: 'Make resume review easier to trust.',
+    guide: { href: '/blog/ai-resume-screening-vs-keyword-filtering', label: 'Evaluate AI resume screening beyond keyword matches' },
     ctaCopy: 'Use role criteria and readable summaries before deciding who should move forward.',
   },
   'candidate-screening-software': {
     mode: 'screening',
     kicker: 'Candidate qualification',
-    sectionTitle: 'Use this page when the buyer needs a better shortlist.',
+    sectionTitle: 'Qualify applicants before committing interview time.',
     sectionCopy:
-      'Candidate screening is broader than resume parsing and narrower than a full ATS. This page focuses on qualification signals, consistency, and preparing candidates for recruiter review.',
+      'Automated candidate screening combines resume evidence with answers about practical role requirements. Hiriq helps recruiters compare applicants against the same criteria and see what still needs a follow-up.',
     cards: [
       { label: 'Volume', value: 'Many applicants', detail: 'Apply the same role criteria across incoming candidates.', icon: UsersRound },
       { label: 'Signal', value: 'Evidence stack', detail: 'Combine profile, resume, and pre-screening context.', icon: Layers3 },
       { label: 'Review', value: 'Cleaner shortlist', detail: 'Give hiring teams fewer, better-informed choices.', icon: ListChecks },
     ],
-    lensTitle: 'Screening-specific buyer questions',
+    lensTitle: 'Shortlist review questions',
     lensItems: ['How do we compare applicants consistently?', 'How do we avoid missing good candidates?', 'How do we prepare hiring managers faster?'],
     workflowTitle: 'Qualification funnel instead of manual sorting',
-    workflowCopy: 'This page is designed around filtering, comparison, and handoff because candidate screening searches usually come from high-volume roles.',
+    workflowCopy: 'Combine documented experience with pre-screening answers, review unresolved requirements, and decide which candidates should enter deeper interviews.',
     relatedSlugs: ['ai-resume-screening', 'ai-interview-platform', 'recruiting-automation-software'],
     ctaTitle: 'Build a shortlist recruiters can actually use.',
+    guide: { href: '/compare/best-ai-candidate-screening-tools', label: 'Compare candidate screening tools and evaluation criteria' },
     ctaCopy: 'Combine criteria, candidate context, and structured review before live interviews begin.',
   },
   'recruiting-automation-software': {
     mode: 'automation',
     kicker: 'Repeatable recruiting operations',
-    sectionTitle: 'Use this page when the buyer wants fewer manual handoffs.',
+    sectionTitle: 'Move applications forward with fewer repetitive tasks.',
     sectionCopy:
-      'The recruiting automation page is about repeatable tasks: intake, screening, pre-screening, and shortlist preparation. It keeps the promise practical instead of suggesting the whole hiring process should run unattended.',
+      'Recruitment automation connects intake, resume review, practical qualification, and interview reports. Give recruiters the evidence they need to make a decision without repeating the same first-pass work for every applicant.',
     cards: [
       { label: 'Trigger', value: 'New applicant', detail: 'Start review from a structured intake event.', icon: Workflow },
       { label: 'Automate', value: 'Early funnel', detail: 'Reduce repetitive screening and qualification work.', icon: Bot },
       { label: 'Notify', value: 'Recruiter review', detail: 'Send organized evidence to the people deciding next steps.', icon: CheckCircle2 },
     ],
-    lensTitle: 'Automation buyer questions',
+    lensTitle: 'Plan your automation',
     lensItems: ['Which recruiting tasks can be automated?', 'Will recruiters stay in control?', 'Can small teams handle more applicants?'],
     workflowTitle: 'Automation as a controlled sequence',
-    workflowCopy: 'This page uses a routed sequence because automation buyers need to see what happens, when, and who reviews it.',
+    workflowCopy: 'Choose which screening steps a role needs, collect the resulting evidence, and give recruiters a clear point to review and decide.',
     relatedSlugs: ['ai-recruiting-software', 'ai-ats', 'candidate-screening-software'],
     ctaTitle: 'Automate the work that keeps repeating.',
+    guide: { href: '/blog/high-volume-hiring-automation-playbook', label: 'Plan a high-volume hiring automation workflow' },
     ctaCopy: 'Start with the early-funnel steps that slow recruiters down before judgment is even needed.',
   },
   'middle-east-ai-hiring': {
     mode: 'region',
     kicker: 'Regional and cross-border hiring',
-    sectionTitle: 'Use this page when the buyer searches by geography.',
+    sectionTitle: 'Run applicant tracking and screening across Gulf hiring teams.',
     sectionCopy:
-      'The Middle East page speaks to distributed teams, regional candidate pools, and cross-border coordination. It avoids claiming local legal coverage and keeps the message centered on web-based hiring workflow support.',
+      'Hiriq supports employers and recruitment agencies in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman. Track applicants, review CVs, confirm role requirements, and assess interview evidence in a shared web-based workflow.',
     cards: [
       { label: 'Markets', value: 'UAE, Qatar, KSA', detail: 'Support teams coordinating across regional hiring markets.', icon: MapPin },
       { label: 'Timing', value: 'Time zones', detail: 'Reduce scheduling friction with automated early screens.', icon: Clock3 },
       { label: 'Review', value: 'Consistent evidence', detail: 'Use the same criteria across local and remote candidates.', icon: Globe2 },
     ],
-    lensTitle: 'Regional buyer questions',
+    lensTitle: 'Coordinate regional hiring',
     lensItems: ['Can it support distributed hiring?', 'Can regional teams review candidates consistently?', 'Can it work across time zones?'],
     workflowTitle: 'Regional hiring playbook',
-    workflowCopy: 'This page has a market playbook layout because geography-led searches need practical coordination context.',
-    relatedSlugs: ['usa-uk-ai-hiring', 'ai-recruiting-software', 'ai-interview-platform'],
+    workflowCopy: 'Record the role location, work setup, availability, and required experience before screening. Share the candidate evidence with the responsible recruiter across offices and time zones.',
+    relatedSlugs: ['ai-ats', 'ai-resume-screening', 'ai-interview-platform'],
+    guide: { href: '/solutions/usa-uk-ai-hiring', label: 'Explore recruiting workflows for US and UK teams' },
     ctaTitle: 'Coordinate regional hiring with clearer evidence.',
     ctaCopy: 'Use Hiriq to structure early screening before candidates and teams move into live conversations.',
   },
   'healthcare-staffing-agencies': {
     mode: 'resume',
     kicker: 'Healthcare recruiting evidence',
-    sectionTitle: 'Use this page when healthcare screening needs more structure than a generic ATS.',
+    sectionTitle: 'Bring clinical role requirements into candidate review.',
     sectionCopy:
-      'Healthcare recruiting searches usually care about role requirements, availability, credential context, and speed. This page keeps the promise practical: Hiriq helps organize screening and interview evidence, while required compliance and hiring decisions stay with the recruiting team.',
+      'Healthcare recruiters can review experience, availability, and candidate-reported qualifications before a longer interview. Role-specific scenarios then help the hiring team inspect clinical reasoning alongside the transcript.',
     cards: [
       { label: 'Role fit', value: 'Clinical criteria', detail: 'Compare resumes against role requirements, experience, and availability signals.', icon: ClipboardCheck },
       { label: 'Screening', value: 'Early qualification', detail: 'Collect practical candidate context before longer recruiter conversations.', icon: SearchCheck },
       { label: 'Interview', value: 'Scenario evidence', detail: 'Use deeper AI interviews for role-specific technical and communication review.', icon: MessageSquareText },
     ],
-    lensTitle: 'Healthcare-search buyer questions',
+    lensTitle: 'Healthcare screening essentials',
     lensItems: ['Can it support nurse staffing?', 'Can recruiters inspect the evidence?', 'Does it avoid replacing credentialing systems?'],
     workflowTitle: 'Healthcare screening from role requirement to reviewed shortlist',
-    workflowCopy: 'This page emphasizes clinical-role context, recruiter oversight, and transparent evidence because healthcare buyers need specificity without unsupported compliance claims.',
+    workflowCopy: 'Collect practical qualification answers first, then use deeper interview evidence for recruiter review. Complete formal credential verification through your established process.',
     relatedSlugs: ['candidate-pre-screening-software', 'ai-interview-platform', 'ai-resume-screening'],
     ctaTitle: 'Screen healthcare candidates with clearer role-fit evidence.',
+    guide: { href: '/blog/healthcare-candidate-pre-screening-checklist', label: 'Review the healthcare pre-screening checklist' },
     ctaCopy: 'Use Hiriq before facility or hiring-manager review to organize resumes, qualification context, interview transcripts, and recruiter notes.',
   },
   'staffing-agencies': {
     mode: 'pipeline',
     kicker: 'Agency recruiting workflow',
-    sectionTitle: 'Use this page when the buyer needs better candidate submissions.',
+    sectionTitle: 'Prepare candidate submissions your recruiters can explain.',
     sectionCopy:
-      'Staffing agency buyers care about speed, repeatability, and credibility with clients. This page focuses on qualifying candidates across client roles and preparing recruiter-reviewed evidence for submission.',
+      'An ATS for staffing agencies needs to keep each client role and its candidate evidence organized. Hiriq connects applicant tracking, qualification, and interviews so recruiters can review the record before preparing a client submission.',
     cards: [
       { label: 'Client role', value: 'Requirement intake', detail: 'Turn client requirements into screening criteria before applicants are reviewed.', icon: SlidersHorizontal },
       { label: 'Candidate', value: 'Evidence profile', detail: 'Attach resume, pre-screening, and interview context to each shortlist choice.', icon: UsersRound },
       { label: 'Submission', value: 'Recruiter review', detail: 'Support client-facing recommendations without automating away judgment.', icon: ShieldCheck },
     ],
-    lensTitle: 'Agency-specific buyer questions',
+    lensTitle: 'Before sending a submission',
     lensItems: ['Can it qualify applicants across client roles?', 'Can it improve submission quality?', 'Can recruiters review before sending?'],
     workflowTitle: 'Agency pipeline from client requirement to reviewed candidate evidence',
-    workflowCopy: 'This layout is pipeline-led because staffing agencies need to see how candidates move from intake to client-ready review.',
+    workflowCopy: 'Translate the client brief into criteria, qualify applicants against that role, and inspect the evidence before recommending a candidate.',
     relatedSlugs: ['high-volume-hiring', 'candidate-screening-software', 'recruiting-automation-software'],
     ctaTitle: 'Give recruiters better evidence before client submissions.',
     ctaCopy: 'Use Hiriq to standardize screening while keeping the agency relationship and final recommendation human-led.',
@@ -377,18 +386,18 @@ const solutionVariants: Record<string, SolutionVariant> = {
   'high-volume-hiring': {
     mode: 'screening',
     kicker: 'Applicant volume control',
-    sectionTitle: 'Use this page when volume is the main hiring problem.',
+    sectionTitle: 'Keep applicant volume from becoming a screening backlog.',
     sectionCopy:
-      'High-volume buyers are not looking for another generic ATS page. They need repeatable criteria, fast early qualification, and reviewable evidence before scheduling live interviews.',
+      'Apply consistent requirements across larger applicant pools, collect practical qualification answers, and prioritize the candidates who need recruiter attention. Keep criteria specific to each vacancy.',
     cards: [
       { label: 'Volume', value: 'Large applicant pools', detail: 'Apply consistent role criteria across many candidates.', icon: UsersRound },
       { label: 'Routing', value: 'Next-best step', detail: 'Send stronger candidates to pre-screening, AI interviews, or recruiter review.', icon: Route },
       { label: 'Review', value: 'Shortlist evidence', detail: 'Give teams context they can inspect before making decisions.', icon: ListChecks },
     ],
-    lensTitle: 'High-volume buyer questions',
+    lensTitle: 'Keep screening consistent',
     lensItems: ['Can it reduce repetitive screening?', 'Can it keep criteria consistent?', 'Can humans inspect the shortlist?'],
     workflowTitle: 'High-volume screening without turning every role into the same filter',
-    workflowCopy: 'This page focuses on scale and consistency while making it clear that Hiriq supports decisions instead of making final hiring calls.',
+    workflowCopy: 'Review candidates against the same role requirements, inspect uncertain results, and advance applicants with evidence that supports the next stage.',
     relatedSlugs: ['candidate-screening-software', 'candidate-pre-screening-software', 'ai-resume-screening'],
     ctaTitle: 'Move from applicant overload to a recruiter-ready shortlist.',
     ctaCopy: 'Use Hiriq to focus live recruiter time on candidates with stronger role-fit evidence.',
@@ -396,7 +405,7 @@ const solutionVariants: Record<string, SolutionVariant> = {
   'candidate-pre-screening-software': {
     mode: 'automation',
     kicker: 'Before the full interview',
-    sectionTitle: 'Use this page when the buyer needs quick qualification, not a full interview.',
+    sectionTitle: 'Confirm practical fit before a full interview.',
     sectionCopy:
       'Pre-screening is intentionally narrower than Hiriq AI Interviews. It helps recruiters confirm practical fit early so the longer live AI interview can focus on technical, behavioral, and scenario evidence.',
     cards: [
@@ -404,10 +413,10 @@ const solutionVariants: Record<string, SolutionVariant> = {
       { label: 'Routing', value: 'Qualified next step', detail: 'Decide who should move into AI interviews or recruiter conversations.', icon: Route },
       { label: 'Context', value: 'Compact summary', detail: 'Give recruiters a short evidence snapshot before spending live time.', icon: FileSearch },
     ],
-    lensTitle: 'Pre-screening buyer questions',
+    lensTitle: 'Choose the right screening stage',
     lensItems: ['How is this different from AI interviews?', 'Can it reduce unqualified calls?', 'Does the recruiter still decide?'],
     workflowTitle: 'Pre-screening as the qualification layer before deeper interviews',
-    workflowCopy: 'This page separates early-fit questions from the full interview engine, which helps buyers understand when to use each Hiriq workflow.',
+    workflowCopy: 'Use pre-screening to clarify availability and baseline requirements. Reserve the live AI interview for deeper technical and scenario questions once practical fit is understood.',
     relatedSlugs: ['ai-interview-platform', 'candidate-screening-software', 'recruiting-automation-software'],
     ctaTitle: 'Qualify practical fit before spending interview time.',
     ctaCopy: 'Use pre-screening for availability and baseline requirements, then reserve AI interviews for deeper role evidence.',
@@ -415,20 +424,21 @@ const solutionVariants: Record<string, SolutionVariant> = {
   'usa-uk-ai-hiring': {
     mode: 'markets',
     kicker: 'USA and UK hiring workflows',
-    sectionTitle: 'Use this page when the buyer is comparing tools for competitive hiring markets.',
+    sectionTitle: 'Connect US and UK recruiting teams around candidate evidence.',
     sectionCopy:
-      'The USA and UK page focuses on speed, remote hiring, and structured evaluation. It stays practical: Hiriq supports workflow consistency, while recruiters remain responsible for hiring decisions.',
+      'Use the same applicant tracking workflow for US resumes and UK CVs, with requirements tailored to each vacancy. Recruiters can inspect screening answers and interview reports before arranging the next conversation.',
     cards: [
       { label: 'USA', value: 'Fast response', detail: 'Keep applicants moving before live interviews are booked.', icon: Gauge },
       { label: 'UK', value: 'Structured review', detail: 'Give teams comparable candidate evidence.', icon: Building2 },
       { label: 'Remote', value: 'Distributed hiring', detail: 'Screen candidates across locations and schedules.', icon: Globe2 },
     ],
-    lensTitle: 'Market-specific buyer questions',
+    lensTitle: 'Hiring across the US and UK',
     lensItems: ['Can it help competitive roles move faster?', 'Can US and UK teams share the same workflow?', 'Can remote candidates be screened earlier?'],
     workflowTitle: 'Two-market hiring view',
-    workflowCopy: 'This page uses a split-market layout because the search intent is geographic, not just feature-led.',
+    workflowCopy: 'Confirm role location, work setup, and availability during pre-screening, then share interview evidence across US and UK teams for review.',
     relatedSlugs: ['middle-east-ai-hiring', 'ai-ats', 'recruiting-automation-software'],
     ctaTitle: 'Give USA and UK recruiters cleaner early-stage evidence.',
+    guide: { href: '/blog/ai-ats-buyers-checklist', label: 'Compare applicant tracking and screening requirements' },
     ctaCopy: 'Use structured screening and interview context before committing time to live interview loops.',
   },
 };
@@ -481,12 +491,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 function HeroVisual({
   mode,
   theme,
-  searchTerms,
+  capabilities,
   workflow,
 }: {
   mode: VariantMode;
   theme: SolutionTheme;
-  searchTerms: string[];
+  capabilities: string[];
   workflow: string[];
 }) {
   if (mode === 'pipeline') {
@@ -614,7 +624,7 @@ function HeroVisual({
   }
 
   if (mode === 'region' || mode === 'markets') {
-    const labels = mode === 'region' ? ['UAE', 'Qatar', 'Saudi Arabia', 'Pakistan'] : ['USA', 'UK', 'Remote', 'Global'];
+    const labels = mode === 'region' ? ['UAE', 'Saudi Arabia', 'Qatar', 'Gulf teams'] : ['USA', 'UK', 'Remote', 'Global'];
     return (
       <div className={`fade-in-up animation-delay-200 border p-6 shadow-xl ${theme.panel} rounded-lg`}>
         <div className="mb-6 flex items-center justify-between">
@@ -679,12 +689,12 @@ function HeroVisual({
           <Globe2 className="h-5 w-5" />
         </div>
         <div>
-          <h2 className="text-lg font-bold text-slate-900">Search intent map</h2>
-          <p className="text-sm text-slate-600">Terms this page is built to answer clearly.</p>
+          <h2 className="text-lg font-bold text-slate-900">Your recruiting workflow</h2>
+          <p className="text-sm text-slate-600">Keep the role, candidate evidence, and next step together.</p>
         </div>
       </div>
       <div className="flex flex-wrap gap-2">
-        {searchTerms.map((term) => (
+        {capabilities.map((term) => (
           <span key={term} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700">
             {term}
           </span>
@@ -868,7 +878,10 @@ export default async function SolutionPage({ params }: PageProps) {
           name: 'Hiriq',
         },
         inLanguage: 'en',
-        relatedLink: relatedSolutions.map((item) => `${siteUrl}/solutions/${item.slug}`),
+        relatedLink: [
+          ...relatedSolutions.map((item) => `${siteUrl}/solutions/${item.slug}`),
+          ...(variant.guide ? [`${siteUrl}${variant.guide.href}`] : []),
+        ],
       },
       {
         '@type': 'BreadcrumbList',
@@ -951,7 +964,7 @@ export default async function SolutionPage({ params }: PageProps) {
               </div>
             </div>
 
-            <HeroVisual mode={variant.mode} theme={theme} searchTerms={solution.searchTerms} workflow={solution.workflow} />
+            <HeroVisual mode={variant.mode} theme={theme} capabilities={variant.cards.map((card) => card.value)} workflow={solution.workflow} />
           </div>
         </section>
 
@@ -960,7 +973,7 @@ export default async function SolutionPage({ params }: PageProps) {
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <p className={`mb-3 text-sm font-bold uppercase tracking-wide ${theme.accent}`}>What this page is solving</p>
+              <p className={`mb-3 text-sm font-bold uppercase tracking-wide ${theme.accent}`}>Hiring challenges</p>
               <h2 className="text-3xl font-bold text-slate-900">
                 Specific pain points for {solution.shortTitle.toLowerCase()}.
               </h2>
@@ -1001,7 +1014,7 @@ export default async function SolutionPage({ params }: PageProps) {
               </div>
               <h2 className="text-3xl font-bold text-slate-900">Frequently asked questions</h2>
               <p className="mt-4 leading-7 text-slate-600">
-                Practical answers for teams comparing Hiriq with the exact workflow on this page.
+                Answers about candidate evidence, workflow setup, and recruiter control.
               </p>
             </div>
             <FAQAccordion items={solution.faq} />
@@ -1011,9 +1024,9 @@ export default async function SolutionPage({ params }: PageProps) {
         <section className="bg-white px-4 pb-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="mb-8 max-w-3xl">
-              <p className={`mb-3 text-sm font-bold uppercase tracking-wide ${theme.accent}`}>Related Hiriq pages</p>
+              <p className={`mb-3 text-sm font-bold uppercase tracking-wide ${theme.accent}`}>Explore Hiriq</p>
               <h2 className="text-3xl font-bold text-slate-900">
-                Continue through the matching search paths.
+                Find the next step in your hiring workflow.
               </h2>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
@@ -1028,6 +1041,15 @@ export default async function SolutionPage({ params }: PageProps) {
                 </Link>
               ))}
             </div>
+            {variant.guide && (
+              <Link
+                href={variant.guide.href}
+                className={`mt-6 inline-flex items-center gap-2 font-semibold underline underline-offset-4 ${theme.accent}`}
+              >
+                {variant.guide.label}
+                <ArrowRight className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+              </Link>
+            )}
           </div>
         </section>
 

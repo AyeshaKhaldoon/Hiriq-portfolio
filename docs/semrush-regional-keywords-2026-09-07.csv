@@ -1,0 +1,93 @@
+database;Keyword;Search Volume;Keyword Difficulty Index;Intent
+us;applicant tracking system;8100;68;1,0
+us;ats software;9900;60;0
+us;ai ats;170;50;1
+us;recruitment software;2900;74;0
+us;recruiting software;2900;47;1
+us;ai recruiting software;1000;66;1
+us;ai hiring software;590;63;0
+us;candidate screening software;480;11;0
+us;automated candidate screening;260;11;1
+us;ai interview software;390;75;1
+us;ai interview platform;210;67;1
+us;conversational ai interview;10;0;
+us;cv screening software;110;48;1
+us;resume screening software;320;50;0
+us;recruitment automation software;480;19;0
+us;healthcare recruitment software;140;12;1
+us;recruitment software uae;0;0;
+us;applicant tracking system uae;0;0;
+us;recruitment software uk;90;41;1
+uk;applicant tracking system;2400;49;1
+uk;ats software;1000;43;1
+uk;ai ats;90;0;
+uk;recruitment software;1900;72;0
+uk;recruiting software;590;56;1
+uk;ai recruiting software;210;60;0
+uk;ai hiring software;210;59;1,0
+uk;candidate screening software;320;19;0
+uk;automated candidate screening;40;0;
+uk;ai interview software;90;0;
+uk;ai interview platform;20;0;
+uk;conversational ai interview;0;0;
+uk;cv screening software;110;47;1
+uk;resume screening software;90;0;
+uk;recruitment automation software;480;36;1
+uk;healthcare recruitment software;210;10;1
+uk;recruitment software uae;0;0;
+uk;applicant tracking system uae;0;0;
+uk;recruitment software uk;720;39;1
+ae;applicant tracking system;320;52;1
+ae;ats software;140;51;1
+ae;ai ats;30;0;
+ae;recruitment software;40;68;1
+ae;recruiting software;40;68;1
+ae;ai recruiting software;30;53;1
+ae;automated candidate screening;10;0;
+ae;ai interview software;30;62;1
+ae;cv screening software;20;0;
+ae;resume screening software;20;0;
+ae;recruitment automation software;50;29;1
+ae;healthcare recruitment software;10;0;
+ae;recruitment software uk;0;0;
+sa;applicant tracking system;210;51;1,0
+sa;ats software;30;0;
+sa;recruitment software;10;0;
+sa;recruiting software;10;0;
+sa;ai recruiting software;20;0;
+sa;cv screening software;20;0;
+qa;applicant tracking system;110;53;1
+qa;ats software;30;50;1
+qa;recruitment software;10;0;
+qa;recruiting software;10;0;
+qa;recruitment automation software;0;0;
+kw;applicant tracking system;20;0;
+kw;ats software;30;55;1
+kw;recruitment software;10;0;
+kw;recruiting software;10;0;
+bh;applicant tracking system;20;0;
+bh;ats software;30;54;1
+bh;recruitment software;10;0;
+bh;recruiting software;10;0;
+bh;recruitment software uk;0;0;
+om;applicant tracking system;20;0;
+om;recruitment software;10;0;
+om;recruiting software;10;0;
+om;candidate screening software;0;0;
+om;recruitment software uae;0;0;
+om;recruitment software uk;0;0;
+us;ai interview software for recruiters;0;0;
+us;ai interview tools for hiring;0;0;
+us;automated interview software;40;30;0
+us;ai video interview software;170;49;0
+us;ai phone screening;70;15;1
+us;ai recruitment software;1000;63;1,0
+us;ats for small business;210;34;1,0
+us;ats for staffing agencies;390;4;0
+uk;automated interview software;10;0;
+uk;ai video interview software;40;0;
+uk;ai phone screening;10;0;
+uk;ai recruitment software;390;61;0
+uk;ats for small business;210;12;0
+uk;ats for staffing agencies;110;0;
+ae;ai recruitment software;30;53;1

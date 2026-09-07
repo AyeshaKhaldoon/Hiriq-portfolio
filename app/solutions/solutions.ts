@@ -60,7 +60,7 @@ export const solutions: Solution[] = [
       },
       {
         q: 'Can Hiriq work for teams outside the United States?',
-        a: 'Yes. Hiriq is designed for web-based recruiting teams and can support teams hiring across the USA, UK, Middle East, Pakistan, and other international markets.',
+        a: 'Yes. Hiriq supports web-based recruiting workflows for employers and agencies in the United States, United Kingdom, and Middle East.',
       },
       {
         q: 'Does Hiriq make final hiring decisions?',
@@ -71,19 +71,20 @@ export const solutions: Solution[] = [
   {
     slug: 'ai-ats',
     shortTitle: 'AI ATS',
-    title: 'AI ATS for applicant tracking, screening, and recruiter workflows',
+    title: 'AI applicant tracking system for recruiting teams',
     metaTitle: 'AI ATS and Applicant Tracking System | Hiriq',
     metaDescription:
       'Use Hiriq as an AI ATS for applicant tracking, branded application pages, resume screening, candidate ranking, and automated interview workflows.',
     eyebrow: 'AI applicant tracking system',
     lead:
       'Hiriq combines applicant tracking with AI-powered screening so teams can move from job setup to qualified shortlist without spreadsheet-heavy recruiting.',
-    market: 'Useful for startups, agencies, and growing teams hiring across the USA, UK, UAE, Qatar, Pakistan, and remote markets.',
+    market: 'For startups, staffing agencies, and growing hiring teams in the US, UK, and Middle East.',
     primaryKeyword: 'AI ATS',
     searchTerms: [
       'AI ATS',
       'AI applicant tracking system',
       'ATS software',
+      'ATS for small business',
       'candidate tracking',
       'AI candidate ranking',
     ],
@@ -123,8 +124,8 @@ export const solutions: Solution[] = [
   {
     slug: 'ai-interview-platform',
     shortTitle: 'AI Interview Platform',
-    title: 'AI interview platform for live, structured candidate interviews',
-    metaTitle: 'AI Interview Platform for Live Structured Interviews | Hiriq',
+    title: 'Live AI interview platform for recruiters and hiring teams',
+    metaTitle: 'AI Interview Platform for Recruiters | Live Interviews | Hiriq',
     metaDescription:
       'Hiriq runs live conversational AI interviews with adaptive follow-ups, industry-specific questions, integrity flags, transcripts, and recruiter-controlled scoring.',
     eyebrow: 'AI interview platform',
@@ -179,8 +180,8 @@ export const solutions: Solution[] = [
   {
     slug: 'ai-resume-screening',
     shortTitle: 'AI Resume Screening',
-    title: 'AI resume screening software for faster candidate shortlists',
-    metaTitle: 'AI Resume Screening Software and Candidate Matching | Hiriq',
+    title: 'AI resume and CV screening software for recruiters',
+    metaTitle: 'AI Resume & CV Screening Software for Recruiters | Hiriq',
     metaDescription:
       'Hiriq screens resumes against job criteria, highlights candidate fit, and helps recruiters build better shortlists for high-volume roles.',
     eyebrow: 'AI resume screening',
@@ -192,6 +193,7 @@ export const solutions: Solution[] = [
       'AI resume screening',
       'resume screening software',
       'AI CV screening',
+      'CV screening software',
       'candidate matching software',
       'AI shortlist tool',
     ],
@@ -215,7 +217,7 @@ export const solutions: Solution[] = [
     faq: [
       {
         q: 'Does Hiriq use keyword-only resume screening?',
-        a: 'No. Hiriq is positioned around role criteria, candidate fit, and recruiter review rather than simple keyword matching.',
+        a: 'Hiriq compares documented skills and experience against role criteria and returns matching evidence for recruiter review. Recruiters can inspect the original resume and clarify missing information in pre-screening.',
       },
       {
         q: 'Can Hiriq help with high-volume hiring?',
@@ -352,14 +354,14 @@ export const solutions: Solution[] = [
   {
     slug: 'middle-east-ai-hiring',
     shortTitle: 'Middle East AI Hiring',
-    title: 'AI hiring platform for Middle East recruiting teams',
-    metaTitle: 'AI Hiring Platform for the Middle East | Hiriq',
+    title: 'ATS and AI recruiting software for the Middle East',
+    metaTitle: 'ATS & AI Recruiting Software for the Middle East | Hiriq',
     metaDescription:
-      'Hiriq helps teams hiring in the Middle East use AI resume screening, automated interviews, and structured candidate review across regional and remote roles.',
+      'Track applicants, screen CVs, and run live AI interviews with Hiriq. Built for employers and recruitment agencies in the UAE, Saudi Arabia, Qatar, and Gulf markets.',
     eyebrow: 'Middle East AI hiring',
     lead:
-      'Hiriq supports recruiting teams operating across the UAE, Qatar, Saudi Arabia, Pakistan, and wider Middle East talent markets.',
-    market: 'Built for cross-border hiring, remote teams, agencies, and companies coordinating candidates across time zones.',
+      'Hiriq brings applicant tracking, CV screening, candidate pre-screening, and live AI interviews into one workflow for Middle East hiring teams.',
+    market: 'For employers and agencies in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, and the wider Middle East.',
     primaryKeyword: 'AI hiring platform Middle East',
     searchTerms: [
       'AI hiring Middle East',
@@ -367,6 +369,9 @@ export const solutions: Solution[] = [
       'AI hiring Qatar',
       'AI recruiting Saudi Arabia',
       'AI ATS Middle East',
+      'applicant tracking system',
+      'ATS software',
+      'CV screening software',
     ],
     problems: [
       'Regional hiring often spans several countries, time zones, and candidate pools.',
@@ -389,7 +394,7 @@ export const solutions: Solution[] = [
     faq: [
       {
         q: 'Does Hiriq support Middle East hiring teams?',
-        a: 'Yes. Hiriq can support teams recruiting across the UAE, Qatar, Saudi Arabia, Pakistan, and broader Middle East markets.',
+        a: 'Yes. Employers and recruitment agencies in the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, and the wider Middle East can use Hiriq for applicant tracking, screening, interviews, and recruiter review.',
       },
       {
         q: 'Can Hiriq help with cross-border recruiting?',
@@ -398,6 +403,10 @@ export const solutions: Solution[] = [
       {
         q: 'Is pricing available for Middle East teams?',
         a: 'Hiriq includes regional pricing logic on the website and offers sales conversations for teams that need a tailored plan.',
+      },
+      {
+        q: 'What can Gulf hiring teams manage in the applicant tracking system?',
+        a: 'Teams can set role requirements, collect applications, track candidate stages, screen CVs, and review pre-screening answers and AI interview reports. Recruiters decide who moves forward.',
       },
     ],
   },
@@ -410,7 +419,7 @@ export const solutions: Solution[] = [
       'Hiriq helps healthcare staffing and recruitment teams screen resumes, verify role-fit evidence, run structured AI interviews, and prepare recruiter-reviewed shortlists.',
     eyebrow: 'Healthcare recruitment software',
     lead:
-      'Hiriq helps healthcare recruiters move faster from applicant volume to reviewable clinical hiring evidence without making unsupported compliance or hiring-decision claims.',
+      'Hiriq helps healthcare recruiters review clinical experience, collect practical qualification answers, and inspect role-specific interview evidence before preparing a shortlist.',
     market: 'Built for healthcare staffing agencies, care providers, and recruiting teams hiring nurses, allied health, support, and operations roles across regional or remote markets.',
     primaryKeyword: 'healthcare recruitment software',
     searchTerms: [
@@ -465,8 +474,8 @@ export const solutions: Solution[] = [
   {
     slug: 'staffing-agencies',
     shortTitle: 'Staffing Agencies',
-    title: 'Staffing agency software for screening, interviews, and recruiter review',
-    metaTitle: 'Staffing Agency Software for Candidate Screening | Hiriq',
+    title: 'ATS for staffing agencies with screening and AI interviews',
+    metaTitle: 'ATS for Staffing Agencies | Screening & AI Interviews | Hiriq',
     metaDescription:
       'Hiriq helps staffing and recruitment agencies qualify candidates with resume screening, pre-screening, AI interviews, and recruiter-ready shortlist evidence.',
     eyebrow: 'Staffing agency software',
@@ -476,6 +485,7 @@ export const solutions: Solution[] = [
     primaryKeyword: 'staffing agency software',
     searchTerms: [
       'staffing agency software',
+      'ATS for staffing agencies',
       'recruitment agency software',
       'recruiting automation for staffing agencies',
       'candidate screening for staffing agencies',
@@ -621,18 +631,19 @@ export const solutions: Solution[] = [
   {
     slug: 'usa-uk-ai-hiring',
     shortTitle: 'USA and UK AI Hiring',
-    title: 'AI hiring platform for USA and UK recruiting teams',
-    metaTitle: 'AI Hiring Platform for USA and UK Recruiting Teams | Hiriq',
+    title: 'AI recruitment software for US and UK hiring teams',
+    metaTitle: 'AI Recruitment Software for US & UK Hiring Teams | Hiriq',
     metaDescription:
-      'Hiriq helps recruiting teams in the USA and UK automate resume screening, AI interviews, candidate ranking, and shortlist workflows.',
+      'Hiriq helps US and UK employers track applicants, screen resumes and CVs, qualify candidates, and run live AI interviews with recruiter-reviewed evidence.',
     eyebrow: 'USA and UK AI hiring',
     lead:
-      'Hiriq helps US and UK hiring teams reduce manual screening, keep candidates moving, and give hiring managers clearer evidence.',
-    market: 'Designed for startups, agencies, operators, and distributed recruiting teams hiring across US, UK, and global talent pools.',
+      'Hiriq connects applicant tracking, resume and CV screening, practical pre-screening, and live AI interviews for US and UK recruiting teams.',
+    market: 'For US employers, UK recruitment agencies, and distributed hiring teams coordinating applications across locations and time zones.',
     primaryKeyword: 'AI hiring platform USA UK',
     searchTerms: [
       'AI hiring platform USA',
       'AI recruitment software UK',
+      'recruitment software UK',
       'AI ATS USA',
       'AI interview software UK',
       'recruiting automation USA UK',
@@ -667,6 +678,10 @@ export const solutions: Solution[] = [
       {
         q: 'Is Hiriq suitable for remote hiring?',
         a: 'Yes. Hiriq is especially useful when teams need to screen candidates across locations and time zones before live conversations.',
+      },
+      {
+        q: 'Can US and UK recruiters use the same applicant tracking workflow?',
+        a: 'Yes. Teams can track applications, review resumes or CVs, and collect interview evidence in one workflow while setting requirements for each role. Recruiters review results before deciding the next step.',
       },
     ],
   },

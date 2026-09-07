@@ -102,7 +102,7 @@ export default function RootLayout({
         description:
           'Hiriq is an AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, AI interviews, and evidence-backed hiring shortlists.',
         slogan: 'Hire smarter. Hire faster.',
-        areaServed: ['United States', 'United Kingdom', 'Middle East', 'Pakistan', 'Qatar', 'United Arab Emirates'],
+        areaServed: ['United States', 'United Kingdom', 'Middle East', 'United Arab Emirates', 'Saudi Arabia', 'Qatar', 'Kuwait', 'Bahrain', 'Oman'],
         sameAs: [
           'https://www.linkedin.com/company/hiriq',
           'https://www.instagram.com/hiriq.ai',

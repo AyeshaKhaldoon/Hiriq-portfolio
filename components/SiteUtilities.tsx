@@ -188,7 +188,7 @@ export default function SiteUtilities() {
       </div>
 
       {cookieVisible && (
-        <div className="fixed bottom-5 left-5 right-5 z-50 max-w-xl rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-900/15 md:left-auto print:hidden">
+        <div className="fixed bottom-24 left-5 right-5 z-50 max-h-[calc(100dvh-8rem)] max-w-xl overflow-y-auto rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-900/15 md:bottom-5 md:left-auto print:hidden">
           <div className="flex gap-3">
             <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
               <Cookie className="h-5 w-5" />
