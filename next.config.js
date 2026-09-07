@@ -95,6 +95,41 @@ const nextConfig = {
         destination: '/solutions/healthcare-staffing-agencies',
         permanent: true,
       },
+      {
+        source: '/hirevue-alternatives',
+        destination: '/compare/hirevue-alternatives',
+        permanent: true,
+      },
+      {
+        source: '/paradox-alternatives',
+        destination: '/compare/paradox-ai-alternatives',
+        permanent: true,
+      },
+      {
+        source: '/best-ai-interview-software',
+        destination: '/compare/best-ai-interview-software',
+        permanent: true,
+      },
+      {
+        source: '/alternatives',
+        destination: '/compare',
+        permanent: true,
+      },
+      {
+        source: '/comparisons',
+        destination: '/compare',
+        permanent: true,
+      },
+      {
+        source: '/news',
+        destination: '/press',
+        permanent: true,
+      },
+      {
+        source: '/media',
+        destination: '/press',
+        permanent: true,
+      },
     ];
   },
 };

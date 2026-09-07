@@ -8,38 +8,7 @@ import Footer from '@/components/Footer';
 import NewsletterForm from '@/components/NewsletterForm';
 import { siteUrl } from '@/app/seo';
 
-import { blogPosts } from '../articles';
-function getPostBySlug(slug: string) {
-  return blogPosts.find(post => post.slug === slug);
-}
-
-function getRelatedPosts(currentSlug: string) {
-  return blogPosts.filter(post => post.slug !== currentSlug).slice(0, 2);
-}
-
-const blogSeoKeywords: Record<string, string[]> = {
-  'ai-transforming-recruitment-2026': [
-    'AI recruiting trends 2026',
-    'AI recruitment software',
-    'automated candidate screening',
-    'AI hiring platform',
-    'recruitment automation',
-  ],
-  'reduce-time-to-hire': [
-    'reduce time to hire',
-    'time to hire strategies',
-    'AI resume screening',
-    'automated pre-screening',
-    'recruiting workflow automation',
-  ],
-  'cost-of-bad-hire': [
-    'cost of a bad hire',
-    'prevent bad hires',
-    'candidate screening software',
-    'AI candidate matching',
-    'structured hiring process',
-  ],
-};
+import { blogPosts, getPostBySlug, getRelatedPosts } from '../blogPosts';
 
 // SEO Metadata - FIXED FOR NEXT.JS 15
 
@@ -61,9 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${post.title} | Hiriq Blog`,
+    title: `${post.title} | Hiriq`,
     description: post.excerpt,
-    keywords: post.keywords || blogSeoKeywords[post.slug] || ['AI recruiting', 'hiring automation', 'candidate screening'],
+    keywords: post.keywords,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
@@ -74,8 +43,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `${siteUrl}/blog/${post.slug}`,
       siteName: 'Hiriq',
       images: [{ url: post.image, alt: post.title }],
-      publishedTime: post.date,
-      modifiedTime: post.updated || post.date,
+      publishedTime: post.isoDate,
+      modifiedTime: post.isoModified,
       authors: [post.author.name],
     },
     twitter: {
@@ -108,12 +77,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.title,
     description: post.excerpt,
     image: new URL(post.image, siteUrl).href,
-    datePublished: post.date,
-    dateModified: post.updated || post.date,
+    datePublished: post.isoDate,
+    dateModified: post.isoModified,
     author: {
       '@type': post.author.type || 'Person',
       name: post.author.name,
-      url: `${siteUrl}/about`,
+      url: post.author.profileUrl || `${siteUrl}/about`,
     },
     publisher: {
       '@type': 'Organization',
@@ -124,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       },
     },
     mainEntityOfPage: articleUrl,
-    keywords: (post.keywords || blogSeoKeywords[post.slug] || []).join(', '),
+    keywords: post.keywords.join(', '),
     about: [
       'AI recruiting software',
       'candidate screening',
@@ -190,7 +159,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <time dateTime={post.date}>{post.date}</time>
+                <time dateTime={post.isoDate}>{post.date}</time>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -294,16 +263,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     {section.conclusion}
                   </p>
                 )}
+
                 {section.links && (
-                  <ul className="mt-5 space-y-2">
-                    {section.links.map((link) => (
-                      <li key={link.href}>
-                        <Link href={link.href} className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900">
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      Referenced in this section
+                    </p>
+                    <ul className="mt-3 space-y-2">
+                      {section.links.map((link) => (
+                        <li key={link.href}>
+                          <a
+                            href={link.href}
+                            {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
+                            className="font-medium text-cyan-700 underline-offset-4 hover:underline"
+                          >
+                            {link.label}
+                          </a>
+                          {link.source && (
+                            <span className="text-slate-500"> &mdash; {link.source}</span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </div>
             ))}

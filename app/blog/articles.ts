@@ -1,13 +1,13 @@
-import { legacyBlogPosts, type BlogPost } from './legacyPosts';
+import type { BlogPost } from './blogPosts';
 
-const author = { name: 'Hiriq', avatar: '/Logo.png', type: 'Organization' as const };
+const author = { name: 'Hiriq', role: 'Hiriq editorial team', avatar: '/Logo.png', type: 'Organization' as const };
 
-const newPosts: BlogPost[] = [
+export const newPosts: BlogPost[] = [
   {
     slug: 'ai-ats-buyers-checklist',
     title: 'How to Choose an AI ATS: A Practical Buyer Checklist',
     excerpt: 'Evaluate AI applicant tracking software with a role-based demo, screening evidence, recruiter controls, and a measurable pilot before committing.',
-    category: 'Best Practices', date: '2026-09-07', readTime: '4 min read',
+    category: 'Best Practices', date: 'Sep 7, 2026', isoDate: '2026-09-07', isoModified: '2026-09-07', readTime: '4 min read',
     image: '/product/product-pipeline.webp', author,
     keywords: ['AI ATS', 'AI applicant tracking system', 'ATS buyer checklist'],
     content: {
@@ -25,7 +25,7 @@ const newPosts: BlogPost[] = [
     slug: 'ai-resume-screening-vs-keyword-filtering',
     title: 'AI Resume Screening vs. Keyword Filtering: What to Test',
     excerpt: 'Learn how to evaluate CV screening beyond keyword matches, handle missing evidence, and build a shortlist recruiters can explain.',
-    category: 'Recruiting Tips', date: '2026-09-07', readTime: '4 min read',
+    category: 'Recruiting Tips', date: 'Sep 7, 2026', isoDate: '2026-09-07', isoModified: '2026-09-07', readTime: '4 min read',
     image: '/product/product-pipeline.webp', author,
     keywords: ['AI resume screening', 'CV screening software', 'resume keyword filtering'],
     content: {
@@ -43,7 +43,7 @@ const newPosts: BlogPost[] = [
     slug: 'live-ai-interviews-vs-one-way-video',
     title: 'Live AI Interviews vs. One-Way Video Interviews',
     excerpt: 'Compare adaptive conversations with recorded video questions, including follow-ups, interview scorecards, transcripts, and recruiter review.',
-    category: 'Industry Trends', date: '2026-09-07', readTime: '4 min read',
+    category: 'Industry Trends', date: 'Sep 7, 2026', isoDate: '2026-09-07', isoModified: '2026-09-07', readTime: '4 min read',
     image: '/product/product-ai-scorecard.webp', author,
     keywords: ['live AI interviews', 'conversational AI interview platform', 'one-way video interviews'],
     content: {
@@ -61,7 +61,7 @@ const newPosts: BlogPost[] = [
     slug: 'healthcare-candidate-pre-screening-checklist',
     title: 'Healthcare Candidate Pre-Screening: A Recruiter Checklist',
     excerpt: 'Separate practical nurse qualification questions from clinical interview evidence, with a clear handoff for credential verification and recruiter review.',
-    category: 'Recruiting Tips', date: '2026-09-07', readTime: '4 min read',
+    category: 'Recruiting Tips', date: 'Sep 7, 2026', isoDate: '2026-09-07', isoModified: '2026-09-07', readTime: '4 min read',
     image: '/product/product-prescreening-result.webp', author,
     keywords: ['healthcare candidate screening', 'nurse pre-screening', 'healthcare staffing software'],
     content: {
@@ -79,7 +79,7 @@ const newPosts: BlogPost[] = [
     slug: 'high-volume-hiring-automation-playbook',
     title: 'High-Volume Hiring Automation: From Intake to Shortlist',
     excerpt: 'Build a measurable hiring workflow across resume screening, pre-screening, AI interviews, and recruiter review for teams working across time zones.',
-    category: 'Best Practices', date: '2026-09-07', readTime: '4 min read',
+    category: 'Best Practices', date: 'Sep 7, 2026', isoDate: '2026-09-07', isoModified: '2026-09-07', readTime: '4 min read',
     image: '/product/product-dashboard.webp', author,
     keywords: ['high-volume hiring automation', 'recruiting automation software', 'automated candidate screening'],
     content: {
@@ -94,5 +94,3 @@ const newPosts: BlogPost[] = [
     }
   }
 ];
-
-export const blogPosts: BlogPost[] = [...newPosts, ...legacyBlogPosts];

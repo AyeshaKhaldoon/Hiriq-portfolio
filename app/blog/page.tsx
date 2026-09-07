@@ -7,8 +7,7 @@ import { AlertCircle, ArrowRight, Calendar, CheckCircle2, Clock } from 'lucide-r
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { getStoredUtmParams } from '@/components/SiteUtilities';
-
-import { blogPosts } from './articles';
+import { blogPosts, blogCategories } from './blogPosts';
 
 /* ================= PAGE ================= */
 
@@ -18,12 +17,7 @@ export default function Blog() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
-  const categories = [
-    'All Posts',
-    'Industry Trends',
-    'Best Practices',
-    'Recruiting Tips',
-  ];
+  const categories = blogCategories;
 
   const filteredPosts =
     selectedCategory === 'All Posts'

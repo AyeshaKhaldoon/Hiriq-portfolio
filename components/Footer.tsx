@@ -73,6 +73,9 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
               <li><Link href="/solutions/high-volume-hiring" className="hover:text-cyan-400 transition-colors">High-Volume Hiring</Link></li>
               <li><Link href="/solutions/middle-east-ai-hiring" className="hover:text-cyan-400 transition-colors">Middle East Hiring</Link></li>
               <li><Link href="/solutions/usa-uk-ai-hiring" className="hover:text-cyan-400 transition-colors">USA and UK Hiring</Link></li>
+              <li><Link href="/compare" className="hover:text-cyan-400 transition-colors">Software Comparisons</Link></li>
+              <li><Link href="/compare/best-ai-interview-software" className="hover:text-cyan-400 transition-colors">Best AI Interview Software</Link></li>
+              <li><Link href="/compare/hirevue-alternatives" className="hover:text-cyan-400 transition-colors">HireVue Alternatives</Link></li>
               <li><Link href="/resources/link-to-hiriq" className="hover:text-cyan-400 transition-colors">Link to Hiriq</Link></li>
             </ul>
           </div>
@@ -81,6 +84,7 @@ export default function Footer({ showSocialIcons = false }: FooterProps) {
             <ul className="space-y-2 text-gray-300 text-sm">
               <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About</Link></li>
               <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
+              <li><Link href="/press" className="hover:text-cyan-400 transition-colors">Press and Coverage</Link></li>
               <li><a href="https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">BoardroomPK Interview</a></li>
               <li><Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
             </ul>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Hiriq - AI Recruiting Software for Screening and Interviews',
   description:
-    'Hiriq helps recruiting teams automate resume screening, candidate pre-screening, live AI interviews, and evidence-backed shortlist review while keeping recruiters in control.',
+    'Hiriq automates resume screening, candidate pre-screening, and live AI interviews, then hands recruiters scored evidence for every shortlist decision.',
   keywords:
     'AI recruiting software, AI recruitment software, AI ATS, applicant tracking system, AI resume screening, AI interview platform, candidate screening software, healthcare staffing software, staffing agency software, high-volume hiring software, recruitment automation',
   authors: [{ name: 'Hiriq Team' }],
@@ -103,7 +103,11 @@ export default function RootLayout({
           'Hiriq is an AI-powered recruitment platform for applicant tracking workflows, resume screening, automated pre-screening, AI interviews, and evidence-backed hiring shortlists.',
         slogan: 'Hire smarter. Hire faster.',
         areaServed: ['United States', 'United Kingdom', 'Middle East', 'Pakistan', 'Qatar', 'United Arab Emirates'],
-        sameAs: ['https://www.linkedin.com/company/hiriq', 'https://www.instagram.com/hiriq.ai'],
+        sameAs: [
+          'https://www.linkedin.com/company/hiriq',
+          'https://www.instagram.com/hiriq.ai',
+          'https://theorg.com/org/hiriq',
+        ],
         founder: [
           { '@id': `${siteUrl}/#ayesha-khaldoon` },
           { '@id': `${siteUrl}/#muhammad-ahmad` },
@@ -111,8 +115,16 @@ export default function RootLayout({
         subjectOf: [
           {
             '@type': 'Article',
+            url: 'https://staffinghub.com/guest-posts/why-adding-more-recruiters-is-making-your-firm-fall-behind/',
+            name: 'Why Adding More Recruiters Is Making Your Firm Fall Behind',
+            datePublished: '2026-08-28',
+            publisher: { '@type': 'Organization', name: 'Staffing Hub', url: 'https://staffinghub.com' },
+          },
+          {
+            '@type': 'Article',
             url: 'https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq',
             name: 'Intelligent. Human-Centered. Hiring. | Ayesha Khaldoon | Founder of Hiriq',
+            publisher: { '@type': 'Organization', name: 'Boardroom', url: 'https://boardroompk.com' },
           },
         ],
         knowsAbout: [
@@ -177,12 +189,23 @@ export default function RootLayout({
         jobTitle: 'Co-Founder CEO',
         worksFor: { '@id': organizationId },
         image: `${siteUrl}/team/ayesha-khaldoon.jpg`,
-        sameAs: ['https://pk.linkedin.com/in/ayesha-khaldoon'],
+        sameAs: ['https://pk.linkedin.com/in/ayesha-khaldoon', 'https://theorg.com/org/hiriq'],
+        knowsAbout: ['Staffing operations', 'Recruiter productivity', 'Time-to-qualify', 'AI candidate screening'],
         subjectOf: [
           {
             '@type': 'Article',
             url: 'https://boardroompk.com/site/startups/intelligent-human-centered-hiring-ayesha-khaldoon-founder-of-hiriq',
             name: 'Intelligent. Human-Centered. Hiring. | Ayesha Khaldoon | Founder of Hiriq',
+          },
+        ],
+        // Bylined commentary published by third-party outlets.
+        workExample: [
+          {
+            '@type': 'Article',
+            url: 'https://staffinghub.com/guest-posts/why-adding-more-recruiters-is-making-your-firm-fall-behind/',
+            name: 'Why Adding More Recruiters Is Making Your Firm Fall Behind',
+            datePublished: '2026-08-28',
+            publisher: { '@type': 'Organization', name: 'Staffing Hub', url: 'https://staffinghub.com' },
           },
         ],
       },
@@ -219,8 +242,10 @@ export default function RootLayout({
             </Script>
           </>
         )}
-        <Script
-          id="site-schema"
+        {/* Plain <script> so the JSON-LD is present in the server-rendered HTML.
+            next/script defaults to afterInteractive, which injects it only after
+            hydration and leaves crawlers with no entity markup in the raw source. */}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
